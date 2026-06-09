@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white text-ink antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    line-height: 1.65;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fraunces), Georgia, serif;
+    @apply font-semibold leading-tight text-navy;
+    letter-spacing: -0.01em;
+  }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+  h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); }
+  p { @apply mb-4; }
+  a {
+    @apply text-navy underline transition-colors;
+    text-decoration-color: theme('colors.gold-lt');
+    text-underline-offset: 3px;
+  }
+  a:hover { @apply text-gold; }
+  strong { @apply font-bold text-ink; }
+  ul, ol { @apply pl-6 mb-4; }
+  li { @apply mb-1; }
+}
+
+@layer components {
+  .wrap { @apply max-w-wrap mx-auto px-6; }
+  .narrow { @apply max-w-narrow mx-auto px-6; }
+
+  .btn {
+    @apply inline-block px-7 py-3.5 bg-navy text-paper font-semibold text-sm rounded transition-all;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .btn:hover { @apply bg-navy-dk text-gold-lt -translate-y-0.5; transform: translateY(-1px); }
+  .btn-gold { @apply bg-gold text-navy-dk; }
+  .btn-gold:hover { @apply bg-gold-lt; }
+  .btn-ghost { @apply bg-transparent text-navy border border-border; }
+  .btn-ghost:hover { @apply border-gold bg-gold-pale; }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase text-gold mb-3 block;
+    letter-spacing: 0.14em;
+  }
+
+  .callout {
+    @apply border-l-[3px] border-gold bg-paper p-5 my-7 rounded-r;
+  }
+  .callout-warn { @apply border-danger bg-[#fbf2ef]; }
+  .callout-rule { @apply border-navy bg-cream; }
+  .callout h4 {
+    @apply text-xs font-bold uppercase text-navy mb-1;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.08em;
+  }
+
+  .quick-answer {
+    @apply bg-gold-pale border-l-[4px] border-gold p-6 my-6 rounded-r;
+  }
+  .quick-answer .qa-label {
+    @apply text-xs font-bold uppercase text-navy mb-2 block;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.12em;
+  }
+  .quick-answer p {
+    @apply text-base text-ink leading-relaxed mb-0;
+  }
+
+  .tbl { @apply w-full border-collapse my-6 text-sm; }
+  .tbl th, .tbl td { @apply p-3.5 text-left border-b border-border align-top; }
+  .tbl th {
+    @apply bg-cream text-navy font-bold text-xs uppercase;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer utilities {
+  /* Print: hide chrome on residency-checklist */
+  @media print {
+    .no-print { display: none !important; }
+  }
+}

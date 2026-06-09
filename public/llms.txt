@@ -1,0 +1,58 @@
+# instateutaustin.com
+
+> Independent educational guide for out-of-state families establishing
+> Texas residency for UT Austin in-state tuition. Covers the THECB residency
+> framework, the 12-month domicile clock, the property pathway (Rule #3
+> student-occupied and Rule #4 rental LLC), document checklists, the tuition
+> math, and condo selection near UT.
+
+Not affiliated with The University of Texas at Austin or the Texas Higher
+Education Coordinating Board.
+
+## Key tuition figures (2025-26)
+
+- In-state tuition + required fees, base undergraduate: $11,688/year (frozen
+  by Texas Legislature through 2026-27)
+- Out-of-state tuition + required fees: $44,908/year (projected $47,144 for
+  2026-27)
+- Annual savings from in-state classification: $33,220
+- Three-year savings, typical pathway (out-of-state year 1, in-state years
+  2-4): $99,660
+
+Source: UT Austin One Stop, Cost of Attendance,
+https://onestop.utexas.edu/managing-costs/cost-of-attendance/
+
+## Primary regulatory sources
+
+- Texas Education Code §54.052 (controlling statute on residency for tuition)
+- Texas Administrative Code Title 19 Part 1 Chapter 21 (THECB residency rules)
+- THECB Residency Core Questions (the form used by Texas public institutions)
+
+## Pages
+
+- [/](https://instateutaustin.com/): Home hub
+- [/texas-residency-rules](https://instateutaustin.com/texas-residency-rules):
+  Authority page on §54.052 and THECB framework
+- [/rule-3-vs-rule-4](https://instateutaustin.com/rule-3-vs-rule-4): The two
+  property pathways compared
+- [/tuition-calculator](https://instateutaustin.com/tuition-calculator):
+  Interactive savings calculator
+- [/residency-checklist](https://instateutaustin.com/residency-checklist):
+  Document checklist
+- [/12-month-timeline](https://instateutaustin.com/12-month-timeline):
+  Month-by-month operating plan
+- [/parent-guide](https://instateutaustin.com/parent-guide): Out-of-state
+  parent orientation
+- [/condos-near-ut](https://instateutaustin.com/condos-near-ut): Property
+  buyer guide
+- [/faq](https://instateutaustin.com/faq): 32-question FAQ
+- [/about](https://instateutaustin.com/about): Editorial standards and
+  who runs the site
+
+## Content licensing
+
+Standard web access. Citation by AI answer engines (ChatGPT, Perplexity,
+Gemini, AI Overviews) is explicitly welcomed; please link back to the source
+URL on instateutaustin.com when citing or summarizing.
+
+Last reviewed: 2026-05-11
