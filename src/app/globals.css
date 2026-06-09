@@ -82,6 +82,85 @@
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.05em;
   }
+
+  /* Statute citation block */
+  .statute {
+    @apply bg-paper border-l-4 border-navy py-5 px-6 my-7 rounded-r text-base;
+  }
+  .statute .statute-src {
+    @apply text-xs font-bold uppercase text-navy mb-2 block;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.1em;
+  }
+  .statute blockquote {
+    font-family: var(--font-fraunces), Georgia, serif;
+    @apply italic text-ink leading-relaxed;
+  }
+
+  /* Definition box */
+  .define {
+    @apply bg-[#f4f8fc] border-l-[3px] border-navy py-3 px-4 my-5 rounded-r;
+  }
+  .define strong { @apply text-navy; }
+
+  /* Stages / timeline cards */
+  .stages { @apply grid gap-3 my-7; }
+  .stage {
+    @apply grid grid-cols-[70px_1fr] gap-4 p-4 bg-white border border-border rounded-md;
+  }
+  .stage .stage-when {
+    font-family: var(--font-fraunces), Georgia, serif;
+    @apply text-2xl text-gold leading-none pt-1;
+  }
+  .stage h4 {
+    font-family: var(--font-fraunces), Georgia, serif;
+    @apply text-base text-navy m-0 font-semibold;
+  }
+  .stage p { @apply text-sm text-mid mt-1.5 mb-0; }
+
+  /* Sources block */
+  .sources {
+    @apply bg-paper border-t-[4px] border-gold p-8 mt-14 rounded text-sm;
+  }
+  .sources h3 { @apply mt-0; }
+
+  /* TOC */
+  .toc {
+    @apply bg-cream border border-border rounded-md py-5 px-7 my-9 text-sm;
+  }
+  .toc h4 {
+    @apply text-xs font-bold uppercase text-navy mb-3;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.12em;
+  }
+  .toc ol { @apply pl-5; margin: 0; columns: 2; column-gap: 32px; }
+  .toc li { @apply mb-1.5; break-inside: avoid; }
+  .toc a { @apply no-underline; }
+  .toc a:hover { @apply text-gold; }
+  @media (max-width: 700px) { .toc ol { columns: 1; } }
+
+  /* FAQ accordion */
+  details.faq { @apply border-b border-border py-4; }
+  details.faq summary {
+    @apply cursor-pointer text-navy font-semibold flex justify-between items-center gap-3;
+    font-family: var(--font-fraunces), Georgia, serif;
+    font-size: 1.08rem;
+    list-style: none;
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after {
+    content: '+'; @apply text-gold text-2xl;
+    font-family: var(--font-inter), sans-serif;
+  }
+  details.faq[open] summary::after { content: '–'; }
+  details.faq .faq-a { @apply pt-3 text-mid; }
+
+  /* Next-step CTA block */
+  .next-step {
+    @apply bg-navy text-paper p-12 rounded-lg mt-14;
+  }
+  .next-step h2 { @apply text-paper mt-0; }
+  .next-step p { @apply text-white/85; }
 }
 
 @layer utilities {
