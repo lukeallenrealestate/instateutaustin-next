@@ -11,6 +11,20 @@ const nextConfig = {
       { source: '/ut-austin-in-state-tuition', destination: '/texas-residency-rules', permanent: true },
     ];
   },
+  // The state-page SEO URL (/california-families-...) rewrites internally to
+  // a clean dynamic route (/families/california). The browser URL stays
+  // SEO-friendly; Next.js renders from the clean route.
+  // Note: rewrites do NOT pre-render the SEO URL. The dynamic route at
+  // /families/[state] is pre-rendered via generateStaticParams, and the
+  // rewrite proxies the SEO URL to it at request time.
+  async rewrites() {
+    return [
+      {
+        source: '/:state-families-ut-austin-in-state-tuition',
+        destination: '/families/:state',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

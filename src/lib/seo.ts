@@ -11,10 +11,26 @@ interface PageMetaInput {
 
 export function pageMetadata({ title, description, path, ogImage, noindex }: PageMetaInput): Metadata {
   const url = `${SITE.url}${path}`;
-  const image = ogImage ?? SITE.ogImage;
   const robots = SITE.PRE_LAUNCH || noindex
     ? { index: false, follow: false }
     : { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } as const;
+
+  // When ogImage is not explicitly passed, omit images from metadata so that
+  // Next.js's opengraph-image.tsx convention auto-injects the route-level image.
+  const og = {
+    type: 'website' as const,
+    url,
+    title,
+    description,
+    siteName: SITE.name,
+    ...(ogImage ? { images: [ogImage] } : {}),
+  };
+  const twitter = {
+    card: 'summary_large_image' as const,
+    title,
+    description,
+    ...(ogImage ? { images: [ogImage] } : {}),
+  };
 
   return {
     title,
@@ -22,20 +38,8 @@ export function pageMetadata({ title, description, path, ogImage, noindex }: Pag
     metadataBase: new URL(SITE.url),
     alternates: { canonical: url },
     robots,
-    openGraph: {
-      type: 'website',
-      url,
-      title,
-      description,
-      images: [image],
-      siteName: SITE.name,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [image],
-    },
+    openGraph: og,
+    twitter,
     other: {
       'geo.region': 'US-TX',
       'geo.placename': 'Austin, Texas',
