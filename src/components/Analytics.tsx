@@ -1,5 +1,10 @@
-// GA4 + Meta Pixel loader. Mounted once in the root layout.
-// Gated by SITE.PRE_LAUNCH — pre-launch, no analytics fires.
+// Meta Pixel loader. Mounted once in the root layout.
+// Gated by SITE.PRE_LAUNCH; pre-launch, no analytics fires.
+//
+// GA4 was scoped out per user decision; Meta Pixel is the only tracker.
+// Lead events are also still pushed to window.dataLayer in ContactForm so
+// any future GA4/GTM install can pick them up retroactively without code
+// changes here.
 
 import Script from 'next/script';
 import { SITE } from '@/lib/site';
@@ -9,16 +14,6 @@ export function Analytics() {
 
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${SITE.ga4Id}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga4-init" strategy="afterInteractive">{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${SITE.ga4Id}', { anonymize_ip: true });
-      `}</Script>
       <Script id="meta-pixel-init" strategy="afterInteractive">{`
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -29,7 +24,11 @@ export function Analytics() {
         fbq('track', 'PageView');
       `}</Script>
       <noscript>
-        <img height="1" width="1" style={{ display: 'none' }} alt=""
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          alt=""
           src={`https://www.facebook.com/tr?id=${SITE.metaPixelId}&ev=PageView&noscript=1`}
         />
       </noscript>

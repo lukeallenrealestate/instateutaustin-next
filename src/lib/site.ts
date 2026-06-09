@@ -23,8 +23,7 @@ export const SITE = {
     ],
   },
 
-  // Analytics. Replace placeholder GA4 ID before launch.
-  ga4Id: 'G-PLACEHOLDER',
+  // Analytics. GA4 scoped out per user decision; Meta Pixel only.
   metaPixelId: '2215492562520453', // AMDG Master Pixel
 
   // Lead routing
