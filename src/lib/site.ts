@@ -4,7 +4,12 @@
 export const SITE = {
   url: 'https://instateutaustin.com',
   name: 'instateutaustin.com',
-  description: 'Independent educational guide to UT Austin in-state tuition and Texas residency rules.',
+  // Honest framing: this is Luke's lead-gen funnel. We keep "not affiliated
+  // with UT/THECB" (factual) and disclose the publisher up front. Bare claims
+  // of editorial "independence" are dropped because they collided with the
+  // operating reality of the site.
+  description: 'Guide to UT Austin in-state tuition strategy and Texas residency rules for out-of-state families. Published by Luke Allen, Texas REALTOR® (TREC #788149).',
+  publisherLine: 'Published by Luke Allen, Texas REALTOR® (TREC #788149), Austin Marketing + Development Group.',
   ogImage: 'https://instateutaustin.com/images/og-card.jpg',
 
   // YMYL disclosure

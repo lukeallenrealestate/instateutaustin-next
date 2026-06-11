@@ -6,8 +6,8 @@ import { QuickAnswer } from '@/components/QuickAnswer';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
-const TITLE = 'UT Austin In-State Tuition: The Texas Residency Guide';
-const DESCRIPTION = `Save ${fmtUSD(TUITION.threeYearSavings)}+ on UT Austin tuition through Texas residency. In-state ${fmtUSD(TUITION.inStatePerYear)} vs out-of-state ${fmtUSD(TUITION.outOfStatePerYear)}. The 12-month domicile pathway, for out-of-state parents.`;
+const TITLE = `Save ${fmtUSD(TUITION.annualSavings)}/year on UT Austin Tuition (In-State Residency Guide)`;
+const DESCRIPTION = `Save ${fmtUSD(TUITION.annualSavings)} a year by qualifying for UT Austin in-state tuition through Texas residency. In-state ${fmtUSD(TUITION.inStatePerYear)} vs out-of-state ${fmtUSD(TUITION.outOfStatePerYear)}. The 12-month domicile pathway for out-of-state parents, by Luke Allen, Texas REALTOR®.`;
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,
@@ -63,14 +63,14 @@ export default function Home() {
           <div>
             <p className="eyebrow">UT Austin · In-State Tuition Strategy</p>
             <h1
-              className="text-ink max-w-[16ch]"
+              className="text-ink max-w-[18ch]"
               style={{ fontSize: 'clamp(2.2rem, 5.6vw, 4rem)', lineHeight: 1.08, fontWeight: 700 }}
             >
-              Save <span className="text-burnt">{fmtUSD(TUITION.threeYearSavings)}+</span> on{' '}
+              Save <span className="text-burnt">{fmtUSD(TUITION.annualSavings)} a year</span> on{' '}
               <span className="text-burnt">UT&nbsp;Austin</span> tuition.
             </h1>
             <p className="text-body mt-4 max-w-[60ch] text-lg">
-              The complete out-of-state parent&apos;s guide to Texas residency rules, the 12-month domicile clock, and the property pathway that converts an out-of-state admit into a Texas resident for tuition purposes.
+              The out-of-state parent&apos;s guide to Texas residency rules, the 12-month domicile clock, and the property pathway that converts an out-of-state admit into a Texas resident for tuition purposes.
             </p>
             <div className="mt-8 flex gap-3 flex-wrap">
               <Link href="/texas-residency-rules" className="btn">Start with the rules</Link>
@@ -79,13 +79,16 @@ export default function Home() {
           </div>
 
           <div className="bg-surface border border-hairline rounded-lg p-8 shadow-sm">
-            <div className="text-xs font-bold uppercase tracking-widest text-burnt">Three-year savings</div>
-            <div className="font-serif text-5xl text-burnt mt-2 leading-none">{fmtUSD(TUITION.threeYearSavings)}</div>
+            <div className="text-xs font-bold uppercase tracking-widest text-burnt">Annual savings</div>
+            <div className="font-serif text-5xl text-burnt mt-2 leading-none" style={{ fontVariantNumeric: 'tabular-nums' }}>
+              {fmtUSD(TUITION.annualSavings)}
+            </div>
+            <div className="text-xs text-body mt-2">Out-of-state minus in-state, base undergraduate. {fmtUSD(TUITION.outOfStatePerYear)} − {fmtUSD(TUITION.inStatePerYear)}.</div>
             <div className="mt-5 border-t border-hairline pt-4 space-y-2 text-sm text-body">
               <Row label="Non-resident tuition (per year)" value={`~${fmtUSD(TUITION.outOfStatePerYear)}`} />
               <Row label="Texas resident tuition (per year)" value={`~${fmtUSD(TUITION.inStatePerYear)}`} />
-              <Row label="Annual delta" value={fmtUSD(TUITION.annualSavings)} />
-              <Row label="Three-year delta (typical pathway)" value={`${fmtUSD(TUITION.threeYearSavings)}+`} />
+              <Row label="Three-year total (typical pathway)" value={fmtUSD(TUITION.threeYearSavings)} />
+              <Row label="Four-year total (residency from year 1)" value={fmtUSD(TUITION.fourYearSavings)} />
             </div>
             <div className="text-xs text-body mt-4">
               Figures: UT Austin published tuition and required fees, base undergraduate program. In-state frozen through 2026-27.
@@ -101,7 +104,7 @@ export default function Home() {
         <div className="wrap flex flex-wrap gap-6 justify-center">
           <span><Dot /> Cites Texas Education Code §54.052</span>
           <span><Dot /> Last reviewed {SITE.lastReviewed}</span>
-          <span><Dot /> Independent (not affiliated with UT or THECB)</span>
+          <span><Dot /> Not affiliated with UT or THECB</span>
           <span><Dot /> Updated quarterly</span>
         </div>
       </div>
@@ -136,13 +139,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ (matches FAQPage schema above) */}
+      <section className="py-16">
+        <div className="narrow">
+          <p className="eyebrow">Common questions</p>
+          <h2 className="mt-0">The five questions parents ask first</h2>
+          <p className="text-body mb-6">If the answer to your question is not here, send it through the <Link href="/contact">contact form</Link>. The full 32-question FAQ is at <Link href="/faq">/faq</Link>.</p>
+          {FAQ.map((item, i) => (
+            <details key={i} className="faq">
+              <summary>{item.q}</summary>
+              <div className="faq-a">{item.a}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="bg-paper py-20 border-b border-hairline text-center">
         <div className="narrow">
           <p className="eyebrow">Talk to a human</p>
           <h2 className="text-ink max-w-[22ch] mx-auto mt-0">Your situation is specific. Get a written answer.</h2>
           <p className="text-body max-w-[56ch] mx-auto my-4 text-lg">The site covers the general case. If your circumstances do not quite fit (divorce, military, scholarship interactions, late timing), send a message.</p>
-          <Link href="/contact" className="btn btn-gold">Ask a question →</Link>
+          <Link href="/contact" className="btn">Ask a question →</Link>
         </div>
       </section>
     </>
@@ -151,9 +169,14 @@ export default function Home() {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex justify-between gap-3">
+    <div className="flex justify-between gap-3 items-baseline">
       <span className="text-body">{label}</span>
-      <strong className="text-ink font-mono font-medium">{value}</strong>
+      <strong
+        className="text-ink font-semibold"
+        style={{ fontVariantNumeric: 'tabular-nums' }}
+      >
+        {value}
+      </strong>
     </div>
   );
 }

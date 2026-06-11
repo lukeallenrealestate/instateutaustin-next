@@ -4,19 +4,38 @@ import { SITE } from './site';
 interface PageMetaInput {
   title: string;
   description: string;
-  path: string; // e.g. "/texas-residency-rules" — leading slash, no trailing
+  path: string;
   ogImage?: string;
   noindex?: boolean;
 }
 
+/** Normalize the home path so canonical, OG, and breadcrumb URLs all agree.
+ * Without this, `${SITE.url}${'/'}` produces a trailing slash that conflicts
+ * with the canonical (no slash) — a small E-E-A-T cleanup. */
+function absUrl(path: string) {
+  return path === '/' ? SITE.url : `${SITE.url}${path}`;
+}
+
+/** Named human author for every Article schema. YMYL pages get penalized when
+ * authored by a faceless "Editorial Team"; a real person with a TREC license
+ * is the correct E-E-A-T signal. */
+export const AUTHOR_PERSON = {
+  '@type': 'Person' as const,
+  name: 'Luke Allen',
+  url: `${SITE.url}/about`,
+  jobTitle: 'Texas REALTOR® (TREC #788149)',
+  worksFor: {
+    '@type': 'Organization' as const,
+    name: 'Austin Marketing + Development Group',
+  },
+};
+
 export function pageMetadata({ title, description, path, ogImage, noindex }: PageMetaInput): Metadata {
-  const url = `${SITE.url}${path}`;
+  const url = absUrl(path);
   const robots = SITE.PRE_LAUNCH || noindex
     ? { index: false, follow: false }
     : { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } as const;
 
-  // When ogImage is not explicitly passed, omit images from metadata so that
-  // Next.js's opengraph-image.tsx convention auto-injects the route-level image.
   const og = {
     type: 'website' as const,
     url,
@@ -47,7 +66,6 @@ export function pageMetadata({ title, description, path, ogImage, noindex }: Pag
   };
 }
 
-/** Minimal JSON-LD wrapper. Use in components via <Schema data={...} />. */
 export function jsonLd(data: object) {
   return { __html: JSON.stringify(data) };
 }
@@ -60,19 +78,23 @@ export function breadcrumb(items: Array<{ name: string; path: string }>) {
       '@type': 'ListItem',
       position: i + 1,
       name: it.name,
-      item: `${SITE.url}${it.path}`,
+      item: absUrl(it.path),
     })),
   };
 }
 
+/** Publisher Organization for Article schema and any standalone use.
+ * `founder` ties the entity to Luke Allen (the real publisher) to satisfy
+ * Google's "who is responsible for this content?" question. */
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE.name,
     url: SITE.url,
-    logo: SITE.ogImage,
-    description: SITE.description,
+    logo: `${SITE.url}/opengraph-image`,
+    description: 'Guide to UT Austin in-state tuition strategy and Texas residency rules for out-of-state families. Published by Luke Allen, Texas REALTOR® (TREC #788149), Austin Marketing + Development Group.',
+    founder: AUTHOR_PERSON,
   };
 }
 
@@ -90,9 +112,9 @@ export function articleSchema(opts: {
     description: opts.description,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
-    author: { '@type': 'Organization', name: 'instateutaustin.com Editorial Team' },
+    author: AUTHOR_PERSON,
     publisher: organizationSchema(),
-    mainEntityOfPage: `${SITE.url}${opts.path}`,
+    mainEntityOfPage: absUrl(opts.path),
     image: SITE.ogImage,
   };
 }
@@ -112,7 +134,7 @@ export function faqPageSchema(qa: Array<{ q: string; a: string }>) {
 export function howToSchema(opts: {
   name: string;
   description?: string;
-  totalTime?: string; // ISO 8601 duration, e.g. "P14M"
+  totalTime?: string;
   steps: Array<{ name: string; text: string }>;
 }) {
   return {

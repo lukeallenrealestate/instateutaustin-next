@@ -16,7 +16,10 @@ export function Footer() {
               instate<span className="text-burnt">UT</span>austin
             </div>
             <p className="text-body max-w-xs">
-              An independent guide for out-of-state families navigating Texas residency rules and UT Austin tuition strategy.
+              A guide for out-of-state families navigating Texas residency rules and UT Austin tuition strategy.
+            </p>
+            <p className="text-xs text-light max-w-xs mt-3">
+              Published by <strong className="text-ink">Luke Allen</strong>, Texas REALTOR® (TREC #788149), Austin Marketing + Development Group.
             </p>
           </div>
           <FootCol title="The Rules" links={[

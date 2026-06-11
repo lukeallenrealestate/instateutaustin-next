@@ -10,7 +10,7 @@ export const contentType = 'image/png';
 // than one child. Wrappers below all set display: flex explicitly.
 
 export default async function OpengraphImage() {
-  const savingsK = Math.round(TUITION.threeYearSavings / 1000);
+  const annualK = (TUITION.annualSavings / 1000).toFixed(1).replace(/\.0$/, '');
   return new ImageResponse(
     (
       <div
@@ -55,7 +55,7 @@ export default async function OpengraphImage() {
             }}
           >
             Save&nbsp;
-            <span style={{ display: 'flex', color: '#BF5700' }}>${savingsK}K+</span>
+            <span style={{ display: 'flex', color: '#BF5700' }}>${annualK}K/yr</span>
             &nbsp;on&nbsp;
             <span style={{ display: 'flex', color: '#BF5700' }}>UT Austin</span>
             &nbsp;tuition.
@@ -109,7 +109,7 @@ export default async function OpengraphImage() {
               In-state ~${TUITION.inStatePerYear.toLocaleString()}/yr · Out-of-state ~${TUITION.outOfStatePerYear.toLocaleString()}/yr
             </div>
             <div style={{ display: 'flex', marginTop: 6, fontSize: 14, color: '#8A8478' }}>
-              Source: UT Austin One Stop · Independent guide, not affiliated with UT or THECB
+              Source: UT Austin One Stop · Published by Luke Allen, TREC #788149 · Not affiliated with UT or THECB
             </div>
           </div>
         </div>

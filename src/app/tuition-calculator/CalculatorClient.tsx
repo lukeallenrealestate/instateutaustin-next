@@ -119,16 +119,16 @@ export function CalculatorClient() {
               {computed.rows.map(r => (
                 <tr key={r.year}>
                   <td className="p-3 border-b border-hairline">{r.year}-{(r.year + 1).toString().slice(2)}</td>
-                  <td className="p-3 border-b border-hairline text-right font-mono">{fmtUSD(r.outYr)}</td>
-                  <td className="p-3 border-b border-hairline text-right font-mono">{fmtUSD(r.planYr)}</td>
-                  <td className="p-3 border-b border-hairline text-right font-mono text-burnt font-semibold">{fmtUSD(r.saved)}</td>
+                  <td className="p-3 border-b border-hairline text-right tabular-nums">{fmtUSD(r.outYr)}</td>
+                  <td className="p-3 border-b border-hairline text-right tabular-nums">{fmtUSD(r.planYr)}</td>
+                  <td className="p-3 border-b border-hairline text-right tabular-nums text-burnt font-semibold">{fmtUSD(r.saved)}</td>
                 </tr>
               ))}
               <tr className="font-bold text-ink">
                 <td className="p-3 bg-paper border-t-2 border-burnt">Total</td>
-                <td className="p-3 bg-paper border-t-2 border-burnt text-right font-mono">{fmtUSD(computed.totalOut)}</td>
-                <td className="p-3 bg-paper border-t-2 border-burnt text-right font-mono">{fmtUSD(computed.totalPlan)}</td>
-                <td className="p-3 bg-paper border-t-2 border-burnt text-right font-mono">{fmtUSD(computed.saved)}</td>
+                <td className="p-3 bg-paper border-t-2 border-burnt text-right tabular-nums">{fmtUSD(computed.totalOut)}</td>
+                <td className="p-3 bg-paper border-t-2 border-burnt text-right tabular-nums">{fmtUSD(computed.totalPlan)}</td>
+                <td className="p-3 bg-paper border-t-2 border-burnt text-right tabular-nums">{fmtUSD(computed.saved)}</td>
               </tr>
             </tbody>
           </table>
