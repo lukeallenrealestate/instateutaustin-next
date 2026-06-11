@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, howToSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { AuthorBox } from '@/components/AuthorBox';
+import { TrustRow } from '@/components/TrustRow';
 import { TimelineCountdown } from './TimelineCountdown';
 import { SITE } from '@/lib/site';
 
@@ -143,6 +145,8 @@ export default function TimelinePage() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-12">
         <div className="narrow">
 
@@ -151,6 +155,8 @@ export default function TimelinePage() {
           <QuickAnswer label="The 60-second answer">
             For a Fall 2027 in-state tuition petition, the 12-month domicile clock must start no later than approximately September 2026. The operational timeline runs T−14 months (engage Texas broker and CPA) through T (residency determination from UT). The critical month is T−12: close on the Texas property in August, then obtain Texas driver&apos;s license, vehicle registration, and voter registration by end of September so all clock-starting indicia are in place. Tax filing in March-April 2027 with a Texas address is the single largest single point of failure. Petition submission through MyStatus around July 2027; determination by census date in early September 2027.
           </QuickAnswer>
+
+          <AuthorBox />
 
           <h2 className="mt-0">How to read this timeline</h2>
           <p>The timeline below is written for a family targeting <strong>in-state status for the Fall 2027 term</strong> at UT Austin, the most common target for out-of-state families whose student enrolls in Fall 2026 as a non-resident. The target census date is approximately September 8, 2027. Working backward, the 12-month clock must start no later than approximately September 8, 2026.</p>

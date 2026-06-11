@@ -3,8 +3,27 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema, howToSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { TrustRow } from '@/components/TrustRow';
+import { AuthorBox } from '@/components/AuthorBox';
+import { StickyTOC, type TocSection } from '@/components/StickyTOC';
 import { SITE } from '@/lib/site';
 import { TUITION, fmtUSD } from '@/lib/tuition';
+
+const SECTIONS: TocSection[] = [
+  { id: 'framework',                label: 'The legal framework' },
+  { id: 'dependent-vs-independent', label: 'Dependent vs. independent' },
+  { id: 'domicile-clock',           label: '12-month domicile clock' },
+  { id: 'presence-requirement',     label: 'Physical presence' },
+  { id: 'property-pathway',         label: 'Rule #3 vs. Rule #4' },
+  { id: 'documents',                label: 'Required documents' },
+  { id: 'portal',                   label: 'UT Residency Portal' },
+  { id: 'disqualifying',            label: 'Disqualifying factors' },
+  { id: 'edge-cases',               label: 'Edge cases' },
+  { id: 'appeals',                  label: 'If you are denied' },
+  { id: 'timeline',                 label: 'Worked timeline' },
+  { id: 'faq',                      label: 'Frequently asked' },
+  { id: 'sources',                  label: 'Sources' },
+];
 
 const TITLE = 'Texas Residency Rules for UT Austin In-State Tuition';
 const DESCRIPTION = `The complete legal guide to Texas residency rules for UT Austin in-state tuition. THECB framework, §54.052, the 12-month domicile clock, dependent vs. independent, the property pathway, and the failure modes.`;
@@ -86,7 +105,7 @@ export default function ResidencyRulesPage() {
       <Schema data={faqPageSchema(FAQ)} />
 
       {/* HEADER */}
-      <header className="bg-paper pt-20 pb-14 border-b border-hairline">
+      <header className="bg-paper pt-20 pb-12">
         <div className="narrow">
           <p className="eyebrow">The authoritative explanation</p>
           <h1 className="text-ink max-w-[22ch]">Texas Residency Rules for UT Austin In-State Tuition</h1>
@@ -102,33 +121,23 @@ export default function ResidencyRulesPage() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-10">
-        <div className="narrow">
+        <div className="wrap max-w-[1180px] grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-12">
+          <div className="max-w-[760px] mx-auto lg:mx-0 w-full px-6 lg:px-0">
 
-          {/* QUICK ANSWER */}
-          <QuickAnswer label="The 60-second answer">
-            UT Austin charges in-state tuition (~{fmtUSD(TUITION.inStatePerYear)}/year) to students whose parents (on the dependent branch) or who themselves (on the independent branch) maintain a Texas domicile for 12 continuous months before a term&apos;s census date. The most reliable pathway for out-of-state families is real-property ownership plus the supporting indicia (Texas driver&apos;s license, vehicle registration, voter registration, and a federal tax return with a Texas address). The petition is filed through UT&apos;s MyStatus portal, decided in 2 to 4 weeks, and produces a recalculated bill at the resident rate, roughly {fmtUSD(TUITION.annualSavings)}/year cheaper.
-          </QuickAnswer>
+            <AuthorBox blurb="Has personally walked dozens of out-of-state families through the 12-month domicile clock, Rule #3 condo purchases in West Campus, and Rule #4 multifamily acquisitions in East Austin." />
 
-          {/* TOC */}
-          <nav className="toc" aria-label="Table of contents">
-            <h4>What is on this page</h4>
-            <ol>
-              <li><a href="#framework">The legal framework</a></li>
-              <li><a href="#dependent-vs-independent">Dependent vs. independent</a></li>
-              <li><a href="#domicile-clock">The 12-month domicile clock</a></li>
-              <li><a href="#presence-requirement">Presence in Texas</a></li>
-              <li><a href="#property-pathway">Property: Rule #3 vs. Rule #4</a></li>
-              <li><a href="#documents">Required documents</a></li>
-              <li><a href="#portal">UT Residency Portal walkthrough</a></li>
-              <li><a href="#disqualifying">Disqualifying factors</a></li>
-              <li><a href="#edge-cases">Edge cases (military, divorce, dual residency)</a></li>
-              <li><a href="#appeals">If you are denied</a></li>
-              <li><a href="#timeline">From purchase to in-state semester</a></li>
-              <li><a href="#faq">Frequently asked questions</a></li>
-              <li><a href="#sources">Sources &amp; further reading</a></li>
-            </ol>
-          </nav>
+            {/* QUICK ANSWER */}
+            <QuickAnswer label="The 60-second answer">
+              UT Austin charges in-state tuition (~{fmtUSD(TUITION.inStatePerYear)}/year) to students whose parents (on the dependent branch) or who themselves (on the independent branch) maintain a Texas domicile for 12 continuous months before a term&apos;s census date. The most reliable pathway for out-of-state families is real-property ownership plus the supporting indicia (Texas driver&apos;s license, vehicle registration, voter registration, and a federal tax return with a Texas address). The petition is filed through UT&apos;s MyStatus portal, decided in 2 to 4 weeks, and produces a recalculated bill at the resident rate, roughly {fmtUSD(TUITION.annualSavings)}/year cheaper.
+            </QuickAnswer>
+
+            {/* Mobile-only Jump-to; desktop sticky TOC is in the right sidebar. */}
+            <div className="lg:hidden">
+              <StickyTOC sections={SECTIONS} heading="On this page" />
+            </div>
 
           {/* 1 FRAMEWORK */}
           <h2 id="framework">1. The legal framework</h2>
@@ -430,9 +439,14 @@ export default function ResidencyRulesPage() {
           <div className="next-step">
             <h2>Now that you understand the rules</h2>
             <p>Read the side-by-side comparison of the two property pathways, <Link href="/rule-3-vs-rule-4" className="text-burnt-deep">Rule #3 vs. Rule #4</Link>, to choose which one fits your family. Then run the numbers in the <Link href="/tuition-calculator" className="text-burnt-deep">tuition calculator</Link> to confirm the savings amortize against the carrying costs. When you are ready to look at properties, the <Link href="/condos-near-ut" className="text-burnt-deep">condos near UT</Link> page covers what to look for, and the <Link href="/contact" className="text-burnt-deep">contact form</Link> connects you to a Texas-licensed broker who specializes in this pathway.</p>
-            <Link href="/rule-3-vs-rule-4" className="btn btn-gold mt-4 inline-block">Rule #3 vs. Rule #4 →</Link>
+            <Link href="/rule-3-vs-rule-4" className="btn mt-4 inline-block">Rule #3 vs. Rule #4 →</Link>
           </div>
 
+          </div>
+          {/* Desktop sidebar: sticky TOC */}
+          <aside className="hidden lg:block">
+            <StickyTOC sections={SECTIONS} heading="On this page" />
+          </aside>
         </div>
       </section>
     </>

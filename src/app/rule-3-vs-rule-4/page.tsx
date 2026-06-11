@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { AuthorBox } from '@/components/AuthorBox';
+import { TrustRow } from '@/components/TrustRow';
 import { SITE } from '@/lib/site';
 
 const TITLE = 'Rule #3 vs Rule #4: UT Residency Property Pathways';
@@ -66,11 +68,15 @@ export default function Rule3vs4Page() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-12">
         <div className="narrow">
           <QuickAnswer label="The 60-second answer">
             <strong>Rule #3</strong> is the student-occupied property path: the family buys a condo or small house in the parents&apos; personal name, the student lives there, the family records Texas domicile through the property. Best for families whose primary goal is residency plus student housing. <strong>Rule #4</strong> is the rental/business activity path: the family forms a Texas LLC, the LLC buys a duplex or small multifamily, the rental business itself becomes the domicile proof. Best for investment-minded families with prior real-estate experience. Most out-of-state UT families pick Rule #3.
           </QuickAnswer>
+
+          <AuthorBox />
 
           <h2>The two paths in one sentence each</h2>
 

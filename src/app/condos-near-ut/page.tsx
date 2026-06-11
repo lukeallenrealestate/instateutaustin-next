@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { AuthorBox } from '@/components/AuthorBox';
+import { TrustRow } from '@/components/TrustRow';
 import { ContactForm } from '@/components/ContactForm';
 import { SITE } from '@/lib/site';
 
@@ -93,12 +95,16 @@ export default function CondosPage() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-12">
         <div className="narrow">
 
           <QuickAnswer label="The 60-second answer">
             Most out-of-state UT families pursuing Rule #3 (student-occupied) buy in West Campus or Hyde Park: 1-bed and 2-bed condos in the $325K-$650K range, walk or short bike to campus, HOA dues $300-$800/month. Rule #4 (rental LLC) families look at East Austin duplexes and small multifamily in the $550K-$1.2M range. Across all neighborhoods, inspect the HOA documents (reserve study, special assessments, owner-occupancy ratio, rental cap, minimum lease term), use a Texas-licensed broker who has run this play before, and never invent or rely on third-party-quoted MLS prices.
           </QuickAnswer>
+
+          <AuthorBox />
 
           <h2 className="mt-0">What this guide is for</h2>
           <p>You have decided the Texas residency pathway is worth pursuing. You have read <Link href="/texas-residency-rules">the rules</Link>, run <Link href="/tuition-calculator">the calculator</Link>, and picked <Link href="/rule-3-vs-rule-4">Rule #3 or Rule #4</Link>. Now you need to find the actual property. This page covers the property-level decisions: which UT-area neighborhoods make sense, what to look for in a condo or small house, how to read a condo&apos;s HOA documents, and the eight or nine ways a property that looks great on Zillow can fail to serve the residency pathway.</p>

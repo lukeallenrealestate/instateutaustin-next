@@ -16,11 +16,15 @@
   --hairline:   #E7DECE;
   --cream:      #F3E9D2;
   --danger:     #B54B3B;
+  /* Height of the fixed nav. Anchors use scroll-margin-top to clear it. */
+  --nav-h:      64px;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Older readers, dense YMYL content; bump baseline. */
+    font-size: 17px;
     -webkit-text-size-adjust: 100%;
     background: var(--paper);
   }
@@ -29,40 +33,49 @@
     font-family: var(--font-inter), system-ui, sans-serif;
     line-height: 1.65;
   }
+  /* Anchors should land below the fixed nav. */
+  :is(h1, h2, h3, h4, h5, h6, [id]) {
+    scroll-margin-top: calc(var(--nav-h) + 16px);
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-fraunces), Georgia, serif;
-    @apply font-semibold leading-tight text-ink;
-    letter-spacing: -0.01em;
+    @apply font-semibold text-ink;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
   }
-  h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
-  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
-  h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); }
+  /* Distinct scale; H2 and H3 must not blur together. */
+  h1 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); margin-top: 0; }
+  h2 { font-size: clamp(1.7rem, 3vw, 2.25rem); margin-top: 2.5rem; line-height: 1.2; }
+  h3 { font-size: clamp(1.18rem, 1.6vw, 1.32rem); margin-top: 1.6rem; line-height: 1.3; }
+  h4 { font-size: 1rem; margin-top: 1.2rem; line-height: 1.35; }
   p { @apply mb-4 text-body; }
-  /* Body links: burnt-deep clears 4.5:1 on warm cream backgrounds.
-   * Burnt (#BF5700) is reserved for large text, buttons, the logo, numbers,
-   * and headlines per spec.
-   */
+  /* Long-form measure on prose. Containers set their own width when needed. */
+  p, li { max-width: 72ch; }
+
   a {
     @apply text-burnt-deep underline transition-colors;
     text-decoration-color: var(--hairline);
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
   a:hover { @apply text-burnt; text-decoration-color: var(--burnt); }
   strong { @apply font-bold text-ink; }
   ul, ol { @apply pl-6 mb-4; }
   li { @apply mb-1 text-body; }
+
+  /* Focus ring — accessible and consistent with the brand. */
+  :focus-visible {
+    outline: 2px solid var(--burnt);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 @layer components {
   .wrap { @apply max-w-wrap mx-auto px-6; }
   .narrow { @apply max-w-narrow mx-auto px-6; }
 
-  /* Buttons.
-   * Primary: solid --burnt background, white text, font-weight 500,
-   *   padding 13px 26px, border-radius 6px.
-   * Secondary (.btn-ghost): transparent, --ink text, 1px solid --hairline,
-   *   same padding/radius.
-   */
+  /* ────────── BUTTONS ────────── */
   .btn {
     @apply inline-block bg-burnt text-white font-medium text-[0.95rem] rounded-md transition-colors;
     padding: 13px 26px;
@@ -70,49 +83,64 @@
     text-decoration: none;
   }
   .btn:hover { @apply bg-burnt-deep text-white; }
-  /* .btn-gold is kept as an alias of .btn so existing class strings (which
-   * routinely use `btn btn-gold` for primary actions) produce the new
-   * primary style without per-component edits.
-   */
   .btn-gold { @apply bg-burnt text-white; }
   .btn-gold:hover { @apply bg-burnt-deep text-white; }
   .btn-ghost {
     @apply bg-transparent text-ink;
     border: 1px solid var(--hairline);
+    transition: border-color .2s ease, color .2s ease;
   }
   .btn-ghost:hover {
     @apply text-burnt;
     border-color: var(--burnt);
   }
 
-  /* Eyebrow labels (small-caps section preheaders): burnt. */
+  /* ────────── EYEBROW ────────── */
   .eyebrow {
     @apply text-xs font-bold uppercase mb-3 block;
     color: var(--burnt);
     letter-spacing: 0.14em;
   }
 
-  /* Generic callout. Left border in burnt by default. */
-  .callout {
+  /* ────────── CALLOUT VARIANTS ──────────
+   * Three calm variants. Same shape; differentiated by left-border treatment
+   * and a small lead icon glyph in the title.
+   *   .callout-note      (hairline, neutral)
+   *   .callout           (burnt, "Important")
+   *   .callout-warn      (heavier burnt + warm tint, "Warning, this denies petitions")
+   */
+  .callout, .callout-note, .callout-warn, .callout-rule {
     @apply p-5 my-7 rounded-r;
     background: var(--cream);
     border-left: 3px solid var(--burnt);
   }
+  .callout-note {
+    background: var(--surface);
+    border-left-color: var(--hairline);
+  }
   .callout-warn {
     background: #FBEFE9;
-    border-left-color: var(--danger);
-  }
-  .callout-rule {
-    background: var(--cream);
+    border-left-width: 4px;
     border-left-color: var(--burnt);
   }
-  .callout h4 {
-    @apply text-xs font-bold uppercase text-ink mb-1;
+  .callout-rule { /* legacy alias */ border-left-color: var(--burnt); }
+  .callout h4,
+  .callout-note h4,
+  .callout-warn h4,
+  .callout-rule h4 {
+    @apply text-xs font-bold uppercase text-ink mb-1.5;
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.08em;
+    margin-top: 0;
+  }
+  .callout p,
+  .callout-note p,
+  .callout-warn p,
+  .callout-rule p {
+    max-width: none;
   }
 
-  /* Answer-first quick-answer block (AEO surface). */
+  /* ────────── QUICK ANSWER (AEO surface) ────────── */
   .quick-answer {
     @apply p-6 my-6 rounded-r;
     background: #FDF2E5;
@@ -125,9 +153,10 @@
   }
   .quick-answer p {
     @apply text-base text-ink leading-relaxed mb-0;
+    max-width: none;
   }
 
-  /* Tables. */
+  /* ────────── TABLES ────────── */
   .tbl { @apply w-full border-collapse my-6 text-sm; }
   .tbl th, .tbl td { @apply p-3.5 text-left align-top; border-bottom: 1px solid var(--hairline); }
   .tbl th {
@@ -136,8 +165,37 @@
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.05em;
   }
+  /* Compare table: generous padding, low-contrast zebra, scrolls on mobile. */
+  .tbl-compare {
+    @apply w-full text-sm my-7;
+    border-collapse: collapse;
+  }
+  .tbl-compare th {
+    @apply text-ink font-bold text-xs uppercase p-4 text-left;
+    background: var(--cream);
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.06em;
+    border-bottom: 2px solid var(--burnt);
+  }
+  .tbl-compare td {
+    @apply p-4 align-top text-body;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .tbl-compare tbody tr:nth-child(odd) td { background: rgba(243,233,210,0.35); }
+  .tbl-compare td:first-child {
+    @apply font-semibold text-ink;
+    background: var(--surface);
+    width: 200px;
+  }
+  .tbl-compare .num {
+    font-variant-numeric: tabular-nums;
+    @apply font-semibold;
+  }
+  .tbl-scroll {
+    @apply -mx-6 px-6 overflow-x-auto;
+  }
 
-  /* Statute citation block. */
+  /* ────────── STATUTE / DEFINE / STAGES / SOURCES ────────── */
   .statute {
     @apply py-5 px-6 my-7 rounded-r text-base;
     background: var(--cream);
@@ -151,9 +209,9 @@
   .statute blockquote {
     font-family: var(--font-fraunces), Georgia, serif;
     @apply italic text-ink leading-relaxed;
+    max-width: none;
   }
 
-  /* Definition box. */
   .define {
     @apply py-3 px-4 my-5 rounded-r;
     background: var(--surface);
@@ -161,24 +219,25 @@
   }
   .define strong { @apply text-ink; }
 
-  /* Stages / timeline cards. */
   .stages { @apply grid gap-3 my-7; }
   .stage {
     @apply grid grid-cols-[70px_1fr] gap-4 p-4 rounded-md;
     background: var(--surface);
     border: 1px solid var(--hairline);
+    transition: border-color .18s ease, transform .18s ease;
   }
+  .stage:hover { border-color: var(--burnt); transform: translateY(-1px); }
   .stage .stage-when {
     font-family: var(--font-fraunces), Georgia, serif;
     @apply text-2xl text-burnt leading-none pt-1;
+    font-variant-numeric: tabular-nums;
   }
   .stage h4 {
     font-family: var(--font-fraunces), Georgia, serif;
     @apply text-base text-ink m-0 font-semibold;
   }
-  .stage p { @apply text-sm text-body mt-1.5 mb-0; }
+  .stage p { @apply text-sm text-body mt-1.5 mb-0; max-width: none; }
 
-  /* Sources block at the end of authority pages. */
   .sources {
     @apply p-8 mt-14 rounded text-sm;
     background: var(--cream);
@@ -186,7 +245,7 @@
   }
   .sources h3 { @apply mt-0 text-ink; }
 
-  /* Table of contents card. */
+  /* ────────── TOC (inline + sticky) ────────── */
   .toc {
     @apply rounded-md py-5 px-7 my-9 text-sm;
     background: var(--cream);
@@ -196,20 +255,22 @@
     @apply text-xs font-bold uppercase text-ink mb-3;
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.12em;
+    margin-top: 0;
   }
   .toc ol { @apply pl-5; margin: 0; columns: 2; column-gap: 32px; }
-  .toc li { @apply mb-1.5; break-inside: avoid; }
+  .toc li { @apply mb-1.5; break-inside: avoid; max-width: none; }
   .toc a { @apply no-underline; }
   .toc a:hover { @apply text-burnt; }
   @media (max-width: 700px) { .toc ol { columns: 1; } }
 
-  /* FAQ accordion. */
+  /* ────────── FAQ ACCORDION ────────── */
   details.faq { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
   details.faq summary {
     @apply cursor-pointer text-ink font-semibold flex justify-between items-center gap-3;
     font-family: var(--font-fraunces), Georgia, serif;
-    font-size: 1.08rem;
+    font-size: 1.12rem;
     list-style: none;
+    line-height: 1.35;
   }
   details.faq summary::-webkit-details-marker { display: none; }
   details.faq summary::after {
@@ -218,25 +279,105 @@
     font-family: var(--font-inter), sans-serif;
     font-size: 1.5rem;
     line-height: 1;
+    flex-shrink: 0;
+    transition: transform .18s ease;
   }
   details.faq[open] summary::after { content: '–'; }
-  details.faq .faq-a { @apply pt-3 text-body; }
+  details.faq .faq-a {
+    @apply pt-3 text-body;
+    max-width: 65ch;
+  }
 
-  /* Next-step CTA block at end of authority pages. */
+  /* ────────── NEXT-STEP CTA BLOCK ────────── */
   .next-step {
-    @apply p-12 rounded-lg mt-14;
+    @apply p-10 md:p-12 rounded-lg mt-14;
     background: var(--surface);
     border: 1px solid var(--hairline);
     border-left: 4px solid var(--burnt);
   }
   .next-step h2 { @apply text-ink mt-0; }
-  .next-step p { @apply text-body; }
+  .next-step p { @apply text-body; max-width: 56ch; }
   .next-step a { @apply text-burnt-deep; }
   .next-step a:hover { @apply text-burnt; }
+
+  /* ────────── KEY TAKEAWAY ────────── */
+  .takeaway {
+    @apply p-5 my-7 rounded-r;
+    background: var(--cream);
+    border-left: 3px solid var(--burnt);
+  }
+  .takeaway .takeaway-label {
+    @apply text-xs font-bold uppercase text-burnt mb-1.5 block;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.12em;
+  }
+  .takeaway p { @apply text-ink m-0; }
+
+  /* ────────── SCROLL FADE-IN ────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .55s cubic-bezier(.2,.6,.3,1), transform .55s cubic-bezier(.2,.6,.3,1);
+  }
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ────────── STICKY TOC (sidebar variant) ────────── */
+  .toc-sticky {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+    align-self: start;
+    max-height: calc(100vh - var(--nav-h) - 48px);
+    overflow-y: auto;
+    padding-right: 12px;
+  }
+  .toc-sticky h4 {
+    @apply text-xs font-bold uppercase text-ink mb-3;
+    font-family: var(--font-inter), sans-serif;
+    letter-spacing: 0.12em;
+    margin-top: 0;
+  }
+  .toc-sticky ol {
+    @apply pl-0 m-0;
+    list-style: none;
+    border-left: 1px solid var(--hairline);
+  }
+  .toc-sticky li {
+    @apply m-0;
+    max-width: none;
+  }
+  .toc-sticky a {
+    display: block;
+    padding: 8px 14px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: var(--body);
+    font-size: 0.86rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .toc-sticky a:hover { color: var(--ink); }
+  .toc-sticky a.is-active {
+    color: var(--burnt);
+    border-left-color: var(--burnt);
+    font-weight: 600;
+  }
 }
 
 @layer utilities {
   @media print {
     .no-print { display: none !important; }
+  }
+  /* Respect prefers-reduced-motion: kill non-essential motion + animations. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+    .fade-in { opacity: 1; transform: none; }
   }
 }

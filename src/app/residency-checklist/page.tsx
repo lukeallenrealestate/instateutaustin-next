@@ -4,7 +4,56 @@ import { pageMetadata, breadcrumb, articleSchema, howToSchema, faqPageSchema } f
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
 import { PrintButton } from '@/components/PrintButton';
+import { AuthorBox } from '@/components/AuthorBox';
+import { TrustRow } from '@/components/TrustRow';
+import { Checklist, type ChecklistGroup } from '@/components/Checklist';
 import { SITE } from '@/lib/site';
+
+// Single source of truth for the interactive document checklist.
+// Items render with tags (BOTH/R3/R4) and persist tick state in localStorage
+// so a parent who comes back picks up exactly where they left off.
+const CHECKLIST_GROUPS: ChecklistGroup[] = [
+  {
+    heading: 'Personal residency indicia (BOTH paths)',
+    items: [
+      { id: 'tx-dl', tag: 'BOTH', title: 'Texas Driver’s License or Texas ID', detail: 'Issued by TxDPS. Issuance date must be at least 12 months before the target census date.' },
+      { id: 'tx-vehicle', tag: 'BOTH', title: 'Texas Vehicle Registration', detail: 'For any vehicle the family or student operates in Texas. Includes a Texas safety inspection.' },
+      { id: 'tx-voter', tag: 'BOTH', title: 'Texas Voter Registration Card', detail: 'Register through the Texas Secretary of State or the county elections office. Do not vote in another state during the 12-month window.' },
+      { id: 'fed-1040-tx', tag: 'BOTH', title: 'Federal Tax Return with Texas Address', detail: 'Form 1040 for the most recent completed tax year prior to the petition, with a Texas address as the residence of record. Single largest cause of denial when wrong.' },
+      { id: 'narrative', tag: 'BOTH', title: 'Petition Narrative', detail: '2-3 paragraph written statement explaining when the Texas domicile was established and summarizing the documentary record.' },
+      { id: 'presence', tag: 'BOTH', title: 'Proof of Student’s Texas Presence', detail: 'Documentation showing the student was at the Texas address for the bulk of the 12-month period.' },
+    ],
+  },
+  {
+    heading: 'Rule #3 — Student-occupied property',
+    items: [
+      { id: 'r3-settlement', tag: 'R3', title: 'Settlement Statement (Closing Disclosure / HUD-1)', detail: 'From the property closing. Shows the closing date and the parents as the buyers.' },
+      { id: 'r3-deed', tag: 'R3', title: 'Recorded Warranty Deed', detail: 'Recorded with the county clerk where the property is located. The recording date is the legal mark of ownership.' },
+      { id: 'r3-prop-tax', tag: 'R3', title: 'Property Tax Statement', detail: 'From the county appraisal district. Shows the family as the owner of record for the most recent tax year.' },
+      { id: 'r3-homestead', tag: 'R3', title: 'Homestead Exemption Application (if filed)', detail: 'Filed with the county appraisal district when the property is the family’s declared homestead.' },
+      { id: 'r3-mortgage', tag: 'R3', title: 'Mortgage Statement', detail: 'If financed: a recent statement from the lender showing the family as borrower and the Texas property as secured collateral.' },
+      { id: 'r3-utility-12', tag: 'R3', title: '12+ Months of Consecutive Utility Bills', detail: 'Austin Energy, City of Austin Utilities (water), gas, internet. All in the family’s name at the Texas address.' },
+      { id: 'r3-hoa', tag: 'R3', title: 'HOA Statement (if condo or planned community)', detail: 'Corroborates ownership and occupancy. Most West Campus condos and Austin townhomes have HOAs.' },
+      { id: 'r3-insurance', tag: 'R3', title: 'Insurance Declaration Page', detail: 'Homeowner’s insurance policy showing the family as named insured at the Texas address.' },
+    ],
+  },
+  {
+    heading: 'Rule #4 — Rental LLC',
+    items: [
+      { id: 'r4-cof', tag: 'R4', title: 'Texas Certificate of Formation', detail: 'Filed with the Texas Secretary of State. SOS form 205 (LLC) or equivalent.' },
+      { id: 'r4-oa', tag: 'R4', title: 'LLC Operating Agreement', detail: 'Internal governance document. Shows membership interests.' },
+      { id: 'r4-franchise', tag: 'R4', title: 'Texas Franchise Tax Public Information Report', detail: 'Filed annually with the Texas Comptroller. For most rental LLCs the tax is $0 due, but the report must be filed.' },
+      { id: 'r4-registered-agent', tag: 'R4', title: 'Registered Agent Designation', detail: 'Confirmation of a Texas-physical-address registered agent.' },
+      { id: 'r4-deed-llc', tag: 'R4', title: 'Settlement Statement & Recorded Deed (LLC as Grantee)', detail: 'Same as Rule #3 but the buyer/grantee is the LLC, not the parents personally.' },
+      { id: 'r4-pma', tag: 'R4', title: 'Property Management Agreement', detail: 'Signed contract between the LLC and a Texas-licensed property manager. Typically 8-10% of gross rents.' },
+      { id: 'r4-leases', tag: 'R4', title: 'Tenant Leases (Signed)', detail: 'For each rented unit. 12-month residential lease in standard Texas format.' },
+      { id: 'r4-bank', tag: 'R4', title: 'LLC Bank Statements', detail: 'At least 6 consecutive months from a Texas-domiciled bank. Shows rent deposits and expense payments flowing through the LLC.' },
+      { id: 'r4-1065-k1', tag: 'R4', title: 'Form 1065 (or Schedule E) and K-1s', detail: 'Partnership return for the most recent tax year, with K-1s issued to each member. Single-member LLCs use Schedule E.' },
+      { id: 'r4-prop-tax-llc', tag: 'R4', title: 'Property Tax Statement (LLC as Owner)', detail: 'Homestead exemption is NOT available to LLC-owned properties.' },
+      { id: 'r4-insurance-llc', tag: 'R4', title: 'Insurance Declaration (LLC as Insured)', detail: 'Commercial / landlord insurance policy with the LLC as named insured.' },
+    ],
+  },
+];
 
 const TITLE = 'UT Austin Residency Checklist (Every Document You Will Need)';
 const DESCRIPTION = 'The complete document checklist for a UT Austin Texas residency petition. Rule #3 list, Rule #4 list, common-mistake taxonomy, and a printable version.';
@@ -27,20 +76,6 @@ const HOWTO_STEPS_R3 = [
   { name: 'Upload through the MyStatus portal', text: 'Label files clearly, in order: 01-Settlement, 02-Deed, 03-Utilities, and so on.' },
   { name: 'Respond to document requests', text: 'If the office requests additional documents, respond within the stated window.' },
 ];
-
-function CheckItem({ children, tag, required }: { children: React.ReactNode; tag: 'R3' | 'R4' | 'BOTH'; required?: string }) {
-  const tagColor = tag === 'BOTH' ? 'bg-ink text-paper' : tag === 'R3' ? 'bg-burnt-pale text-ink' : 'bg-cream text-ink';
-  return (
-    <div className="grid grid-cols-[28px_1fr] gap-2.5 py-3.5 border-b border-hairline last:border-0 items-start">
-      <div className="w-[18px] h-[18px] border-2 border-burnt rounded-sm mt-1" />
-      <div>
-        {required && <strong className="text-ink">{required}</strong>}
-        <span className={`inline-block text-[10px] font-bold tracking-wider uppercase ml-2 px-2 py-0.5 rounded ${tagColor}`}>{tag}</span>
-        <p className="m-1 text-sm text-body">{children}</p>
-      </div>
-    </div>
-  );
-}
 
 export default function ChecklistPage() {
   return (
@@ -72,6 +107,8 @@ export default function ChecklistPage() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-12">
         <div className="narrow">
 
@@ -84,61 +121,15 @@ export default function ChecklistPage() {
             A successful UT Austin residency petition includes a recorded deed, 12 months of utility bills, a Texas driver&apos;s license or ID, Texas vehicle registration, Texas voter registration, and a federal tax return showing a Texas address as the residence of record. Rule #3 (student-occupied) cases add property-tax and insurance documents. Rule #4 (rental LLC) cases add Texas Certificate of Formation, franchise tax filings, a property management agreement, tenant leases, and K-1s. The single largest cause of denial is a federal return filed with an out-of-state address during the relevant tax year.
           </QuickAnswer>
 
+          <AuthorBox blurb="Has assembled this exact document package for dozens of out-of-state families. The interactive version below saves your progress as you tick items off." />
+
           <h2 className="mt-0">How to use this checklist</h2>
           <p>The UT Residency Office requires documentary proof of every claim in the petition. The checklist below mirrors what the residency portal will ask for. Items marked <strong>R3</strong> apply to Rule #3 (student-occupied) cases. Items marked <strong>R4</strong> apply to Rule #4 (rental LLC) cases. Items marked <strong>BOTH</strong> apply to all petitioners regardless of path.</p>
           <p>Get every &quot;BOTH&quot; item in place during the 12-month clock, not at the end. Petitions fail because families wait until the petition is being prepared to start gathering evidence. The checklist is a 365-day operating plan, not a punch list for one weekend.</p>
 
-          <h2>Documents required for both paths</h2>
-          <div className="bg-white border border-hairline rounded-lg p-7 my-6">
-            <h3 className="mt-0 text-ink">Personal residency indicia (parent on dependent branch, student on independent branch)</h3>
-            <CheckItem tag="BOTH" required="Texas Driver's License or Texas Identification Card">
-              Issued by TxDPS. Issuance date must be at least 12 months before the target census date. If a parent cannot lawfully hold two driver&apos;s licenses, the Texas-resident parent for THECB purposes holds the Texas license; the other parent can hold a Texas ID.
-            </CheckItem>
-            <CheckItem tag="BOTH" required="Texas Vehicle Registration">
-              For any vehicle the family or student operates in Texas. Registration includes a Texas safety inspection. Registration card and inspection sticker are the documents.
-            </CheckItem>
-            <CheckItem tag="BOTH" required="Texas Voter Registration Card">
-              Register through the Texas Secretary of State or the county elections office. Critically, do not vote in another state during the 12-month window, that contradicts the registration.
-            </CheckItem>
-            <CheckItem tag="BOTH" required="Federal Tax Return with Texas Address">
-              Form 1040 for the most recent completed tax year prior to the petition, with a Texas address as the residence of record. On the dependent branch, this is the parents&apos; return; the student must appear as a dependent on it.
-            </CheckItem>
-            <CheckItem tag="BOTH" required="Petition Narrative">
-              Short (2-3 paragraph) written statement explaining: when the Texas domicile was established, the basis (Rule #3 or Rule #4), and a summary of the supporting documents.
-            </CheckItem>
-            <CheckItem tag="BOTH" required="Proof of Student's Texas Presence">
-              Documentation showing the student was at the Texas address for the bulk of the 12-month period.
-            </CheckItem>
-          </div>
-
-          <h2>Rule #3, Student-occupied property</h2>
-          <div className="bg-white border border-hairline rounded-lg p-7 my-6">
-            <h3 className="mt-0 text-ink">Property and occupancy documents</h3>
-            <CheckItem tag="R3" required="Settlement Statement (Closing Disclosure / HUD-1)">From the property closing. Shows the closing date and the parents as the buyers.</CheckItem>
-            <CheckItem tag="R3" required="Recorded Warranty Deed">Recorded with the county clerk where the property is located (Travis County for most UT-area properties). The recording date is the legal mark of ownership.</CheckItem>
-            <CheckItem tag="R3" required="Property Tax Statement">From the Travis Central Appraisal District. Shows the family as the owner of record for the most recent tax year.</CheckItem>
-            <CheckItem tag="R3" required="Homestead Exemption Application (if filed)">Filed with the county appraisal district when the property is the family&apos;s declared homestead. Reduces taxable value and caps annual assessment increases at 10%.</CheckItem>
-            <CheckItem tag="R3" required="Mortgage Statement">If financed: a recent statement from the lender showing the family as borrower and the Texas property as secured collateral.</CheckItem>
-            <CheckItem tag="R3" required="12+ Months of Consecutive Utility Bills">Electric (Austin Energy for most central-Austin properties), water (City of Austin Utilities), gas, internet. All in the family&apos;s name at the Texas address.</CheckItem>
-            <CheckItem tag="R3" required="HOA Statement (if condo or planned community)">Most West Campus condos and many Austin townhomes have HOAs. The statement corroborates ownership and occupancy.</CheckItem>
-            <CheckItem tag="R3" required="Insurance Declaration Page">Homeowner&apos;s insurance policy showing the family as named insured at the Texas address.</CheckItem>
-          </div>
-
-          <h2>Rule #4, Rental LLC</h2>
-          <div className="bg-white border border-hairline rounded-lg p-7 my-6">
-            <h3 className="mt-0 text-ink">Entity and operations documents</h3>
-            <CheckItem tag="R4" required="Texas Certificate of Formation">Filed with the Texas Secretary of State. SOS form 205 (LLC) or equivalent.</CheckItem>
-            <CheckItem tag="R4" required="LLC Operating Agreement">Internal governance document. Shows membership interests.</CheckItem>
-            <CheckItem tag="R4" required="Texas Franchise Tax Public Information Report">Filed annually with the Texas Comptroller. For most rental LLCs the franchise tax is $0 due (under threshold), but the report must be filed to maintain good standing.</CheckItem>
-            <CheckItem tag="R4" required="Registered Agent Designation">Confirmation of a Texas-physical-address registered agent.</CheckItem>
-            <CheckItem tag="R4" required="Settlement Statement & Recorded Deed (LLC as Grantee)">Same as Rule #3 but the buyer/grantee is the LLC, not the parents personally.</CheckItem>
-            <CheckItem tag="R4" required="Property Management Agreement">Signed contract between the LLC and a Texas-licensed property manager. Typically 8-10% of gross rents in fee.</CheckItem>
-            <CheckItem tag="R4" required="Tenant Leases (Signed)">For each rented unit. 12-month residential lease in standard Texas format.</CheckItem>
-            <CheckItem tag="R4" required="LLC Bank Statements">At least 6 consecutive months from a Texas-domiciled bank. Shows rent deposits and expense payments flowing through the LLC&apos;s account.</CheckItem>
-            <CheckItem tag="R4" required="Form 1065 (Partnership Return) and K-1s">For multi-member LLCs: Form 1065 partnership return for the most recent tax year, with K-1s issued to each member. For single-member LLCs: Schedule E on the member&apos;s Form 1040.</CheckItem>
-            <CheckItem tag="R4" required="Property Tax Statement (LLC as Owner)">From the county appraisal district. Homestead exemption is NOT available to LLC-owned properties.</CheckItem>
-            <CheckItem tag="R4" required="Insurance Declaration (LLC as Insured)">Commercial / landlord insurance policy with the LLC as named insured.</CheckItem>
-          </div>
+          <h2>The interactive checklist</h2>
+          <p>Tick items as you gather them. Your progress is saved in this browser; come back anytime and pick up where you left off.</p>
+          <Checklist groups={CHECKLIST_GROUPS} storageKey="iua_residency_checklist_v1" />
 
           <h2>Common-mistake taxonomy: three failure modes</h2>
 

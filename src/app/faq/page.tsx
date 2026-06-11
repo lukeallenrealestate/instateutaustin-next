@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { AuthorBox } from '@/components/AuthorBox';
+import { TrustRow } from '@/components/TrustRow';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
@@ -115,11 +117,15 @@ export default function FaqPage() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-12">
         <div className="narrow">
           <QuickAnswer label="The 60-second answer">
             UT Austin charges in-state tuition (~{fmtUSD(TUITION.inStatePerYear)}/year) to students whose family demonstrates 12 continuous months of Texas domicile before the term&apos;s census date. The most reliable proof is real-property ownership plus Texas driver&apos;s license, vehicle registration, voter registration, and a federal tax return with a Texas address. The pathway saves about {fmtUSD(TUITION.annualSavings)}/year. Most denials are caused by a federal return filed with the wrong state address, a vehicle still registered in the prior state, or a clock that did not fully run.
           </QuickAnswer>
+
+          <AuthorBox />
 
           <nav className="bg-cream p-5 rounded-md my-7 flex flex-wrap gap-2">
             <strong className="w-full text-xs uppercase tracking-widest text-ink mb-1.5">Jump to a section</strong>

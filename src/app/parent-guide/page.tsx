@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { AuthorBox } from '@/components/AuthorBox';
+import { TrustRow } from '@/components/TrustRow';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
@@ -63,11 +65,15 @@ export default function ParentGuidePage() {
         </div>
       </header>
 
+      <TrustRow />
+
       <section className="py-12">
         <div className="narrow">
           <QuickAnswer label="The 60-second answer">
             Out-of-state parents need to plan three things in parallel: housing (dorm, off-campus apartment, or family-owned condo for the residency strategy), residency strategy (the 12-month domicile clock saves about {fmtUSD(TUITION.annualSavings)}/year if you commit), and orientation logistics (NSO in June-July, move-in mid-August, first day of classes late August). The single highest-leverage decision is whether to acquire Texas property in time for the Fall before enrollment, that decision sets up a year-2 residency petition worth roughly {fmtUSD(TUITION.threeYearSavings)} over the typical three-year in-state span.
           </QuickAnswer>
+
+          <AuthorBox />
 
           <h2 className="mt-0">What this guide assumes</h2>
           <p>You are the parent of a student who has been admitted to The University of Texas at Austin from out of state. The student is starting in the next academic year. You are figuring out the logistics of move-in, you want to understand which dates actually matter, and you would like to know whether the in-state tuition pathway is worth attempting.</p>
