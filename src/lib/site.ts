@@ -36,8 +36,9 @@ export const SITE = {
   idxSearchUrl: 'https://austintxhomes.co/search',
 
   // Pre-launch toggle. When true: every page sends X-Robots-Tag: noindex,
-  // robots.txt disallows all crawlers. Flip to false before flipping DNS.
-  PRE_LAUNCH: true,
+  // robots.txt disallows all crawlers. Flipped to false 2026-06-11 on
+  // production launch at instateutaustin.com.
+  PRE_LAUNCH: false,
 
-  lastReviewed: '2026-05-11',
+  lastReviewed: '2026-06-11',
 } as const;
