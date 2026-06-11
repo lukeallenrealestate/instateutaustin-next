@@ -53,11 +53,11 @@ export default function ParentGuidePage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-navy-dk text-paper pt-20 pb-12">
+      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">For out-of-state families</p>
-          <h1 className="!text-paper">The Parent Guide to UT Austin</h1>
-          <p className="text-white/82 text-lg max-w-[60ch] mt-4">
+          <p className="eyebrow">For out-of-state families</p>
+          <h1 className="text-ink">The Parent Guide to UT Austin</h1>
+          <p className="text-body text-lg max-w-[60ch] mt-4">
             Everything you wish you had known before your student moved to Austin: academic dates, housing, move-in logistics, residency strategy, and your first 30 days as a UT parent.
           </p>
         </div>
@@ -93,10 +93,10 @@ export default function ParentGuidePage() {
           <p>UT publishes the full academic calendar at <code>registrar.utexas.edu</code>. These are the dates parents need to know. Dates are approximate and subject to UT&apos;s published calendar.</p>
           <div className="grid md:grid-cols-2 gap-4 my-6">
             {DATES.map((d, i) => (
-              <div key={i} className="bg-white border border-border rounded-md p-5 border-l-4 border-l-gold">
-                <div className="font-serif text-lg text-gold">{d.when}</div>
-                <div className="font-semibold text-navy mt-1">{d.what}</div>
-                <div className="text-sm text-mid mt-1.5">{d.why}</div>
+              <div key={i} className="bg-white border border-hairline rounded-md p-5 border-l-4 border-l-burnt">
+                <div className="font-serif text-lg text-burnt">{d.when}</div>
+                <div className="font-semibold text-ink mt-1">{d.what}</div>
+                <div className="text-sm text-body mt-1.5">{d.why}</div>
               </div>
             ))}
           </div>
@@ -162,7 +162,7 @@ export default function ParentGuidePage() {
             <p>If you are considering the residency pathway, the next step is the tuition calculator and the rules page.</p>
             <Link href="/tuition-calculator" className="btn btn-gold mt-4 inline-block">Run the numbers →</Link>
             {' '}
-            <Link href="/texas-residency-rules" className="btn btn-ghost mt-4 inline-block !text-paper !border-gold-lt">Read the rules →</Link>
+            <Link href="/texas-residency-rules" className="btn btn-ghost mt-4 inline-block text-ink !border-burnt-deep">Read the rules →</Link>
           </div>
         </div>
       </section>

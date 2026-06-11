@@ -86,14 +86,14 @@ export default function ResidencyRulesPage() {
       <Schema data={faqPageSchema(FAQ)} />
 
       {/* HEADER */}
-      <header className="bg-navy-dk text-paper pt-20 pb-14">
+      <header className="bg-paper pt-20 pb-14 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">The authoritative explanation</p>
-          <h1 className="!text-paper max-w-[22ch]">Texas Residency Rules for UT Austin In-State Tuition</h1>
-          <p className="text-white/82 text-lg max-w-[64ch] mt-5">
+          <p className="eyebrow">The authoritative explanation</p>
+          <h1 className="text-ink max-w-[22ch]">Texas Residency Rules for UT Austin In-State Tuition</h1>
+          <p className="text-body text-lg max-w-[64ch] mt-5">
             The complete legal framework: Texas Education Code §54.052, the THECB Residency Rules, the 12-month domicile clock, the dependent/independent distinction, the property pathway, and the failure modes, written for parents.
           </p>
-          <div className="text-sm text-white/65 mt-5 flex gap-6 flex-wrap">
+          <div className="text-sm text-body mt-5 flex gap-6 flex-wrap">
             <span><Dot /> Last reviewed {SITE.lastReviewed}</span>
             <span><Dot /> ~9,400 words</span>
             <span><Dot /> Reading time: 38 min</span>
@@ -423,13 +423,13 @@ export default function ResidencyRulesPage() {
               <li>Texas Secretary of State voter registration.</li>
               <li>Texas Comptroller of Public Accounts, franchise tax filings and entity formation.</li>
             </ul>
-            <p className="text-sm text-mid mt-4 mb-0">Last reviewed {SITE.lastReviewed}. Tuition figures cited as 2025-26 published rates ({fmtUSD(TUITION.inStatePerYear)} in-state, {fmtUSD(TUITION.outOfStatePerYear)} out-of-state, base undergraduate). In-state tuition frozen by the Texas Legislature through 2026-27. Rules and figures change, verify against the primary sources before relying.</p>
+            <p className="text-sm text-body mt-4 mb-0">Last reviewed {SITE.lastReviewed}. Tuition figures cited as 2025-26 published rates ({fmtUSD(TUITION.inStatePerYear)} in-state, {fmtUSD(TUITION.outOfStatePerYear)} out-of-state, base undergraduate). In-state tuition frozen by the Texas Legislature through 2026-27. Rules and figures change, verify against the primary sources before relying.</p>
           </div>
 
           {/* NEXT STEP */}
           <div className="next-step">
             <h2>Now that you understand the rules</h2>
-            <p>Read the side-by-side comparison of the two property pathways, <Link href="/rule-3-vs-rule-4" className="text-gold-lt">Rule #3 vs. Rule #4</Link>, to choose which one fits your family. Then run the numbers in the <Link href="/tuition-calculator" className="text-gold-lt">tuition calculator</Link> to confirm the savings amortize against the carrying costs. When you are ready to look at properties, the <Link href="/condos-near-ut" className="text-gold-lt">condos near UT</Link> page covers what to look for, and the <Link href="/contact" className="text-gold-lt">contact form</Link> connects you to a Texas-licensed broker who specializes in this pathway.</p>
+            <p>Read the side-by-side comparison of the two property pathways, <Link href="/rule-3-vs-rule-4" className="text-burnt-deep">Rule #3 vs. Rule #4</Link>, to choose which one fits your family. Then run the numbers in the <Link href="/tuition-calculator" className="text-burnt-deep">tuition calculator</Link> to confirm the savings amortize against the carrying costs. When you are ready to look at properties, the <Link href="/condos-near-ut" className="text-burnt-deep">condos near UT</Link> page covers what to look for, and the <Link href="/contact" className="text-burnt-deep">contact form</Link> connects you to a Texas-licensed broker who specializes in this pathway.</p>
             <Link href="/rule-3-vs-rule-4" className="btn btn-gold mt-4 inline-block">Rule #3 vs. Rule #4 →</Link>
           </div>
 
@@ -439,7 +439,7 @@ export default function ResidencyRulesPage() {
   );
 }
 
-function Dot() { return <span className="inline-block w-1.5 h-1.5 bg-gold rounded-full mr-1.5 align-middle" />; }
+function Dot() { return <span className="inline-block w-1.5 h-1.5 bg-burnt rounded-full mr-1.5 align-middle" />; }
 
 function Stage({ when, head, children }: { when: string; head: string; children: React.ReactNode }) {
   return (

@@ -133,11 +133,11 @@ export default function TimelinePage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-navy-dk text-paper pt-20 pb-12">
+      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">The operating plan</p>
-          <h1 className="!text-paper">The 12-Month Residency Timeline</h1>
-          <p className="text-white/82 text-lg max-w-[60ch] mt-4">
+          <p className="eyebrow">The operating plan</p>
+          <h1 className="text-ink">The 12-Month Residency Timeline</h1>
+          <p className="text-body text-lg max-w-[60ch] mt-4">
             Month-by-month, the tasks and documents that get an out-of-state UT family from &quot;considering this&quot; to &quot;approved as Texas resident,&quot; laid out as a working operational plan.
           </p>
         </div>
@@ -160,16 +160,16 @@ export default function TimelinePage() {
           <div className="relative pl-10 mt-9">
             <div className="absolute left-3.5 top-2 bottom-2 w-0.5 bg-gradient-to-b from-gold to-gold-lt" />
             {TIMELINE.map((m, i) => (
-              <div key={i} className="relative bg-white border border-border rounded-lg py-6 px-7 mb-5 shadow-sm">
-                <div className="absolute -left-8 top-7 w-4 h-4 bg-gold rounded-full ring-4 ring-paper" />
-                <p className="font-serif text-2xl text-navy mt-0 mb-1">{m.when}</p>
-                <span className="text-[11px] font-bold tracking-widest uppercase text-gold mb-3.5 block">{m.tag}</span>
+              <div key={i} className="relative bg-white border border-hairline rounded-lg py-6 px-7 mb-5 shadow-sm">
+                <div className="absolute -left-8 top-7 w-4 h-4 bg-burnt rounded-full ring-4 ring-paper" />
+                <p className="font-serif text-2xl text-ink mt-0 mb-1">{m.when}</p>
+                <span className="text-[11px] font-bold tracking-widest uppercase text-burnt mb-3.5 block">{m.tag}</span>
                 {m.tasks.map((t, j) => (
-                  <div key={j} className="grid grid-cols-[22px_1fr] gap-2.5 py-2.5 border-b border-dashed border-border last:border-0 items-start">
-                    <div className="w-4 h-4 border-2 border-gold rounded-sm mt-1" />
+                  <div key={j} className="grid grid-cols-[22px_1fr] gap-2.5 py-2.5 border-b border-dashed border-hairline last:border-0 items-start">
+                    <div className="w-4 h-4 border-2 border-burnt rounded-sm mt-1" />
                     <div>
-                      <strong className="text-navy">{t.title}</strong>
-                      <p className="m-1 text-sm text-mid">{t.body}</p>
+                      <strong className="text-ink">{t.title}</strong>
+                      <p className="m-1 text-sm text-body">{t.body}</p>
                     </div>
                   </div>
                 ))}
@@ -203,7 +203,7 @@ export default function TimelinePage() {
             <p>If a specific month is approaching and you would like a sanity check on where you are, send us a quick note.</p>
             <Link href="/residency-checklist" className="btn btn-gold mt-4 inline-block">Document checklist →</Link>
             {' '}
-            <Link href="/contact" className="btn btn-ghost mt-4 inline-block !text-paper !border-gold-lt">Ask a timing question →</Link>
+            <Link href="/contact" className="btn btn-ghost mt-4 inline-block text-ink !border-burnt-deep">Ask a timing question →</Link>
           </div>
         </div>
       </section>

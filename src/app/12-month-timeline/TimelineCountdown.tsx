@@ -13,11 +13,11 @@ export function TimelineCountdown() {
   }, []);
 
   return (
-    <div className="bg-paper border-l-4 border-gold p-6 rounded-r my-7">
-      <div className="font-serif text-4xl text-navy leading-none">
+    <div className="bg-paper border-l-4 border-burnt p-6 rounded-r my-7">
+      <div className="font-serif text-4xl text-ink leading-none">
         {daysLeft === null ? '—' : `${daysLeft.toLocaleString()} days`}
       </div>
-      <div className="text-sm text-mid mt-2">
+      <div className="text-sm text-body mt-2">
         Days until <strong>Fall 2027 census date</strong> (Sept 8, 2027, approximate). The 12-month clock must have started no later than this date minus 365.
       </div>
     </div>

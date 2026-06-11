@@ -50,12 +50,12 @@ export function CalculatorClient() {
   }, [startYear, college, credits, years, firstYearInState, increasePct]);
 
   return (
-    <div className="bg-white border border-border rounded-xl shadow-xl -mt-10 relative z-10 overflow-hidden">
+    <div className="bg-white border border-hairline rounded-xl shadow-xl -mt-10 relative z-10 overflow-hidden">
       <div className="grid md:grid-cols-[360px_1fr]">
 
         {/* INPUTS */}
-        <div className="bg-cream p-8 border-r border-border">
-          <h3 className="mt-0 text-base uppercase tracking-widest text-navy font-bold">Your inputs</h3>
+        <div className="bg-cream p-8 border-r border-hairline">
+          <h3 className="mt-0 text-base uppercase tracking-widest text-ink font-bold">Your inputs</h3>
 
           <Field label="First-year Fall enrollment">
             <select className="iua-select" value={startYear} onChange={e => setStartYear(parseInt(e.target.value, 10))}>
@@ -98,10 +98,10 @@ export function CalculatorClient() {
 
         {/* OUTPUT */}
         <div className="p-8">
-          <div className="bg-paper border-l-4 border-gold p-7 rounded-r mb-6">
-            <div className="text-xs font-bold uppercase tracking-widest text-navy">Total savings (out-of-state vs. modeled)</div>
-            <div className="font-serif text-5xl text-gold mt-1.5 leading-none">{fmtUSD(computed.saved)}</div>
-            <div className="text-sm text-mid mt-2.5">
+          <div className="bg-paper border-l-4 border-burnt p-7 rounded-r mb-6">
+            <div className="text-xs font-bold uppercase tracking-widest text-ink">Total savings (out-of-state vs. modeled)</div>
+            <div className="font-serif text-5xl text-burnt mt-1.5 leading-none">{fmtUSD(computed.saved)}</div>
+            <div className="text-sm text-body mt-2.5">
               {computed.subText} Base undergraduate, 15 credit hours. Source: <a href={TUITION.source.url} target="_blank" rel="nofollow noopener">UT One Stop</a>.
             </div>
           </div>
@@ -109,33 +109,33 @@ export function CalculatorClient() {
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr>
-                <th className="bg-cream text-navy text-left p-3 uppercase text-xs tracking-wider border-b border-border">Year</th>
-                <th className="bg-cream text-navy text-right p-3 uppercase text-xs tracking-wider border-b border-border">Out-of-State</th>
-                <th className="bg-cream text-navy text-right p-3 uppercase text-xs tracking-wider border-b border-border">Your Plan</th>
-                <th className="bg-cream text-navy text-right p-3 uppercase text-xs tracking-wider border-b border-border">Saved</th>
+                <th className="bg-cream text-ink text-left p-3 uppercase text-xs tracking-wider border-b border-hairline">Year</th>
+                <th className="bg-cream text-ink text-right p-3 uppercase text-xs tracking-wider border-b border-hairline">Out-of-State</th>
+                <th className="bg-cream text-ink text-right p-3 uppercase text-xs tracking-wider border-b border-hairline">Your Plan</th>
+                <th className="bg-cream text-ink text-right p-3 uppercase text-xs tracking-wider border-b border-hairline">Saved</th>
               </tr>
             </thead>
             <tbody>
               {computed.rows.map(r => (
                 <tr key={r.year}>
-                  <td className="p-3 border-b border-border">{r.year}-{(r.year + 1).toString().slice(2)}</td>
-                  <td className="p-3 border-b border-border text-right font-mono">{fmtUSD(r.outYr)}</td>
-                  <td className="p-3 border-b border-border text-right font-mono">{fmtUSD(r.planYr)}</td>
-                  <td className="p-3 border-b border-border text-right font-mono text-gold font-semibold">{fmtUSD(r.saved)}</td>
+                  <td className="p-3 border-b border-hairline">{r.year}-{(r.year + 1).toString().slice(2)}</td>
+                  <td className="p-3 border-b border-hairline text-right font-mono">{fmtUSD(r.outYr)}</td>
+                  <td className="p-3 border-b border-hairline text-right font-mono">{fmtUSD(r.planYr)}</td>
+                  <td className="p-3 border-b border-hairline text-right font-mono text-burnt font-semibold">{fmtUSD(r.saved)}</td>
                 </tr>
               ))}
-              <tr className="font-bold text-navy">
-                <td className="p-3 bg-paper border-t-2 border-gold">Total</td>
-                <td className="p-3 bg-paper border-t-2 border-gold text-right font-mono">{fmtUSD(computed.totalOut)}</td>
-                <td className="p-3 bg-paper border-t-2 border-gold text-right font-mono">{fmtUSD(computed.totalPlan)}</td>
-                <td className="p-3 bg-paper border-t-2 border-gold text-right font-mono">{fmtUSD(computed.saved)}</td>
+              <tr className="font-bold text-ink">
+                <td className="p-3 bg-paper border-t-2 border-burnt">Total</td>
+                <td className="p-3 bg-paper border-t-2 border-burnt text-right font-mono">{fmtUSD(computed.totalOut)}</td>
+                <td className="p-3 bg-paper border-t-2 border-burnt text-right font-mono">{fmtUSD(computed.totalPlan)}</td>
+                <td className="p-3 bg-paper border-t-2 border-burnt text-right font-mono">{fmtUSD(computed.saved)}</td>
               </tr>
             </tbody>
           </table>
 
-          <details className="bg-[#f4f8fc] border-l-[3px] border-navy py-4 px-5 rounded-r mt-7 text-sm">
-            <summary className="cursor-pointer font-semibold text-navy">Show your work, the formula</summary>
-            <div className="mt-2.5 text-mid space-y-2">
+          <details className="bg-[#f4f8fc] border-l-[3px] border-ink py-4 px-5 rounded-r mt-7 text-sm">
+            <summary className="cursor-pointer font-semibold text-ink">Show your work, the formula</summary>
+            <div className="mt-2.5 text-body space-y-2">
               <p>For each year <code>y</code> from 1 to <code>N</code>:</p>
               <p><strong>Tuition (out-of-state, year y)</strong> = base_out_of_state × (1 + increase)<sup>y−1</sup></p>
               <p><strong>Tuition (in-state, year y)</strong> = base_in_state × (1 + increase)<sup>y−1</sup></p>
@@ -171,7 +171,7 @@ export function CalculatorClient() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block mt-4">
-      <span className="text-xs font-semibold text-navy block mb-1.5">{label}</span>
+      <span className="text-xs font-semibold text-ink block mb-1.5">{label}</span>
       {children}
     </label>
   );
@@ -215,15 +215,15 @@ function EmailScenarioForm({ payload, saved }: { payload: string; saved: string 
   return (
     <div className="mt-7 p-5 bg-cream rounded-md">
       <h3 className="m-0 text-base">Get your scenario by email</h3>
-      <p className="m-0 mb-3 text-sm text-mid">Send the calculation to yourself or your spouse, with a one-page summary of the steps needed to actually realize the savings.</p>
+      <p className="m-0 mb-3 text-sm text-body">Send the calculation to yourself or your spouse, with a one-page summary of the steps needed to actually realize the savings.</p>
       <form onSubmit={onSubmit} className="grid grid-cols-[1fr_1fr_auto] gap-2 items-end">
         <label className="text-xs">
           Name
-          <input type="text" name="name" required className="w-full mt-1 p-2 border border-border rounded text-sm" />
+          <input type="text" name="name" required className="w-full mt-1 p-2 border border-hairline rounded text-sm" />
         </label>
         <label className="text-xs">
           Email
-          <input type="email" name="email" required className="w-full mt-1 p-2 border border-border rounded text-sm" />
+          <input type="email" name="email" required className="w-full mt-1 p-2 border border-hairline rounded text-sm" />
         </label>
         <button type="submit" disabled={status === 'sending'} className="btn btn-gold">
           {status === 'sending' ? 'Sending…' : 'Send'}

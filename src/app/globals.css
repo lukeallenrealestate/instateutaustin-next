@@ -2,72 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
+/* UT Austin burnt-orange identity tokens.
+ * Mirror of tailwind.config.ts so non-Tailwind CSS (component classes below)
+ * can read the same values via var().
+ */
+:root {
+  --burnt:      #BF5700;
+  --burnt-deep: #A04600;
+  --ink:        #2B2926;
+  --body:       #54504A;
+  --paper:      #FAF6EE;
+  --surface:    #FFFDF9;
+  --hairline:   #E7DECE;
+  --cream:      #F3E9D2;
+  --danger:     #B54B3B;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    background: var(--paper);
   }
   body {
-    @apply bg-white text-ink antialiased;
+    @apply bg-paper text-body antialiased;
     font-family: var(--font-inter), system-ui, sans-serif;
     line-height: 1.65;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-fraunces), Georgia, serif;
-    @apply font-semibold leading-tight text-navy;
+    @apply font-semibold leading-tight text-ink;
     letter-spacing: -0.01em;
   }
   h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
   h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   h3 { font-size: clamp(1.2rem, 2vw, 1.45rem); }
-  p { @apply mb-4; }
+  p { @apply mb-4 text-body; }
+  /* Body links: burnt-deep clears 4.5:1 on warm cream backgrounds.
+   * Burnt (#BF5700) is reserved for large text, buttons, the logo, numbers,
+   * and headlines per spec.
+   */
   a {
-    @apply text-navy underline transition-colors;
-    text-decoration-color: theme('colors.gold-lt');
+    @apply text-burnt-deep underline transition-colors;
+    text-decoration-color: var(--hairline);
     text-underline-offset: 3px;
   }
-  a:hover { @apply text-gold; }
+  a:hover { @apply text-burnt; text-decoration-color: var(--burnt); }
   strong { @apply font-bold text-ink; }
   ul, ol { @apply pl-6 mb-4; }
-  li { @apply mb-1; }
+  li { @apply mb-1 text-body; }
 }
 
 @layer components {
   .wrap { @apply max-w-wrap mx-auto px-6; }
   .narrow { @apply max-w-narrow mx-auto px-6; }
 
+  /* Buttons.
+   * Primary: solid --burnt background, white text, font-weight 500,
+   *   padding 13px 26px, border-radius 6px.
+   * Secondary (.btn-ghost): transparent, --ink text, 1px solid --hairline,
+   *   same padding/radius.
+   */
   .btn {
-    @apply inline-block px-7 py-3.5 bg-navy text-paper font-semibold text-sm rounded transition-all;
+    @apply inline-block bg-burnt text-white font-medium text-[0.95rem] rounded-md transition-colors;
+    padding: 13px 26px;
     letter-spacing: 0.02em;
     text-decoration: none;
   }
-  .btn:hover { @apply bg-navy-dk text-gold-lt -translate-y-0.5; transform: translateY(-1px); }
-  .btn-gold { @apply bg-gold text-navy-dk; }
-  .btn-gold:hover { @apply bg-gold-lt; }
-  .btn-ghost { @apply bg-transparent text-navy border border-border; }
-  .btn-ghost:hover { @apply border-gold bg-gold-pale; }
+  .btn:hover { @apply bg-burnt-deep text-white; }
+  /* .btn-gold is kept as an alias of .btn so existing class strings (which
+   * routinely use `btn btn-gold` for primary actions) produce the new
+   * primary style without per-component edits.
+   */
+  .btn-gold { @apply bg-burnt text-white; }
+  .btn-gold:hover { @apply bg-burnt-deep text-white; }
+  .btn-ghost {
+    @apply bg-transparent text-ink;
+    border: 1px solid var(--hairline);
+  }
+  .btn-ghost:hover {
+    @apply text-burnt;
+    border-color: var(--burnt);
+  }
 
+  /* Eyebrow labels (small-caps section preheaders): burnt. */
   .eyebrow {
-    @apply text-xs font-bold uppercase text-gold mb-3 block;
+    @apply text-xs font-bold uppercase mb-3 block;
+    color: var(--burnt);
     letter-spacing: 0.14em;
   }
 
+  /* Generic callout. Left border in burnt by default. */
   .callout {
-    @apply border-l-[3px] border-gold bg-paper p-5 my-7 rounded-r;
+    @apply p-5 my-7 rounded-r;
+    background: var(--cream);
+    border-left: 3px solid var(--burnt);
   }
-  .callout-warn { @apply border-danger bg-[#fbf2ef]; }
-  .callout-rule { @apply border-navy bg-cream; }
+  .callout-warn {
+    background: #FBEFE9;
+    border-left-color: var(--danger);
+  }
+  .callout-rule {
+    background: var(--cream);
+    border-left-color: var(--burnt);
+  }
   .callout h4 {
-    @apply text-xs font-bold uppercase text-navy mb-1;
+    @apply text-xs font-bold uppercase text-ink mb-1;
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.08em;
   }
 
+  /* Answer-first quick-answer block (AEO surface). */
   .quick-answer {
-    @apply bg-gold-pale border-l-[4px] border-gold p-6 my-6 rounded-r;
+    @apply p-6 my-6 rounded-r;
+    background: #FDF2E5;
+    border-left: 4px solid var(--burnt);
   }
   .quick-answer .qa-label {
-    @apply text-xs font-bold uppercase text-navy mb-2 block;
+    @apply text-xs font-bold uppercase text-ink mb-2 block;
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.12em;
   }
@@ -75,20 +127,24 @@
     @apply text-base text-ink leading-relaxed mb-0;
   }
 
+  /* Tables. */
   .tbl { @apply w-full border-collapse my-6 text-sm; }
-  .tbl th, .tbl td { @apply p-3.5 text-left border-b border-border align-top; }
+  .tbl th, .tbl td { @apply p-3.5 text-left align-top; border-bottom: 1px solid var(--hairline); }
   .tbl th {
-    @apply bg-cream text-navy font-bold text-xs uppercase;
+    @apply text-ink font-bold text-xs uppercase;
+    background: var(--cream);
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.05em;
   }
 
-  /* Statute citation block */
+  /* Statute citation block. */
   .statute {
-    @apply bg-paper border-l-4 border-navy py-5 px-6 my-7 rounded-r text-base;
+    @apply py-5 px-6 my-7 rounded-r text-base;
+    background: var(--cream);
+    border-left: 4px solid var(--burnt);
   }
   .statute .statute-src {
-    @apply text-xs font-bold uppercase text-navy mb-2 block;
+    @apply text-xs font-bold uppercase text-ink mb-2 block;
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.1em;
   }
@@ -97,74 +153,89 @@
     @apply italic text-ink leading-relaxed;
   }
 
-  /* Definition box */
+  /* Definition box. */
   .define {
-    @apply bg-[#f4f8fc] border-l-[3px] border-navy py-3 px-4 my-5 rounded-r;
+    @apply py-3 px-4 my-5 rounded-r;
+    background: var(--surface);
+    border-left: 3px solid var(--burnt);
   }
-  .define strong { @apply text-navy; }
+  .define strong { @apply text-ink; }
 
-  /* Stages / timeline cards */
+  /* Stages / timeline cards. */
   .stages { @apply grid gap-3 my-7; }
   .stage {
-    @apply grid grid-cols-[70px_1fr] gap-4 p-4 bg-white border border-border rounded-md;
+    @apply grid grid-cols-[70px_1fr] gap-4 p-4 rounded-md;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
   }
   .stage .stage-when {
     font-family: var(--font-fraunces), Georgia, serif;
-    @apply text-2xl text-gold leading-none pt-1;
+    @apply text-2xl text-burnt leading-none pt-1;
   }
   .stage h4 {
     font-family: var(--font-fraunces), Georgia, serif;
-    @apply text-base text-navy m-0 font-semibold;
+    @apply text-base text-ink m-0 font-semibold;
   }
-  .stage p { @apply text-sm text-mid mt-1.5 mb-0; }
+  .stage p { @apply text-sm text-body mt-1.5 mb-0; }
 
-  /* Sources block */
+  /* Sources block at the end of authority pages. */
   .sources {
-    @apply bg-paper border-t-[4px] border-gold p-8 mt-14 rounded text-sm;
+    @apply p-8 mt-14 rounded text-sm;
+    background: var(--cream);
+    border-top: 4px solid var(--burnt);
   }
-  .sources h3 { @apply mt-0; }
+  .sources h3 { @apply mt-0 text-ink; }
 
-  /* TOC */
+  /* Table of contents card. */
   .toc {
-    @apply bg-cream border border-border rounded-md py-5 px-7 my-9 text-sm;
+    @apply rounded-md py-5 px-7 my-9 text-sm;
+    background: var(--cream);
+    border: 1px solid var(--hairline);
   }
   .toc h4 {
-    @apply text-xs font-bold uppercase text-navy mb-3;
+    @apply text-xs font-bold uppercase text-ink mb-3;
     font-family: var(--font-inter), sans-serif;
     letter-spacing: 0.12em;
   }
   .toc ol { @apply pl-5; margin: 0; columns: 2; column-gap: 32px; }
   .toc li { @apply mb-1.5; break-inside: avoid; }
   .toc a { @apply no-underline; }
-  .toc a:hover { @apply text-gold; }
+  .toc a:hover { @apply text-burnt; }
   @media (max-width: 700px) { .toc ol { columns: 1; } }
 
-  /* FAQ accordion */
-  details.faq { @apply border-b border-border py-4; }
+  /* FAQ accordion. */
+  details.faq { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
   details.faq summary {
-    @apply cursor-pointer text-navy font-semibold flex justify-between items-center gap-3;
+    @apply cursor-pointer text-ink font-semibold flex justify-between items-center gap-3;
     font-family: var(--font-fraunces), Georgia, serif;
     font-size: 1.08rem;
     list-style: none;
   }
   details.faq summary::-webkit-details-marker { display: none; }
   details.faq summary::after {
-    content: '+'; @apply text-gold text-2xl;
+    content: '+';
+    color: var(--burnt);
     font-family: var(--font-inter), sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
   }
   details.faq[open] summary::after { content: '–'; }
-  details.faq .faq-a { @apply pt-3 text-mid; }
+  details.faq .faq-a { @apply pt-3 text-body; }
 
-  /* Next-step CTA block */
+  /* Next-step CTA block at end of authority pages. */
   .next-step {
-    @apply bg-navy text-paper p-12 rounded-lg mt-14;
+    @apply p-12 rounded-lg mt-14;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-left: 4px solid var(--burnt);
   }
-  .next-step h2 { @apply text-paper mt-0; }
-  .next-step p { @apply text-white/85; }
+  .next-step h2 { @apply text-ink mt-0; }
+  .next-step p { @apply text-body; }
+  .next-step a { @apply text-burnt-deep; }
+  .next-step a:hover { @apply text-burnt; }
 }
 
 @layer utilities {
-  /* Print: hide chrome on residency-checklist */
   @media print {
     .no-print { display: none !important; }
   }

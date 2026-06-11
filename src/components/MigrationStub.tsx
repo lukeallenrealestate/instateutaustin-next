@@ -10,8 +10,8 @@ export function MigrationStub({ title, intro, staticFallback }: { title: string;
       <div className="narrow">
         <p className="eyebrow">Migration in progress</p>
         <h1 className="mt-0">{title}</h1>
-        {intro && <p className="text-mid text-lg">{intro}</p>}
-        <p className="text-mid">
+        {intro && <p className="text-body text-lg">{intro}</p>}
+        <p className="text-body">
           The full text of this page is being migrated into the Next.js codebase. In the meantime, you can read the v1 static version, which contains the same substantive content with corrected tuition figures.
         </p>
         {staticFallback && (

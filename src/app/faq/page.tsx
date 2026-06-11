@@ -105,12 +105,12 @@ export default function FaqPage() {
       })} />
       <Schema data={faqPageSchema(FLAT_FAQ)} />
 
-      <header className="bg-navy-dk text-paper pt-20 pb-12">
+      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">Frequently asked questions</p>
-          <h1 className="!text-paper">UT Austin In-State Tuition FAQ</h1>
-          <p className="text-white/82 text-lg max-w-[60ch] mt-4">
-            Thirty-two questions about Texas residency for UT tuition, organized by category. If your question is not here, send it through the <Link href="/contact" className="text-gold-lt">contact form</Link>.
+          <p className="eyebrow">Frequently asked questions</p>
+          <h1 className="text-ink">UT Austin In-State Tuition FAQ</h1>
+          <p className="text-body text-lg max-w-[60ch] mt-4">
+            Thirty-two questions about Texas residency for UT tuition, organized by category. If your question is not here, send it through the <Link href="/contact" className="text-burnt-deep">contact form</Link>.
           </p>
         </div>
       </header>
@@ -122,18 +122,18 @@ export default function FaqPage() {
           </QuickAnswer>
 
           <nav className="bg-cream p-5 rounded-md my-7 flex flex-wrap gap-2">
-            <strong className="w-full text-xs uppercase tracking-widest text-navy mb-1.5">Jump to a section</strong>
+            <strong className="w-full text-xs uppercase tracking-widest text-ink mb-1.5">Jump to a section</strong>
             {CATEGORIES.map(c => (
               <a key={c.id} href={`#${c.id}`}
-                className="bg-white px-3.5 py-1.5 rounded-full text-sm border border-border no-underline text-navy hover:bg-gold hover:text-white hover:border-gold">
+                className="bg-white px-3.5 py-1.5 rounded-full text-sm border border-hairline no-underline text-ink hover:bg-burnt hover:text-white hover:border-burnt">
                 {c.title}
               </a>
             ))}
           </nav>
 
           {CATEGORIES.map(c => (
-            <div key={c.id} className="bg-white border border-border rounded-lg px-7 py-2 my-6">
-              <h2 id={c.id} className="font-serif text-navy mt-4 mb-2 pb-2 border-b border-gold-lt">{c.title}</h2>
+            <div key={c.id} className="bg-white border border-hairline rounded-lg px-7 py-2 my-6">
+              <h2 id={c.id} className="font-serif text-ink mt-4 mb-2 pb-2 border-b border-burnt-deep">{c.title}</h2>
               {c.items.map((item, i) => (
                 <details key={i} className="faq">
                   <summary>{item.q}</summary>

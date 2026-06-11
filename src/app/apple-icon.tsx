@@ -11,8 +11,8 @@ export default async function AppleIcon() {
         style={{
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(180deg, #081729 0%, #0e2748 100%)',
-          color: '#c79a4d',
+          background: '#BF5700',
+          color: '#FAF6EE',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

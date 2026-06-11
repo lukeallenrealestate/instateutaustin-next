@@ -56,11 +56,11 @@ export default function Rule3vs4Page() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-navy-dk text-paper pt-20 pb-12">
+      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">The choice</p>
-          <h1 className="!text-paper">Rule #3 vs. Rule #4: Which property pathway fits your family?</h1>
-          <p className="text-white/82 text-lg max-w-[60ch] mt-4">
+          <p className="eyebrow">The choice</p>
+          <h1 className="text-ink">Rule #3 vs. Rule #4: Which property pathway fits your family?</h1>
+          <p className="text-body text-lg max-w-[60ch] mt-4">
             Two ways to use real property to satisfy the Texas residency requirement at UT Austin. They are not interchangeable. Picking the wrong one for your situation can cost a year of savings and tens of thousands of dollars.
           </p>
         </div>
@@ -92,8 +92,8 @@ export default function Rule3vs4Page() {
           <div className="bg-cream p-7 rounded-lg my-9">
             <h3 className="mt-0">Decision matrix: pick the path that matches more rows</h3>
             <div className="grid md:grid-cols-2 gap-5 mt-4">
-              <div className="bg-white p-6 rounded-md border-l-4 border-gold">
-                <h4 className="text-navy m-0 mb-2.5">Pick Rule #3 if…</h4>
+              <div className="bg-white p-6 rounded-md border-l-4 border-burnt">
+                <h4 className="text-ink m-0 mb-2.5">Pick Rule #3 if…</h4>
                 <ul className="text-sm m-0 pl-5">
                   <li>The property is primarily housing for your student</li>
                   <li>You do not want to run a rental business</li>
@@ -104,8 +104,8 @@ export default function Rule3vs4Page() {
                   <li>You want the property to qualify for a homestead exemption</li>
                 </ul>
               </div>
-              <div className="bg-white p-6 rounded-md border-l-4 border-gold">
-                <h4 className="text-navy m-0 mb-2.5">Pick Rule #4 if…</h4>
+              <div className="bg-white p-6 rounded-md border-l-4 border-burnt">
+                <h4 className="text-ink m-0 mb-2.5">Pick Rule #4 if…</h4>
                 <ul className="text-sm m-0 pl-5">
                   <li>The property is being acquired primarily as an investment</li>
                   <li>You are comfortable with LLCs, franchise tax, K-1s</li>
@@ -124,17 +124,17 @@ export default function Rule3vs4Page() {
             <table className="w-full border-collapse my-6 text-sm">
               <thead>
                 <tr>
-                  <th className="bg-cream text-navy p-3.5 text-left uppercase text-xs tracking-wide border-b border-border">Dimension</th>
-                  <th className="bg-cream text-navy p-3.5 text-left uppercase text-xs tracking-wide border-b border-border">Rule #3, Student-Occupied</th>
-                  <th className="bg-cream text-navy p-3.5 text-left uppercase text-xs tracking-wide border-b border-border">Rule #4, Rental LLC</th>
+                  <th className="bg-cream text-ink p-3.5 text-left uppercase text-xs tracking-wide border-b border-hairline">Dimension</th>
+                  <th className="bg-cream text-ink p-3.5 text-left uppercase text-xs tracking-wide border-b border-hairline">Rule #3, Student-Occupied</th>
+                  <th className="bg-cream text-ink p-3.5 text-left uppercase text-xs tracking-wide border-b border-hairline">Rule #4, Rental LLC</th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARE_ROWS.map(([dim, r3, r4], i) => (
                   <tr key={i}>
-                    <td className="p-3.5 border-b border-border bg-paper font-semibold text-navy align-top w-[180px]">{dim}</td>
-                    <td className="p-3.5 border-b border-border align-top">{r3}</td>
-                    <td className="p-3.5 border-b border-border align-top">{r4}</td>
+                    <td className="p-3.5 border-b border-hairline bg-paper font-semibold text-ink align-top w-[180px]">{dim}</td>
+                    <td className="p-3.5 border-b border-hairline align-top">{r3}</td>
+                    <td className="p-3.5 border-b border-hairline align-top">{r4}</td>
                   </tr>
                 ))}
               </tbody>
@@ -207,7 +207,7 @@ export default function Rule3vs4Page() {
 
           <div className="next-step">
             <h2>Picked a path?</h2>
-            <p>If Rule #3 fits, the next read is the <Link href="/condos-near-ut" className="text-gold-lt">condos near UT</Link> buying guide. If Rule #4 fits, you will want a Texas-licensed broker who has run this play before, that is a <Link href="/contact" className="text-gold-lt">conversation</Link> rather than a webpage.</p>
+            <p>If Rule #3 fits, the next read is the <Link href="/condos-near-ut" className="text-burnt-deep">condos near UT</Link> buying guide. If Rule #4 fits, you will want a Texas-licensed broker who has run this play before, that is a <Link href="/contact" className="text-burnt-deep">conversation</Link> rather than a webpage.</p>
             <Link href="/residency-checklist" className="btn btn-gold mt-4 inline-block">The document checklist →</Link>
           </div>
         </div>

@@ -42,17 +42,17 @@ export function ContactForm({ source, variant = 'full', heading, subhead }: Prop
     }
   }
 
-  const inputCls = 'block w-full mt-1.5 p-2.5 bg-white border border-border rounded text-ink focus:outline-none focus:border-gold';
-  const labelCls = 'block mb-3.5 text-xs font-semibold text-navy';
+  const inputCls = 'block w-full mt-1.5 p-2.5 bg-white border border-hairline rounded text-ink focus:outline-none focus:border-burnt';
+  const labelCls = 'block mb-3.5 text-xs font-semibold text-ink';
 
   return (
     <form
       onSubmit={onSubmit}
-      className={variant === 'full' ? 'bg-cream p-8 rounded-md border border-border' : 'space-y-3'}
+      className={variant === 'full' ? 'bg-cream p-8 rounded-md border border-hairline' : 'space-y-3'}
       aria-label="Contact form"
     >
       {heading && <h3 className="mt-0 mb-1">{heading}</h3>}
-      {subhead && <p className="text-mid text-sm mb-4">{subhead}</p>}
+      {subhead && <p className="text-body text-sm mb-4">{subhead}</p>}
 
       {variant === 'minimal' ? (
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-end">

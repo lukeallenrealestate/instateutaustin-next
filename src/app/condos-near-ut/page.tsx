@@ -83,11 +83,11 @@ export default function CondosPage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-navy-dk text-paper pt-20 pb-12">
+      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">Property buyer guide</p>
-          <h1 className="!text-paper">Condos Near UT Austin: The Residency Buyer Guide</h1>
-          <p className="text-white/82 text-lg max-w-[60ch] mt-4">
+          <p className="eyebrow">Property buyer guide</p>
+          <h1 className="text-ink">Condos Near UT Austin: The Residency Buyer Guide</h1>
+          <p className="text-body text-lg max-w-[60ch] mt-4">
             How to evaluate UT-area condos and small homes for the Texas residency pathway. Neighborhoods, HOAs, owner-occupancy clauses, resale liquidity, and the property-level gotchas that cost families money.
           </p>
         </div>
@@ -107,16 +107,16 @@ export default function CondosPage() {
           <h2>The five neighborhoods, ranked by relevance</h2>
 
           {NBHDS.map((n, i) => (
-            <div key={i} className="bg-white border border-border rounded-lg p-7 my-6">
+            <div key={i} className="bg-white border border-hairline rounded-lg p-7 my-6">
               <div className="flex justify-between items-baseline gap-4 flex-wrap">
-                <h3 className="m-0 text-navy font-serif text-2xl">{n.name}</h3>
-                <div className="font-serif text-lg text-gold">{n.price}</div>
+                <h3 className="m-0 text-ink font-serif text-2xl">{n.name}</h3>
+                <div className="font-serif text-lg text-burnt">{n.price}</div>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
                 {n.stats.map(([l, v], j) => (
                   <div key={j} className="bg-paper py-2.5 px-3 rounded">
-                    <div className="text-[10px] uppercase tracking-wider text-mid">{l}</div>
-                    <div className="font-bold text-navy">{v}</div>
+                    <div className="text-[10px] uppercase tracking-wider text-body">{l}</div>
+                    <div className="font-bold text-ink">{v}</div>
                   </div>
                 ))}
               </div>
@@ -169,7 +169,7 @@ export default function CondosPage() {
           </ul>
 
           {/* RECOMMENDED REALTOR */}
-          <div className="bg-gradient-to-br from-cream to-paper border border-gold-lt rounded-lg p-8 my-10">
+          <div className="bg-gradient-to-br from-cream to-paper border border-burnt-deep rounded-lg p-8 my-10">
             <h3 className="mt-0">About our recommended local realtor</h3>
             <p>The property pathway works best when you have a Texas-licensed broker who has run this play before: someone who has helped multiple families navigate the Rule #3 / Rule #4 decision, who knows which West Campus buildings have clean HOAs, and who understands that the deal needs to serve a residency strategy as well as a real-estate strategy.</p>
             <p>Our recommended local broker is <strong>{SITE.partner.name}</strong>, Texas Real Estate Commission license #{SITE.partner.trecLicense}, of {SITE.partner.brokerage}. {SITE.partner.name.split(' ')[0]} has worked extensively with out-of-state UT families on both Rule #3 condo purchases and Rule #4 multifamily acquisitions. He works on standard buyer-agency commission terms (paid by the seller in the vast majority of Austin transactions) and there is no cost to the family for an introduction.</p>
@@ -196,7 +196,7 @@ export default function CondosPage() {
             <p>Submit the form above to be connected with our recommended Austin-licensed broker, or read the supporting pages first.</p>
             <Link href="/12-month-timeline" className="btn btn-gold mt-4 inline-block">See the 12-month timeline →</Link>
             {' '}
-            <a href={SITE.idxSearchUrl} target="_blank" rel="noopener" className="btn mt-4 inline-block !bg-transparent !text-paper !border-gold-lt">Browse MLS listings →</a>
+            <a href={SITE.idxSearchUrl} target="_blank" rel="noopener" className="btn mt-4 inline-block !bg-transparent text-ink !border-burnt-deep">Browse MLS listings →</a>
           </div>
         </div>
       </section>

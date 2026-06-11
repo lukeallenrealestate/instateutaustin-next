@@ -48,11 +48,11 @@ export default function CalculatorPage() {
         publisher: { '@type': 'Organization', name: SITE.name },
       }} />
 
-      <header className="bg-navy-dk text-paper pt-20 pb-14">
+      <header className="bg-paper pt-20 pb-14 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">Run the numbers</p>
-          <h1 className="!text-paper">UT Austin Tuition Savings Calculator</h1>
-          <p className="text-white/82 max-w-[60ch] mt-4 text-lg">
+          <p className="eyebrow">Run the numbers</p>
+          <h1 className="text-ink">UT Austin Tuition Savings Calculator</h1>
+          <p className="text-body max-w-[60ch] mt-4 text-lg">
             Model the four-year cost of UT Austin tuition for your student under both classifications. Plug in your enrollment year, major track, and credit load: get a year-by-year and four-year savings figure you can defend to your spouse.
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function CalculatorPage() {
       <section className="bg-paper py-16 text-center">
         <div className="narrow">
           <h2 className="mt-0">Ready to plan the property side?</h2>
-          <p className="text-mid max-w-[56ch] mx-auto mb-6 text-lg">If the savings number above pencils for your family, the next decision is which property pathway to use and what to look for.</p>
+          <p className="text-body max-w-[56ch] mx-auto mb-6 text-lg">If the savings number above pencils for your family, the next decision is which property pathway to use and what to look for.</p>
           <a href="/rule-3-vs-rule-4" className="btn">Rule #3 vs. Rule #4 →</a>
           {' '}
           <a href="/condos-near-ut" className="btn btn-ghost">Condos Near UT →</a>

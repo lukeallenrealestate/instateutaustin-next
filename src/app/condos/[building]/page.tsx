@@ -56,11 +56,11 @@ export default async function BuildingPage({ params }: Props) {
         dateModified: SITE.lastReviewed,
       })} />
 
-      <header className="bg-navy-dk text-paper py-20">
+      <header className="bg-paper py-20 border-b border-hairline">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">Condos near UT</p>
-          <h1 className="!text-paper">{b.name}</h1>
-          <p className="text-white/80 text-lg mt-4">{b.address}</p>
+          <p className="eyebrow">Condos near UT</p>
+          <h1 className="text-ink">{b.name}</h1>
+          <p className="text-body text-lg mt-4">{b.address}</p>
         </div>
       </header>
 
@@ -91,7 +91,7 @@ export default async function BuildingPage({ params }: Props) {
           <div className="bg-cream p-7 rounded mt-9 flex flex-wrap gap-3 items-center justify-between">
             <div>
               <h3 className="mt-0 mb-1">See current listings in this building</h3>
-              <p className="text-mid text-sm mb-0">Live MLS data on austintxhomes.co (our IDX partner).</p>
+              <p className="text-body text-sm mb-0">Live MLS data on austintxhomes.co (our IDX partner).</p>
             </div>
             <a href={`${SITE.idxSearchUrl}?q=${encodeURIComponent(b.name)}`} target="_blank" rel="noopener" className="btn">View on MLS →</a>
           </div>

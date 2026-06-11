@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <div className="narrow">
         <p className="eyebrow">Legal</p>
         <h1>Privacy Policy</h1>
-        <p className="text-mid text-sm">Last reviewed: {SITE.lastReviewed}</p>
+        <p className="text-body text-sm">Last reviewed: {SITE.lastReviewed}</p>
 
         <h2>What we collect</h2>
         <p>The only personal information instateutaustin.com collects directly is what you choose to enter into a contact form on this site: your name, email address, phone number (optional), student-status response, and any message you write. We do not require account creation. We do not collect Social Security numbers, financial-account information, or government identifiers anywhere on this site.</p>

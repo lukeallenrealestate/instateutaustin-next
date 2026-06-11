@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="narrow">
           <p className="eyebrow">About</p>
           <h1>Why this site exists</h1>
-          <p className="text-mid text-lg mb-8">A neutral, plain-English guide for out-of-state families trying to understand whether, and how, to qualify for in-state tuition at UT Austin through Texas residency.</p>
+          <p className="text-body text-lg mb-8">A neutral, plain-English guide for out-of-state families trying to understand whether, and how, to qualify for in-state tuition at UT Austin through Texas residency.</p>
 
           <h2>The problem this site solves</h2>
           <p>If your student has been admitted to The University of Texas at Austin from out of state, you are looking at roughly <strong>{fmtUSD(TUITION.outOfStatePerYear)} a year</strong> in tuition, fees, and required charges, versus roughly <strong>{fmtUSD(TUITION.inStatePerYear)} a year</strong> for a Texas resident. In-state tuition is frozen by the Texas Legislature through the 2026-27 academic year; out-of-state continues to rise. The annual delta is about <strong>{fmtUSD(TUITION.annualSavings)}</strong>, and over the typical out-of-state-year-1 plus in-state-years-2-to-4 pathway, the savings total about <strong>{fmtUSD(TUITION.threeYearSavings)} in 2026 dollars</strong>. Source: <a href={TUITION.source.url} target="_blank" rel="nofollow noopener">UT One Stop</a>.</p>

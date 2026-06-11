@@ -52,43 +52,52 @@ export default function Home() {
       })} />
 
       {/* HERO */}
-      <section className="bg-navy-dk text-paper py-24 relative overflow-hidden"
-        style={{ background: 'radial-gradient(ellipse at 60% 30%, rgba(199,154,77,0.18), transparent 55%), linear-gradient(180deg, #081729 0%, #0e2748 100%)' }}>
+      <section
+        className="py-24 border-b border-hairline relative overflow-hidden"
+        style={{
+          background:
+            'radial-gradient(ellipse at 60% 30%, rgba(191,87,0,0.06), transparent 55%), #FAF6EE',
+        }}
+      >
         <div className="wrap grid md:grid-cols-[1.3fr_1fr] gap-14 items-center">
           <div>
-            <p className="eyebrow !text-gold-lt">UT Austin · In-State Tuition Strategy</p>
-            <h1 className="!text-paper max-w-[16ch]" style={{ fontSize: 'clamp(2.2rem, 5.6vw, 4rem)', lineHeight: 1.08 }}>
-              Save <em className="not-italic text-gold-lt">{fmtUSD(TUITION.threeYearSavings)}+</em> on UT Austin tuition.
+            <p className="eyebrow">UT Austin · In-State Tuition Strategy</p>
+            <h1
+              className="text-ink max-w-[16ch]"
+              style={{ fontSize: 'clamp(2.2rem, 5.6vw, 4rem)', lineHeight: 1.08, fontWeight: 700 }}
+            >
+              Save <span className="text-burnt">{fmtUSD(TUITION.threeYearSavings)}+</span> on{' '}
+              <span className="text-burnt">UT&nbsp;Austin</span> tuition.
             </h1>
-            <p className="text-white/80 mt-4 max-w-[60ch] text-lg">
+            <p className="text-body mt-4 max-w-[60ch] text-lg">
               The complete out-of-state parent&apos;s guide to Texas residency rules, the 12-month domicile clock, and the property pathway that converts an out-of-state admit into a Texas resident for tuition purposes.
             </p>
             <div className="mt-8 flex gap-3 flex-wrap">
-              <Link href="/texas-residency-rules" className="btn btn-gold">Start with the rules</Link>
-              <Link href="/tuition-calculator" className="btn btn-ghost text-paper border-gold-lt/40">Run the numbers →</Link>
+              <Link href="/texas-residency-rules" className="btn">Start with the rules</Link>
+              <Link href="/tuition-calculator" className="btn btn-ghost">Run the numbers →</Link>
             </div>
           </div>
 
-          <div className="bg-white/5 border border-gold/20 rounded-lg p-8 backdrop-blur-sm">
-            <div className="text-xs font-bold uppercase tracking-widest text-gold-lt">Three-year savings</div>
-            <div className="font-serif text-5xl text-gold mt-2 leading-none">{fmtUSD(TUITION.threeYearSavings)}</div>
-            <div className="mt-5 border-t border-gold-lt/20 pt-4 space-y-2 text-sm text-white/85">
+          <div className="bg-surface border border-hairline rounded-lg p-8 shadow-sm">
+            <div className="text-xs font-bold uppercase tracking-widest text-burnt">Three-year savings</div>
+            <div className="font-serif text-5xl text-burnt mt-2 leading-none">{fmtUSD(TUITION.threeYearSavings)}</div>
+            <div className="mt-5 border-t border-hairline pt-4 space-y-2 text-sm text-body">
               <Row label="Non-resident tuition (per year)" value={`~${fmtUSD(TUITION.outOfStatePerYear)}`} />
               <Row label="Texas resident tuition (per year)" value={`~${fmtUSD(TUITION.inStatePerYear)}`} />
               <Row label="Annual delta" value={fmtUSD(TUITION.annualSavings)} />
               <Row label="Three-year delta (typical pathway)" value={`${fmtUSD(TUITION.threeYearSavings)}+`} />
             </div>
-            <div className="text-xs text-white/55 mt-4">
+            <div className="text-xs text-body mt-4">
               Figures: UT Austin published tuition and required fees, base undergraduate program. In-state frozen through 2026-27.
-              {' '}<a className="text-gold-lt" href={TUITION.source.url} target="_blank" rel="nofollow noopener">UT One Stop</a>.
-              {' '}<Link href="/tuition-calculator" className="text-gold-lt">Run your numbers →</Link>
+              {' '}<a className="text-burnt-deep" href={TUITION.source.url} target="_blank" rel="nofollow noopener">UT One Stop</a>.
+              {' '}<Link href="/tuition-calculator" className="text-burnt-deep">Run your numbers →</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* TRUST */}
-      <div className="bg-cream border-y border-border py-5 text-sm text-mid">
+      <div className="bg-cream border-y border-hairline py-5 text-sm text-body">
         <div className="wrap flex flex-wrap gap-6 justify-center">
           <span><Dot /> Cites Texas Education Code §54.052</span>
           <span><Dot /> Last reviewed {SITE.lastReviewed}</span>
@@ -113,14 +122,14 @@ export default function Home() {
         <div className="wrap">
           <p className="eyebrow">Where to start</p>
           <h2 className="mt-0">Six pages that, together, are the strategy</h2>
-          <p className="text-mid max-w-[62ch]">Each page is self-contained. If you have ten minutes, read 1, 2, and 5.</p>
+          <p className="text-body max-w-[62ch]">Each page is self-contained. If you have ten minutes, read 1, 2, and 5.</p>
           <div className="grid md:grid-cols-3 gap-5 mt-9">
             {PATHS.map((p, i) => (
-              <Link key={p.href} href={p.href} className="block bg-white border border-border rounded p-7 no-underline text-ink hover:-translate-y-1 hover:border-gold hover:shadow-lg transition-all">
-                <div className="font-serif text-gold mb-2">0{i + 1}</div>
-                <h3 className="mt-0 text-navy text-lg">{p.title}</h3>
-                <p className="text-mid text-sm mt-2 mb-0">{p.desc}</p>
-                <div className="text-gold font-semibold text-sm mt-3">{p.cta} →</div>
+              <Link key={p.href} href={p.href} className="block bg-white border border-hairline rounded p-7 no-underline text-ink hover:-translate-y-1 hover:border-burnt hover:shadow-lg transition-all">
+                <div className="font-serif text-burnt mb-2">0{i + 1}</div>
+                <h3 className="mt-0 text-ink text-lg">{p.title}</h3>
+                <p className="text-body text-sm mt-2 mb-0">{p.desc}</p>
+                <div className="text-burnt font-semibold text-sm mt-3">{p.cta} →</div>
               </Link>
             ))}
           </div>
@@ -128,11 +137,11 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-navy text-paper py-20 text-center">
+      <section className="bg-paper py-20 border-b border-hairline text-center">
         <div className="narrow">
-          <p className="eyebrow !text-gold-lt">Talk to a human</p>
-          <h2 className="!text-paper max-w-[22ch] mx-auto mt-0">Your situation is specific. Get a written answer.</h2>
-          <p className="text-white/80 max-w-[56ch] mx-auto my-4 text-lg">The site covers the general case. If your circumstances do not quite fit (divorce, military, scholarship interactions, late timing), send a message.</p>
+          <p className="eyebrow">Talk to a human</p>
+          <h2 className="text-ink max-w-[22ch] mx-auto mt-0">Your situation is specific. Get a written answer.</h2>
+          <p className="text-body max-w-[56ch] mx-auto my-4 text-lg">The site covers the general case. If your circumstances do not quite fit (divorce, military, scholarship interactions, late timing), send a message.</p>
           <Link href="/contact" className="btn btn-gold">Ask a question →</Link>
         </div>
       </section>
@@ -142,10 +151,13 @@ export default function Home() {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex justify-between"><span>{label}</span><strong className="text-paper font-mono font-normal">{value}</strong></div>
+    <div className="flex justify-between gap-3">
+      <span className="text-body">{label}</span>
+      <strong className="text-ink font-mono font-medium">{value}</strong>
+    </div>
   );
 }
-function Dot() { return <span className="inline-block w-1.5 h-1.5 bg-gold rounded-full mr-2 align-middle" />; }
+function Dot() { return <span className="inline-block w-1.5 h-1.5 bg-burnt rounded-full mr-2 align-middle" />; }
 
 const PATHS = [
   { href: '/texas-residency-rules', title: 'The Texas Residency Rules', desc: 'The authoritative explanation of §54.052 and the THECB framework.', cta: 'Read the rules' },

@@ -22,7 +22,7 @@ export default function ContactPage() {
           <div>
             <p className="eyebrow">Get in touch</p>
             <h1 className="mt-0">Ask a question</h1>
-            <p className="text-mid text-lg">If you have a question about Texas residency, the 12-month domicile clock, the property pathway, or your specific situation, send it through the form. We read every submission and route to a real human.</p>
+            <p className="text-body text-lg">If you have a question about Texas residency, the 12-month domicile clock, the property pathway, or your specific situation, send it through the form. We read every submission and route to a real human.</p>
 
             <h2>What you can expect</h2>
             <ul>

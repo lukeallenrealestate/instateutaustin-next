@@ -14,7 +14,7 @@ export default function DisclaimerPage() {
       <div className="narrow">
         <p className="eyebrow">Legal</p>
         <h1>Disclaimer</h1>
-        <p className="text-mid text-sm">Last reviewed: {SITE.lastReviewed}</p>
+        <p className="text-body text-sm">Last reviewed: {SITE.lastReviewed}</p>
 
         <h2>Not affiliated with UT Austin</h2>
         <p>instateutaustin.com is an independent educational guide. We are not affiliated with, endorsed by, or sponsored by The University of Texas at Austin, the UT System, the Texas Higher Education Coordinating Board (THECB), the Texas Comptroller of Public Accounts, or any agency of the State of Texas. Trademarks and brand names referenced on this site are the property of their respective owners and are used only for identification.</p>

@@ -4,16 +4,20 @@ import { SITE } from '@/lib/site';
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-navy-dk text-gold-lt pt-14 pb-7 mt-20 text-sm">
+    <footer className="bg-paper text-body pt-14 pb-7 mt-20 text-sm border-t border-hairline">
       <div className="wrap">
-        <div className="bg-gold/5 border-l-2 border-gold p-4 mb-7 text-xs text-light leading-relaxed">
-          <strong className="text-paper">{SITE.disclaimer.split('.')[0]}.</strong>{' '}
+        <div className="bg-cream border-l-[3px] border-burnt p-4 mb-7 text-xs text-body leading-relaxed rounded-r">
+          <strong className="text-ink">{SITE.disclaimer.split('.')[0]}.</strong>{' '}
           Information presented here is educational. It is not legal or tax advice. Rules and tuition figures change. Verify with the relevant authorities and consult a Texas-licensed attorney or CPA for personal cases.
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-9 mb-9">
           <div>
-            <div className="font-serif text-paper text-xl mb-2">instate<span className="text-gold">UT</span>austin</div>
-            <p className="text-light max-w-xs">An independent guide for out-of-state families navigating Texas residency rules and UT Austin tuition strategy.</p>
+            <div className="font-serif text-ink text-xl mb-2">
+              instate<span className="text-burnt">UT</span>austin
+            </div>
+            <p className="text-body max-w-xs">
+              An independent guide for out-of-state families navigating Texas residency rules and UT Austin tuition strategy.
+            </p>
           </div>
           <FootCol title="The Rules" links={[
             ['/texas-residency-rules', 'Texas Residency Rules'],
@@ -34,7 +38,7 @@ export function Footer() {
             ['/privacy', 'Privacy'],
           ]}/>
         </div>
-        <div className="border-t border-gold-lt/10 pt-5 flex flex-wrap gap-3 justify-between text-xs text-mid">
+        <div className="border-t border-hairline pt-5 flex flex-wrap gap-3 justify-between text-xs text-light">
           <span>© {year} instateutaustin.com. Educational use only.</span>
           <span>Reviewed: {SITE.lastReviewed}</span>
         </div>
@@ -46,9 +50,15 @@ export function Footer() {
 function FootCol({ title, links }: { title: string; links: Array<[string, string]> }) {
   return (
     <div>
-      <h4 className="text-paper text-xs font-bold uppercase tracking-widest mb-3">{title}</h4>
+      <h4 className="text-burnt text-xs font-bold uppercase tracking-widest mb-3">{title}</h4>
       {links.map(([href, label]) => (
-        <Link key={href} href={href} className="block py-1 text-gold-lt no-underline hover:text-paper">{label}</Link>
+        <Link
+          key={href}
+          href={href}
+          className="block py-1 text-body no-underline hover:text-burnt"
+        >
+          {label}
+        </Link>
       ))}
     </div>
   );
