@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
@@ -53,13 +54,46 @@ export default function Home() {
 
       {/* HERO */}
       <section
-        className="py-24 border-b border-hairline relative overflow-hidden"
-        style={{
-          background:
-            'radial-gradient(ellipse at 60% 30%, rgba(191,87,0,0.06), transparent 55%), #FAF6EE',
-        }}
+        className="py-24 md:py-28 border-b border-hairline relative overflow-hidden"
+        style={{ backgroundColor: '#FAF6EE' }}
       >
-        <div className="wrap grid md:grid-cols-[1.3fr_1fr] gap-14 items-center">
+        {/* Tower image, full-bleed, anchored to the right + bottom so the tower
+            sits behind the savings card on desktop and crops cleanly on mobile.
+            Paper gradient overlay above keeps the left side legible for the
+            headline. */}
+        <div className="absolute inset-0 z-0" aria-hidden="true">
+          <Image
+            src="/images/ut-tower.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center 35%',
+            }}
+          />
+          {/* Left-to-right cream wash so the headline reads cleanly on the
+              left while the tower stays visible on the right. */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(95deg, rgba(250,246,238,0.97) 0%, rgba(250,246,238,0.94) 40%, rgba(250,246,238,0.65) 70%, rgba(250,246,238,0.45) 100%)',
+            }}
+          />
+          {/* Bottom-to-top fade into the cream so the border-hairline isn't
+              fighting an abrupt photo edge. */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-24"
+            style={{
+              background:
+                'linear-gradient(180deg, rgba(250,246,238,0) 0%, rgba(250,246,238,1) 100%)',
+            }}
+          />
+        </div>
+
+        <div className="relative z-10 wrap grid md:grid-cols-[1.3fr_1fr] gap-14 items-center">
           <div>
             <p className="eyebrow">UT Austin · In-State Tuition Strategy</p>
             <h1
