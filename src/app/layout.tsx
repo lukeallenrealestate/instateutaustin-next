@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: SITE.name, template: '%s | instateutaustin.com' },
   description: SITE.description,
+  verification: {
+    google: 'u4HSpLCVqGTqdAuYoBN5D8F6dITeppTEfJ1No5X8JkY',
+  },
   other: {
     'geo.region': 'US-TX',
     'geo.placename': 'Austin, Texas',
