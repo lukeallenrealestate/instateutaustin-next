@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { ContactSection } from '@/components/ContactSection';
 import { PageHero } from '@/components/PageHero';
 import { CalculatorClient } from './CalculatorClient';
 import { TUITION, fmtUSD } from '@/lib/tuition';
@@ -122,6 +123,8 @@ export default function CalculatorPage() {
           <a href="/condos-near-ut" className="btn btn-ghost">Condos Near UT →</a>
         </div>
       </section>
+
+      <ContactSection source="instateutaustin-tuition-calculator" />
     </>
   );
 }

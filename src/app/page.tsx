@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { ContactSection } from '@/components/ContactSection';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
@@ -188,15 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="bg-paper py-20 border-b border-hairline text-center">
-        <div className="narrow">
-          <p className="eyebrow">Talk to a human</p>
-          <h2 className="text-ink max-w-[22ch] mx-auto mt-0">Your situation is specific. Get a written answer.</h2>
-          <p className="text-body max-w-[56ch] mx-auto my-4 text-lg">The site covers the general case. If your circumstances do not quite fit (divorce, military, scholarship interactions, late timing), send a message.</p>
-          <Link href="/contact" className="btn">Ask a question →</Link>
-        </div>
-      </section>
+      <ContactSection source="instateutaustin-home" />
     </>
   );
 }

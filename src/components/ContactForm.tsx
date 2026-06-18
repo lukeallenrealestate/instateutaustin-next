@@ -91,6 +91,20 @@ export function ContactForm({ source, variant = 'full', heading, subhead }: Prop
       <div className={`text-sm mt-3 ${status === 'ok' ? 'text-green-700' : status === 'err' ? 'text-red-700' : ''}`}>
         {msg}
       </div>
+
+      {variant !== 'minimal' && (
+        <p className="text-xs text-body mt-4 pt-4 border-t border-hairline">
+          Prefer to talk?{' '}
+          <a href="tel:+12547182567" className="text-burnt-deep font-semibold">
+            (254) 718-2567
+          </a>
+          {' '}or{' '}
+          <a href="mailto:luke@austinmdg.com" className="text-burnt-deep">
+            luke@austinmdg.com
+          </a>
+          . Same person, same inbox.
+        </p>
+      )}
     </form>
   );
 }

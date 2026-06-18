@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema, howToSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { ContactSection } from '@/components/ContactSection';
 import { TrustRow } from '@/components/TrustRow';
 import { AuthorBox } from '@/components/AuthorBox';
 import { StickyTOC, type TocSection } from '@/components/StickyTOC';
@@ -445,6 +446,8 @@ export default function ResidencyRulesPage() {
           </aside>
         </div>
       </section>
+
+      <ContactSection source="instateutaustin-residency-rules" />
     </>
   );
 }

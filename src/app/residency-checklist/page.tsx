@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, howToSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { ContactSection } from '@/components/ContactSection';
 import { PageHero } from '@/components/PageHero';
 import { PrintButton } from '@/components/PrintButton';
 import { AuthorBox } from '@/components/AuthorBox';
@@ -204,6 +205,8 @@ export default function ChecklistPage() {
           </div>
         </div>
       </section>
+
+      <ContactSection source="instateutaustin-residency-checklist" />
     </>
   );
 }

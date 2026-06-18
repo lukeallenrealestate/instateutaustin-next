@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { ContactSection } from '@/components/ContactSection';
 import { PageHero } from '@/components/PageHero';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
@@ -203,6 +204,8 @@ export default function CondosPage() {
           </div>
         </div>
       </section>
+
+      <ContactSection source="instateutaustin-condos-bottom" />
     </>
   );
 }
