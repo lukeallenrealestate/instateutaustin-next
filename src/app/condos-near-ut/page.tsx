@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
 import { ContactForm } from '@/components/ContactForm';
@@ -85,15 +86,11 @@ export default function CondosPage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">Property buyer guide</p>
-          <h1 className="text-ink">Condos Near UT Austin: The Residency Buyer Guide</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            How to evaluate UT-area condos and small homes for the Texas residency pathway. Neighborhoods, HOAs, owner-occupancy clauses, resale liquidity, and the property-level gotchas that cost families money.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="Property buyer guide"
+        title="Condos Near UT Austin: The Residency Buyer Guide"
+        lede={<>How to evaluate UT-area condos and small homes for the Texas residency pathway. Neighborhoods, HOAs, owner-occupancy clauses, resale liquidity, and the property-level gotchas that cost families money.</>}
+      />
 
       <TrustRow />
 

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
 import { SITE } from '@/lib/site';
@@ -58,15 +59,11 @@ export default function Rule3vs4Page() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">The choice</p>
-          <h1 className="text-ink">Rule #3 vs. Rule #4: Which property pathway fits your family?</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            Two ways to use real property to satisfy the Texas residency requirement at UT Austin. They are not interchangeable. Picking the wrong one for your situation can cost a year of savings and tens of thousands of dollars.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="The choice"
+        title="Rule #3 vs. Rule #4: Which property pathway fits your family?"
+        lede={<>Two ways to use real property to satisfy the Texas residency requirement at UT Austin. They are not interchangeable. Picking the wrong one for your situation can cost a year of savings and tens of thousands of dollars.</>}
+      />
 
       <TrustRow />
 

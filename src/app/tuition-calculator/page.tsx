@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { CalculatorClient } from './CalculatorClient';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
@@ -48,15 +49,11 @@ export default function CalculatorPage() {
         publisher: { '@type': 'Organization', name: SITE.name },
       }} />
 
-      <header className="bg-paper pt-20 pb-14 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">Run the numbers</p>
-          <h1 className="text-ink">UT Austin Tuition Savings Calculator</h1>
-          <p className="text-body max-w-[60ch] mt-4 text-lg">
-            Model the four-year cost of UT Austin tuition for your student under both classifications. Plug in your enrollment year, major track, and credit load: get a year-by-year and four-year savings figure you can defend to your spouse.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="Run the numbers"
+        title="UT Austin Tuition Savings Calculator"
+        lede={<>Model the four-year cost of UT Austin tuition for your student under both classifications. Plug in your enrollment year, major track, and credit load: get a year-by-year and four-year savings figure you can defend to your spouse.</>}
+      />
 
       <section className="pt-0">
         <div className="wrap" style={{ maxWidth: '1080px' }}>

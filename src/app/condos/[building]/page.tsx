@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { getBuilding, publishedBuildings } from '@/lib/buildings';
 import { pageMetadata, breadcrumb, articleSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
+import { PageHero } from '@/components/PageHero';
 import { QuickAnswer } from '@/components/QuickAnswer';
 import { SITE } from '@/lib/site';
 
@@ -56,13 +57,11 @@ export default async function BuildingPage({ params }: Props) {
         dateModified: SITE.lastReviewed,
       })} />
 
-      <header className="bg-paper py-20 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">Condos near UT</p>
-          <h1 className="text-ink">{b.name}</h1>
-          <p className="text-body text-lg mt-4">{b.address}</p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="Condos near UT"
+        title={b.name}
+        lede={b.address}
+      />
 
       <section className="py-12">
         <div className="narrow">

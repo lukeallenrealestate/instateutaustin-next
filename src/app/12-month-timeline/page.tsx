@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, howToSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
 import { TimelineCountdown } from './TimelineCountdown';
@@ -135,15 +136,11 @@ export default function TimelinePage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">The operating plan</p>
-          <h1 className="text-ink">The 12-Month Residency Timeline</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            Month-by-month, the tasks and documents that get an out-of-state UT family from &quot;considering this&quot; to &quot;approved as Texas resident,&quot; laid out as a working operational plan.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="The operating plan"
+        title="The 12-Month Residency Timeline"
+        lede={<>Month-by-month, the tasks and documents that get an out-of-state UT family from &quot;considering this&quot; to &quot;approved as Texas resident,&quot; laid out as a working operational plan.</>}
+      />
 
       <TrustRow />
 

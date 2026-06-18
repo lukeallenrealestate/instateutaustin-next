@@ -6,6 +6,7 @@ import { QuickAnswer } from '@/components/QuickAnswer';
 import { TrustRow } from '@/components/TrustRow';
 import { AuthorBox } from '@/components/AuthorBox';
 import { StickyTOC, type TocSection } from '@/components/StickyTOC';
+import { PageHero } from '@/components/PageHero';
 import { SITE } from '@/lib/site';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 
@@ -104,22 +105,17 @@ export default function ResidencyRulesPage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      {/* HEADER */}
-      <header className="bg-paper pt-20 pb-12">
-        <div className="narrow">
-          <p className="eyebrow">The authoritative explanation</p>
-          <h1 className="text-ink max-w-[22ch]">Texas Residency Rules for UT Austin In-State Tuition</h1>
-          <p className="text-body text-lg max-w-[64ch] mt-5">
-            The complete legal framework: Texas Education Code §54.052, the THECB Residency Rules, the 12-month domicile clock, the dependent/independent distinction, the property pathway, and the failure modes, written for parents.
-          </p>
-          <div className="text-sm text-body mt-5 flex gap-6 flex-wrap">
-            <span><Dot /> Last reviewed {SITE.lastReviewed}</span>
-            <span><Dot /> ~9,400 words</span>
-            <span><Dot /> Reading time: 38 min</span>
-            <span><Dot /> Sources cited at end</span>
-          </div>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="The authoritative explanation"
+        title={<h1 className="text-ink max-w-[22ch]">Texas Residency Rules for UT Austin In-State Tuition</h1>}
+        lede="The complete legal framework: Texas Education Code §54.052, the THECB Residency Rules, the 12-month domicile clock, the dependent/independent distinction, the property pathway, and the failure modes, written for parents."
+        meta={<>
+          <span><Dot /> Last reviewed {SITE.lastReviewed}</span>
+          <span><Dot /> ~9,400 words</span>
+          <span><Dot /> Reading time: 38 min</span>
+          <span><Dot /> Sources cited at end</span>
+        </>}
+      />
 
       <TrustRow />
 

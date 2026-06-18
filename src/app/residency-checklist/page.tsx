@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, howToSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { PrintButton } from '@/components/PrintButton';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
@@ -97,15 +98,11 @@ export default function ChecklistPage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">Operating document</p>
-          <h1 className="text-ink">The UT Austin Residency Checklist</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            Every document UT&apos;s Residency Determination office may ask for, organized by path. Use this as a working punch list during the 12-month clock, not just at petition time.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="Operating document"
+        title="The UT Austin Residency Checklist"
+        lede={<>Every document UT&apos;s Residency Determination office may ask for, organized by path. Use this as a working punch list during the 12-month clock, not just at petition time.</>}
+      />
 
       <TrustRow />
 

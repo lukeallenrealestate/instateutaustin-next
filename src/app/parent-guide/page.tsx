@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
 import { TUITION, fmtUSD } from '@/lib/tuition';
@@ -55,15 +56,11 @@ export default function ParentGuidePage() {
       })} />
       <Schema data={faqPageSchema(FAQ)} />
 
-      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">For out-of-state families</p>
-          <h1 className="text-ink">The Parent Guide to UT Austin</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            Everything you wish you had known before your student moved to Austin: academic dates, housing, move-in logistics, residency strategy, and your first 30 days as a UT parent.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="For out-of-state families"
+        title="The Parent Guide to UT Austin"
+        lede="Everything you wish you had known before your student moved to Austin: academic dates, housing, move-in logistics, residency strategy, and your first 30 days as a UT parent."
+      />
 
       <TrustRow />
 

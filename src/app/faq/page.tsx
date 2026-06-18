@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
+import { PageHero } from '@/components/PageHero';
 import { AuthorBox } from '@/components/AuthorBox';
 import { TrustRow } from '@/components/TrustRow';
 import { TUITION, fmtUSD } from '@/lib/tuition';
@@ -107,15 +108,11 @@ export default function FaqPage() {
       })} />
       <Schema data={faqPageSchema(FLAT_FAQ)} />
 
-      <header className="bg-paper pt-20 pb-12 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">Frequently asked questions</p>
-          <h1 className="text-ink">UT Austin In-State Tuition FAQ</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            Thirty-two questions about Texas residency for UT tuition, organized by category. If your question is not here, send it through the <Link href="/contact" className="text-burnt-deep">contact form</Link>.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow="Frequently asked questions"
+        title="UT Austin In-State Tuition FAQ"
+        lede={<>Thirty-two questions about Texas residency for UT tuition, organized by category. If your question is not here, send it through the <Link href="/contact" className="text-burnt-deep">contact form</Link>.</>}
+      />
 
       <TrustRow />
 

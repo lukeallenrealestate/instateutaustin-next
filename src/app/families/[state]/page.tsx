@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { getState, publishedStates } from '@/lib/states';
 import { pageMetadata, breadcrumb, faqPageSchema, articleSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
+import { PageHero } from '@/components/PageHero';
 import { QuickAnswer } from '@/components/QuickAnswer';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
@@ -54,15 +55,11 @@ export default async function StateFamiliesPage({ params }: Props) {
         dateModified: SITE.lastReviewed,
       })} />
 
-      <header className="bg-paper py-20 border-b border-hairline">
-        <div className="narrow">
-          <p className="eyebrow">For families relocating from {s.name}</p>
-          <h1 className="text-ink max-w-[22ch]">UT Austin in-state tuition for {s.name} families</h1>
-          <p className="text-body text-lg max-w-[60ch] mt-4">
-            The complete guide for {s.name} parents whose student is admitted to UT Austin from out of state. Texas residency rules, the math, and what is specific to moving from {s.name}.
-          </p>
-        </div>
-      </header>
+      <PageHero
+        eyebrow={`For families relocating from ${s.name}`}
+        title={<h1 className="text-ink max-w-[22ch]">UT Austin in-state tuition for {s.name} families</h1>}
+        lede={`The complete guide for ${s.name} parents whose student is admitted to UT Austin from out of state. Texas residency rules, the math, and what is specific to moving from ${s.name}.`}
+      />
 
       <section className="py-12">
         <div className="narrow">
