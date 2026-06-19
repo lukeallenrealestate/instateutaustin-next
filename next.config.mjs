@@ -23,6 +23,16 @@ const nextConfig = {
         source: '/:state-families-ut-austin-in-state-tuition',
         destination: '/families/:state',
       },
+      {
+        // SEO-friendly /ut-austin-engineering-tuition rewrites to /colleges/engineering
+        source: '/ut-austin-:college-tuition',
+        destination: '/colleges/:college',
+      },
+      {
+        // SEO-friendly /ut-austin-residency-military-families rewrites to /residency/military-families
+        source: '/ut-austin-residency-:scenario',
+        destination: '/residency/:scenario',
+      },
     ];
   },
 };
