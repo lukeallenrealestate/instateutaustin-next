@@ -8,8 +8,8 @@ import { CalculatorClient } from './CalculatorClient';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
-const TITLE = 'UT Austin Tuition Savings Calculator (In-State vs Out-of-State)';
-const DESCRIPTION = `Interactive calculator. Model UT Austin in-state vs out-of-state tuition savings year by year. In-state ${fmtUSD(TUITION.inStatePerYear)} vs out-of-state ${fmtUSD(TUITION.outOfStatePerYear)}. Includes college-specific differentials and four-year totals.`;
+const TITLE = 'UT Austin Tuition Calculator (Cost Calculator + Net Price Estimator)';
+const DESCRIPTION = `Free UT Austin tuition calculator and cost calculator. Model in-state vs out-of-state tuition year by year: ${fmtUSD(TUITION.inStatePerYear)} vs ${fmtUSD(TUITION.outOfStatePerYear)}. Includes per-college differentials, four-year totals, and the Texas residency pathway worth ~$99,660 in savings.`;
 const PATH = '/tuition-calculator';
 
 export const metadata: Metadata = pageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH });
