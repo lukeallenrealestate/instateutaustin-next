@@ -217,6 +217,194 @@ export const COMPARISONS: Comparison[] = [
     ],
     published: true,
   },
+  {
+    slug: 'arizona-state',
+    competitorName: 'Arizona State University',
+    competitorShortName: 'ASU',
+    searchPhrase: 'ut austin vs asu',
+    summary:
+      'UT Austin and Arizona State are both large public research universities but differ in academic prestige tier. UT Austin sits in the top 25 of national public universities; ASU is typically ranked in the 40-60 range nationally. UT outranks ASU in most academic comparisons (Engineering, Business, Liberal Arts), though ASU has built a strong technology and innovation reputation in recent years. Cost: ASU in-state at ~$13,400 is comparable to UT in-state; ASU out-of-state at ~$32,200 is materially cheaper than UT out-of-state at $44,908.',
+    utWins: [
+      'UT generally outranks ASU on national prestige metrics across nearly every academic discipline',
+      'McCombs Business outranks W. P. Carey on US News rankings (top 10 vs top 35)',
+      'Computer Science at UT outranks ASU CS by a wide margin',
+      'Cockrell Engineering outranks Fulton Engineering in most disciplines',
+      'Smaller class sizes and more selective admissions environment',
+      'Austin tech industry and broader Texas economic base',
+    ],
+    competitorWins: [
+      'ASU out-of-state tuition is materially lower at ~$32,200/year (vs UT $44,908)',
+      'ASU has very large total enrollment (~80,000 across all campuses) providing broad major options',
+      'Phoenix metro is the 5th largest in the US with strong tech and finance employment',
+      'ASU Online offers flexible degree paths not available at UT',
+      'ASU Honors College (Barrett) has strong reputation in the honors-college niche',
+      'Warmer winter climate than Austin',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 13_400,
+      competitorOutOfState: 32_200,
+      note: 'ASU out-of-state at $32,200 is about $12,700/year cheaper than UT out-of-state at $44,908. ASU in-state at $13,400 is about $1,700/year more expensive than UT in-state at $11,688. For out-of-state families considering UT through the Texas residency pathway, UT after residency at $11,688 becomes cheaper than ASU at either rate.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) significantly outranks W. P. Carey (top 35) in undergraduate rankings. For Engineering: Cockrell outranks Fulton in most disciplines. For Computer Science: UT CS outranks ASU CS by a wide margin and recruits at a higher tier of tech companies. For Liberal Arts: UT generally outranks ASU. For interdisciplinary innovation programs and Honors College, ASU Barrett is well-regarded.',
+    admissionsComparison:
+      'UT Austin acceptance rate is ~31% overall (~8-13% for non-residents). ASU acceptance rate is ~88% (much more accessible). ASU admits substantially broader academic profiles. UT is significantly more selective in admissions across the board.',
+    cultureComparison:
+      'UT Austin is in the heart of Austin, an urban, music-and-tech-driven state capital. ASU\'s main campus is in Tempe, a Phoenix suburb; campus life is largely centered on campus and immediate surroundings. ASU has a stronger Greek life and traditional college sports culture; UT has Texas football tradition. Climate differs: Austin is humid subtropical; Phoenix is arid desert.',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than ASU at either rate. UT after residency at $11,688 vs ASU out-of-state at $32,200 saves about $20,500/year. UT after residency is also cheaper than ASU in-state ($13,400). Arizona residency for out-of-state college students is harder to establish than Texas residency.',
+    faq: [
+      { q: 'Is UT Austin better than ASU?', a: 'For nearly every academic comparison, yes. UT outranks ASU on national prestige and in most departmental rankings. ASU has built innovation programs and the Barrett Honors College that compete on specific niches, but on overall undergraduate academic quality, UT is the stronger institution.' },
+      { q: 'Is UT Austin cheaper than ASU for out-of-state students?', a: 'At full out-of-state sticker, ASU is about $12,700/year cheaper than UT. However, with the Texas residency pathway, UT after residency at $11,688 becomes cheaper than ASU at either in-state or out-of-state rate.' },
+      { q: 'My student got into both ASU Barrett Honors College and UT. Which is better?', a: 'ASU Barrett provides an intimate honors-college experience within a large university. UT\'s honors options (Plan II, Business Honors Program, Engineering Honors) are similarly selective and well-regarded. For most majors, UT\'s overall academic environment is stronger. For specific innovation-and-entrepreneurship interests, ASU\'s programs are differentiated.' },
+      { q: 'Can my student establish Texas residency at UT vs Arizona residency at ASU?', a: 'Texas residency is generally more achievable for out-of-state college students than Arizona residency. The Texas pathway under §54.052 is well-defined: 12 months of qualifying Texas domicile establishes residency for tuition. Arizona requires substantive independent presence and is much harder for college students.' },
+      { q: 'What about the Phoenix vs Austin job market?', a: 'Both metros have strong tech and finance employment. Austin\'s tech industry is denser and more concentrated; Phoenix\'s economy is broader (tech, finance, healthcare, manufacturing). UT alumni have strong placement in both Texas and Bay Area; ASU alumni have strong placement in Phoenix and the broader Southwest.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'ohio-state',
+    competitorName: 'Ohio State University',
+    competitorShortName: 'Ohio State',
+    searchPhrase: 'ut austin vs ohio state',
+    summary:
+      'UT Austin and Ohio State are large public research universities of similar national stature. Both rank in the top 25-50 nationally. Ohio State has a particularly strong Big Ten athletic tradition; UT has a strong Texas Longhorn culture. Cost: Ohio State in-state at ~$12,400 is comparable to UT in-state at $11,688; Ohio State out-of-state at ~$37,000 is about $7,900/year cheaper than UT out-of-state. The Texas residency pathway makes UT after residency cheaper than Ohio State at either rate.',
+    utWins: [
+      'McCombs Business outranks Fisher College of Business in undergraduate rankings',
+      'UT Computer Science generally outranks Ohio State CS',
+      'Plan II Honors is more distinctive than Ohio State Honors options',
+      'Austin tech industry pipeline is stronger than Columbus tech base',
+      'Lower in-state tuition (UT $11,688 vs OSU $12,400)',
+      'Year-round outdoor climate vs Ohio winters',
+    ],
+    competitorWins: [
+      'Ohio State out-of-state tuition is ~$7,900/year cheaper than UT out-of-state',
+      'Engineering programs at OSU rank competitively with Cockrell',
+      'Big Ten athletic tradition (football especially) is among the strongest in the country',
+      'OSU has a stronger pre-vet and agricultural science presence than UT',
+      'Larger total undergraduate population (~50,000 vs UT\'s ~42,000)',
+      'Columbus metro is growing quickly with diversifying employment',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 12_400,
+      competitorOutOfState: 37_000,
+      note: 'Ohio State out-of-state at $37,000 is about $7,900/year cheaper than UT out-of-state at $44,908. In-state rates are similar (UT slightly cheaper). For out-of-state students who establish Texas residency, UT after residency at $11,688 becomes cheaper than Ohio State at either rate.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) outranks Fisher (top 25). For Engineering: comparable rankings; Ohio State strong in mechanical and aerospace, UT strong in petroleum, chemical, and biomedical. For Computer Science: UT generally outranks Ohio State. For Agriculture/Vet: Ohio State has agricultural programs and pre-vet pathway; UT does not.',
+    admissionsComparison:
+      'Ohio State acceptance rate ~57%; UT ~31%. Ohio State is materially more accessible than UT. Both schools have strong honors programs (UT Plan II, OSU Honors Collegium) that are competitively selective.',
+    cultureComparison:
+      'Ohio State is in Columbus, Ohio\'s capital and a city of ~900K with growing tech and finance sectors. Football is central to school culture (Buckeyes vs Michigan rivalry is one of the biggest in college sports). UT Austin sits in urban Austin with music, tech, and state government as the surrounding context. Texas football is a strong tradition but less central to overall campus identity than Buckeye football is at OSU.',
+    residencyAngle:
+      'Texas residency pathway makes UT after residency at $11,688 cheaper than Ohio State at either rate. Ohio residency for out-of-state college students is hard to establish (requires 12 months of substantive independent presence). Texas residency for college families is more accessible through the property pathway.',
+    faq: [
+      { q: 'Is UT Austin better than Ohio State?', a: 'For most academic comparisons, UT slightly outranks Ohio State, particularly in Business (McCombs vs Fisher) and Computer Science. Ohio State is competitive in Engineering. For agriculture, vet medicine, and Big Ten athletic experience, Ohio State has distinct strengths.' },
+      { q: 'Is UT Austin or Ohio State cheaper for out-of-state students?', a: 'At full out-of-state sticker, Ohio State is about $7,900/year cheaper. With the Texas residency pathway, UT after residency at $11,688 becomes substantially cheaper than Ohio State at either rate.' },
+      { q: 'What about Buckeye football tradition?', a: 'For families who value Big Ten football culture as a central part of the college experience, Ohio State delivers an unmatched tradition. UT football is competitive but less central to school identity than Ohio State football.' },
+      { q: 'Can my Ohio student establish Texas residency for UT?', a: 'Yes, through the standard Texas pathway. Acquire Texas property and maintain Texas domicile for 12 months. Ohio residency for UT students is hard to establish in reverse.' },
+      { q: 'Which has better post-graduation job placement?', a: 'Depends on industry. McCombs and UT CS have stronger Bay Area and Austin tech placement. Fisher and OSU have strong Midwest finance and manufacturing placement. Both schools have large alumni networks; the right answer depends on where the student wants to work.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'florida',
+    competitorName: 'University of Florida',
+    competitorShortName: 'UF',
+    searchPhrase: 'ut austin vs uf',
+    summary:
+      'UT Austin and University of Florida are both top-tier public flagships in the SEC/Big 12 sphere. UF has built a strong national reputation in recent years (now top 5 public university by some rankings). Cost: UF in-state at ~$6,400 is dramatically cheaper than UT in-state at $11,688; UF out-of-state at ~$28,700 is materially cheaper than UT out-of-state at $44,908. For Florida-resident families, UF at home is significantly cheaper than UT even through the Texas residency pathway.',
+    utWins: [
+      'McCombs Business generally outranks Warrington College of Business',
+      'Cockrell Engineering competitive with UF Engineering, particularly in petroleum',
+      'Computer Science at UT typically ranks comparable to or above UF CS',
+      'Austin tech industry has more depth than Gainesville',
+      'Larger and more diverse alumni network across the Sun Belt',
+      'Plan II Honors is more distinctive than UF Honors',
+    ],
+    competitorWins: [
+      'UF in-state at $6,400 is dramatically cheaper than UT in-state at $11,688 (about $5,300/year less)',
+      'UF out-of-state at $28,700 is ~$16,200/year cheaper than UT out-of-state',
+      'UF has built a strong national reputation; some rankings place it ahead of UT',
+      'Bright Futures Florida scholarship covers significant tuition for Florida residents',
+      'Strong pre-med and pre-vet pipelines (UF has a Vet School, UT does not)',
+      'SEC football tradition; Gainesville is a classic SEC college town',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 6_400,
+      competitorOutOfState: 28_700,
+      note: 'UF is significantly cheaper in both classifications. UF in-state at $6,400/year is about $5,300 less than UT in-state. UF out-of-state at $28,700 is about $16,200 less than UT out-of-state. For Florida-resident families, UF at home is the cheaper option even compared to UT after Texas residency. For non-Florida out-of-state families considering both, UF OOS at $28,700 is cheaper than UT OOS but more expensive than UT after Texas residency at $11,688.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) generally outranks Warrington (top 20). For Engineering: comparable; UF stronger in biomedical and agricultural engineering, UT stronger in petroleum. For Computer Science: UT generally outranks UF. For Pre-Vet/Vet School: UF has the only veterinary medicine school of the two; UT does not. For Liberal Arts: comparable rankings overall.',
+    admissionsComparison:
+      'UF acceptance rate ~30%; UT ~31%. Both are similarly selective on aggregate. UF admits substantially through holistic review; UT has the Top 10% Rule for Texas residents. For non-residents at either school, admissions are competitive.',
+    cultureComparison:
+      'University of Florida is in Gainesville, a classic SEC college town of ~140K. SEC football is central. Hot, humid Florida climate. UT Austin sits in urban Austin, the Texas state capital, with music and tech industry as the surrounding context. Both have strong sports cultures but UF\'s Gators football is more central to the small-college-town experience.',
+    residencyAngle:
+      'For Florida-resident families, staying at UF in-state at $6,400 is cheaper than pursuing Texas residency at UT for $11,688. The math favors UF for Florida families. For non-Florida out-of-state families considering both, UT after Texas residency at $11,688 is cheaper than UF out-of-state at $28,700. Texas residency pathway is more achievable than Florida residency reclassification.',
+    faq: [
+      { q: 'Is UT Austin better than UF?', a: 'Mixed picture. UT outranks UF in Business (McCombs vs Warrington) and Computer Science. UF outranks UT on some overall prestige metrics in recent years and has a Vet School which UT does not. For most academic comparisons, the schools are within striking distance.' },
+      { q: 'Is UF cheaper than UT for in-state students?', a: 'Yes. UF in-state at $6,400 is about $5,300/year cheaper than UT in-state at $11,688. For Florida-resident families, UF is dramatically cheaper than UT even through the Texas residency pathway.' },
+      { q: 'Should my Florida student attend UF or pursue UT through the residency pathway?', a: 'For most Florida families, UF at the home rate is the better financial choice. Florida\'s Bright Futures scholarship can further reduce UF cost. The Texas residency pathway makes sense for Florida families only when UF is not the right academic fit or when the student is admitted to a UT program (McCombs, CS) that significantly outranks the comparable UF program.' },
+      { q: 'How does Bright Futures change the math?', a: 'Florida Bright Futures Academic Scholarship covers 100% of tuition for Florida residents at top academic profiles, and 75% for the next tier. Combined with low UF in-state tuition, qualifying Florida students often attend UF for $0-$2,000/year in net tuition. UT does not have a comparable in-state merit scholarship.' },
+      { q: 'My non-Florida family is choosing between UF OOS and UT OOS. Which is cheaper?', a: 'At full out-of-state sticker, UF at $28,700 is about $16,200/year cheaper than UT at $44,908. With the Texas residency pathway at UT, UT after residency at $11,688 becomes cheaper than UF OOS. The pathway is the deciding factor.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'wisconsin',
+    competitorName: 'University of Wisconsin-Madison',
+    competitorShortName: 'Wisconsin',
+    searchPhrase: 'ut austin vs wisconsin',
+    summary:
+      'UT Austin and Wisconsin-Madison are flagship public research universities of similar national stature. Both rank in the top 50 nationally, with Wisconsin sitting in the top 15 of national publics. Wisconsin has particularly strong programs in business, engineering, and biological sciences. Cost: Wisconsin in-state at ~$11,200 is comparable to UT in-state at $11,688; Wisconsin out-of-state at ~$41,600 is about $3,300/year cheaper than UT out-of-state. The Texas residency pathway makes UT after residency cheaper than Wisconsin at either rate.',
+    utWins: [
+      'McCombs Business generally outranks Wisconsin School of Business',
+      'UT Computer Science ranks comparably to Wisconsin CS',
+      'Austin tech industry pipeline is stronger than Madison',
+      'Year-round outdoor climate vs Wisconsin winters (which are long and harsh)',
+      'Lower out-of-state tuition vs many top publics in the residency pathway scenario',
+      'Larger and more politically diverse alumni network',
+    ],
+    competitorWins: [
+      'Wisconsin out-of-state at $41,600 is about $3,300/year cheaper than UT out-of-state',
+      'Wisconsin engineering programs rank competitively with Cockrell',
+      'Biological sciences and pre-med pipeline is very strong at Wisconsin',
+      'Madison is consistently ranked among the best college towns in the country',
+      'Strong tradition of student activism and academic culture',
+      'Big Ten athletic tradition; Camp Randall football experience',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 11_200,
+      competitorOutOfState: 41_600,
+      note: 'Wisconsin and UT have similar in-state tuition (Wisconsin slightly cheaper). Wisconsin out-of-state at $41,600 is about $3,300/year cheaper than UT out-of-state at $44,908. For out-of-state students who establish Texas residency, UT after residency at $11,688 becomes cheaper than Wisconsin at either rate.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) generally outranks Wisconsin Business (top 25). For Engineering: comparable rankings. For Computer Science: similar tier; both in top 15. For Biological Sciences and Pre-Med: Wisconsin is notably strong with research opportunities and medical school adjacency. For Agriculture: Wisconsin has agricultural programs; UT does not.',
+    admissionsComparison:
+      'Wisconsin acceptance rate ~57%; UT ~31%. Wisconsin is more accessible. Both have strong honors programs. UT\'s top programs (McCombs, CS) are more selective than Wisconsin\'s comparable programs.',
+    cultureComparison:
+      'Madison is a classic college town of ~270K, consistently rated among the best in the country. State capital plus university. Madison campus culture combines academic intensity, traditional progressive politics, and Big Ten athletic tradition. UT Austin is in a much larger urban setting (Austin metro ~2.5M) with music, tech, and government as the surrounding context. Climate is dramatically different (Wisconsin winters are long and harsh).',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than Wisconsin at either rate. UT after residency at $11,688 vs Wisconsin out-of-state at $41,600 is about $29,900/year savings. Wisconsin residency for out-of-state college students is hard to establish (requires 12 months substantive presence).',
+    faq: [
+      { q: 'Is UT Austin better than Wisconsin?', a: 'Both are top-tier public flagships within striking distance of each other on prestige rankings. UT outranks Wisconsin in Business (McCombs) and is comparable in CS and Engineering. Wisconsin outranks UT in Biological Sciences and has a stronger pre-med pipeline.' },
+      { q: 'Is Wisconsin cheaper than UT Austin?', a: 'For in-state students, Wisconsin is slightly cheaper ($11,200 vs $11,688). For out-of-state students at full sticker, Wisconsin is about $3,300/year cheaper than UT. With the Texas residency pathway, UT after residency at $11,688 becomes the cheaper option.' },
+      { q: 'My Wisconsin student got into both. What should we consider?', a: 'For staying in the Midwest with strong pre-med, biological sciences, or progressive academic culture, Wisconsin is a strong choice. For warmer climate, larger urban setting, stronger business school, and the residency pathway opportunity, UT is the stronger choice. Most Wisconsin families who choose UT do so because of the McCombs/CS programs or Austin location.' },
+      { q: 'Can my Wisconsin student establish Texas residency at UT?', a: 'Yes, through the standard Texas pathway. Acquire Texas property and maintain Texas domicile for 12 months. Wisconsin residency for UT students is much harder to establish in reverse.' },
+      { q: 'How do the winters compare?', a: 'Madison winters are long, snowy, and cold (typical lows in the teens and single digits for months). Austin winters are mild (typical lows in the 40s and 50s, occasional freezes). For students who prefer warmer weather, Austin is dramatically more comfortable.' },
+    ],
+    published: true,
+  },
 ];
 
 export const getComparison = (slug: string) => COMPARISONS.find(c => c.slug === slug && c.published);

@@ -175,6 +175,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MONEY DECISION DEEP LINKS */}
+      <section className="py-16">
+        <div className="narrow">
+          <p className="eyebrow">Answering the money questions</p>
+          <h2 className="mt-0">If you are evaluating UT Austin as an out-of-state parent</h2>
+          <p className="text-body mb-6">The questions every parent asks once the &quot;Congratulations from UT Austin&quot; email arrives. Each links to a substantive page, not marketing copy.</p>
+          <div className="grid md:grid-cols-2 gap-4 mt-7">
+            {MONEY_PAGES.map((p) => (
+              <Link key={p.href} href={p.href} className="block bg-white border border-hairline rounded p-5 no-underline text-ink hover:border-burnt transition-all">
+                <div className="font-semibold text-ink">{p.title}</div>
+                <p className="text-body text-sm mt-1 mb-0">{p.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="text-body mt-7">Browse all per-state guides at <Link href="/by-state">By Origin State</Link>, all per-college tuition pages at <Link href="/by-college">By UT College</Link>, or run the numbers at <Link href="/tuition-calculator">Tuition Calculator</Link>.</p>
+        </div>
+      </section>
+
       {/* FAQ (matches FAQPage schema above) */}
       <section className="py-16">
         <div className="narrow">
@@ -209,6 +227,15 @@ function Row({ label, value }: { label: string; value: string }) {
   );
 }
 function Dot() { return <span className="inline-block w-1.5 h-1.5 bg-burnt rounded-full mr-2 align-middle" />; }
+
+const MONEY_PAGES = [
+  { href: '/is-ut-austin-worth-it-out-of-state', title: 'Is UT Austin worth it for out-of-state?', desc: 'Honest financial and outcome analysis: by major, by home state, with and without the residency pathway.' },
+  { href: '/ut-austin-4-year-cost-out-of-state', title: 'UT Austin 4-year cost (out-of-state)', desc: 'Complete cost of attendance breakdown: tuition, fees, housing, meals, books, transportation, personal.' },
+  { href: '/ut-austin-scholarships-out-of-state', title: 'Scholarships for out-of-state students', desc: 'Forty Acres, McCombs, Cockrell, National Merit, plus how the residency pathway stacks with merit aid.' },
+  { href: '/ut-austin-financial-aid-out-of-state', title: 'Financial aid for out-of-state students', desc: 'FAFSA, federal Pell Grant and loans, what institutional aid is and is not available to non-residents.' },
+  { href: '/ut-austin-acceptance-rate-out-of-state', title: 'UT Austin acceptance rate for out-of-state', desc: 'Real numbers: 8-13% non-resident vs 31% overall, by college, with academic profile of admits.' },
+  { href: '/ut-austin-net-price-calculator', title: 'UT Austin net price calculator', desc: 'Estimate your true four-year net price after aid, scholarships, and the residency pathway.' },
+];
 
 const PATHS = [
   { href: '/texas-residency-rules', title: 'The Texas Residency Rules', desc: 'The authoritative explanation of §54.052 and the THECB framework.', cta: 'Read the rules' },
