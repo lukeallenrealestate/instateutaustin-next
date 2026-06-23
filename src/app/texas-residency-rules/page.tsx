@@ -436,6 +436,14 @@ export default function ResidencyRulesPage() {
           <div className="next-step">
             <h2>Now that you understand the rules</h2>
             <p>Read the side-by-side comparison of the two property pathways, <Link href="/rule-3-vs-rule-4" className="text-burnt-deep">Rule #3 vs. Rule #4</Link>, to choose which one fits your family. Then run the numbers in the <Link href="/tuition-calculator" className="text-burnt-deep">tuition calculator</Link> to confirm the savings amortize against the carrying costs. When you are ready to look at properties, the <Link href="/condos-near-ut" className="text-burnt-deep">condos near UT</Link> page covers what to look for, and the <Link href="/contact" className="text-burnt-deep">contact form</Link> connects you to a Texas-licensed broker who specializes in this pathway.</p>
+            <h3 className="mt-7">Related residency resources</h3>
+            <ul>
+              <li><Link href="/how-to-establish-texas-residency" className="text-burnt-deep">How to establish Texas residency</Link>: the full step-by-step</li>
+              <li><Link href="/texas-residency-12-months" className="text-burnt-deep">Texas residency 12 months</Link>: the exact domicile clock</li>
+              <li><Link href="/buying-property-in-texas-for-residency" className="text-burnt-deep">Buying property in Texas for residency</Link>: the real estate angle</li>
+              <li><Link href="/texas-residency-denied-appeal" className="text-burnt-deep">Texas residency denied: appeal process</Link>: when petitions fail</li>
+              <li><Link href="/moving-to-austin-from-out-of-state" className="text-burnt-deep">Moving to Austin from out of state</Link>: parent relocation guide</li>
+            </ul>
             <Link href="/rule-3-vs-rule-4" className="btn mt-4 inline-block">Rule #3 vs. Rule #4 →</Link>
           </div>
 
