@@ -8,8 +8,10 @@ import { ContactSection } from '@/components/ContactSection';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
-const TITLE = `Save ${fmtUSD(TUITION.annualSavings)}/year on UT Austin Tuition (In-State Residency Guide)`;
-const DESCRIPTION = `Save ${fmtUSD(TUITION.annualSavings)} a year by qualifying for UT Austin in-state tuition through Texas residency. In-state ${fmtUSD(TUITION.inStatePerYear)} vs out-of-state ${fmtUSD(TUITION.outOfStatePerYear)}. The 12-month domicile pathway for out-of-state parents, by Luke Allen, Texas REALTOR®.`;
+// Homepage title MUST include the head term ("In-State UT Austin Tuition")
+// and the brand for domain-match queries. Length ~70 chars to fit the SERP.
+const TITLE = `In-State UT Austin Tuition: Save ${fmtUSD(TUITION.annualSavings)}/yr | instateutaustin.com`;
+const DESCRIPTION = `instateutaustin.com is the complete guide to UT Austin in-state tuition for out-of-state families. Save ${fmtUSD(TUITION.annualSavings)} a year through Texas residency. In-state ${fmtUSD(TUITION.inStatePerYear)} vs out-of-state ${fmtUSD(TUITION.outOfStatePerYear)}. Built by Luke Allen, Texas REALTOR® (TREC #788149).`;
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,
@@ -98,14 +100,13 @@ export default function Home() {
           <div>
             <p className="eyebrow">UT Austin · In-State Tuition Strategy</p>
             <h1
-              className="text-ink max-w-[18ch]"
-              style={{ fontSize: 'clamp(2.2rem, 5.6vw, 4rem)', lineHeight: 1.08, fontWeight: 700 }}
+              className="text-ink max-w-[20ch]"
+              style={{ fontSize: 'clamp(2rem, 5.2vw, 3.6rem)', lineHeight: 1.08, fontWeight: 700 }}
             >
-              Save <span className="text-burnt">{fmtUSD(TUITION.annualSavings)} a year</span> on{' '}
-              <span className="text-burnt">UT&nbsp;Austin</span> tuition.
+              <span className="text-burnt">In-State UT Austin Tuition</span>: Save {fmtUSD(TUITION.annualSavings)} a year.
             </h1>
             <p className="text-body mt-4 max-w-[60ch] text-lg">
-              The out-of-state parent&apos;s guide to Texas residency rules, the 12-month domicile clock, and the property pathway that converts an out-of-state admit into a Texas resident for tuition purposes.
+              <strong>instateutaustin.com</strong> is the complete out-of-state parent&apos;s guide to UT Austin in-state tuition through Texas residency. The 12-month domicile pathway converts an out-of-state admit into a Texas resident for tuition purposes, saving roughly {fmtUSD(TUITION.threeYearSavings)} over three years.
             </p>
             <div className="mt-8 flex gap-3 flex-wrap">
               <Link href="/texas-residency-rules" className="btn">Start with the rules</Link>

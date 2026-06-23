@@ -6,10 +6,7 @@ const nextConfig = {
   // Vercel's edge runtime; everything else is pre-rendered at build time.
   // Image optimization stays on Vercel default.
   async redirects() {
-    return [
-      // The static site had this same alias; preserve here.
-      { source: '/ut-austin-in-state-tuition', destination: '/texas-residency-rules', permanent: true },
-    ];
+    return [];
   },
   // The state-page SEO URL (/california-families-...) rewrites internally to
   // a clean dynamic route (/families/california). The browser URL stays
