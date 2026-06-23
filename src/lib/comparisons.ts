@@ -405,6 +405,241 @@ export const COMPARISONS: Comparison[] = [
     ],
     published: true,
   },
+  {
+    slug: 'indiana',
+    competitorName: 'Indiana University Bloomington',
+    competitorShortName: 'IU',
+    searchPhrase: 'ut austin vs indiana',
+    summary:
+      'UT Austin and Indiana University Bloomington are both flagship public research universities. IU is particularly strong in business (Kelley School of Business is top 10), music (Jacobs School of Music), and education. UT outranks IU on overall prestige rankings but Kelley competes directly with McCombs at the undergraduate business level. Cost: IU in-state at ~$11,300 is comparable to UT in-state at $11,688; IU out-of-state at ~$40,500 is about $4,400/year cheaper than UT out-of-state.',
+    utWins: [
+      'McCombs Business top-10 ranking is competitive with Kelley (both elite undergrad business)',
+      'UT Computer Science generally outranks IU CS',
+      'Cockrell Engineering substantially outranks IU Engineering',
+      'Austin tech industry is materially stronger than Bloomington area employment',
+      'Warmer climate, larger urban setting',
+      'Texas residency pathway makes UT cheaper than IU at either rate',
+    ],
+    competitorWins: [
+      'IU out-of-state is $4,400/year cheaper than UT out-of-state',
+      'Kelley School of Business is a peer of McCombs and consistently top 10',
+      'Jacobs School of Music is one of the top conservatory programs in the US',
+      'IU has strong programs in linguistics, public policy (SPEA), and area studies',
+      'Bloomington is a classic Big Ten college town with excellent campus character',
+      'Hoosiers basketball tradition is among the strongest in the country',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 11_300,
+      competitorOutOfState: 40_500,
+      note: 'IU in-state at $11,300 is about $400/year cheaper than UT in-state. IU out-of-state at $40,500 is about $4,400/year cheaper than UT out-of-state. With the Texas residency pathway, UT after residency at $11,688 is comparable to IU in-state and dramatically cheaper than IU out-of-state.',
+    },
+    programComparison:
+      'For Business: McCombs and Kelley are both elite undergrad programs. Kelley has slightly stronger consulting and Big 4 placement; McCombs has slightly stronger Bay Area tech and Texas employer placement. Both are top-10 nationally. For CS: UT outranks IU. For Music: IU Jacobs is dramatically stronger than UT (Jacobs is among the top 3-5 conservatories in the US). For Engineering: UT Cockrell is stronger than IU Engineering.',
+    admissionsComparison:
+      'IU acceptance rate ~78%; UT ~31%. IU is significantly more accessible than UT for general admission. Kelley direct admit is competitive but easier to access than McCombs direct admit. For non-residents at both schools, admissions are competitive but UT is materially more selective.',
+    cultureComparison:
+      'Bloomington is a classic Big Ten college town of ~85K. IU campus is large, leafy, and tradition-heavy. Hoosier basketball is central to school culture. UT Austin is in urban Austin with music, tech, and government as the surrounding context. Both have strong school spirit; IU is more campus-and-college-town focused, UT is more city-integrated.',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than IU at either classification. UT after residency at $11,688 vs IU out-of-state at $40,500 is about $28,800/year savings. Indiana residency is hard for out-of-state college students to establish; the move from one state to the other favors Texas.',
+    faq: [
+      { q: 'Is Kelley better than McCombs?', a: 'They are peers. Both rank top 10 nationally for undergraduate business. Kelley has slightly stronger consulting and Big 4 accounting placement; McCombs has slightly stronger tech (Bay Area, Austin) and Texas employer placement. Choice usually depends on geographic preference and specific career interest.' },
+      { q: 'Is UT Austin better than IU?', a: 'On overall prestige and most academic comparisons, yes. The exceptions are Music (IU Jacobs is dramatically stronger than UT) and a few specialized programs in linguistics and area studies. For business, the two are peers.' },
+      { q: 'Is IU cheaper than UT for out-of-state students?', a: 'At full sticker, IU is about $4,400/year cheaper than UT. With the Texas residency pathway, UT after residency becomes substantially cheaper than IU.' },
+      { q: 'Can my Indiana student establish Texas residency at UT?', a: 'Yes, through the standard Texas pathway. The Indiana-to-Texas tax move is also modestly favorable (Indiana 3.15%, Texas zero).' },
+      { q: 'What about IU basketball culture?', a: 'For families who value Big Ten basketball tradition as a central part of college culture, IU\'s Hoosier basketball is one of the strongest traditions in the country. UT athletics is football-focused; basketball is competitive but less central.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'purdue',
+    competitorName: 'Purdue University',
+    competitorShortName: 'Purdue',
+    searchPhrase: 'ut austin vs purdue',
+    summary:
+      'UT Austin and Purdue are both top public research universities particularly strong in engineering and STEM. Purdue Engineering ranks top 10 nationally (#4-#9 depending on year); UT Cockrell ranks top 10-15. For Computer Science and Engineering, the two schools are direct competitors. Cost: Purdue in-state at ~$10,000 is slightly cheaper than UT in-state at $11,688; Purdue out-of-state at ~$28,800 is materially cheaper than UT out-of-state. With Texas residency pathway, UT becomes cheaper than Purdue at either rate.',
+    utWins: [
+      'McCombs Business significantly outranks Krannert School of Management (Purdue Business)',
+      'Austin tech industry is materially stronger than the West Lafayette area',
+      'UT Computer Science competitive with Purdue CS in most rankings',
+      'Warmer climate, larger urban setting, broader cultural amenities',
+      'Stronger liberal arts and humanities programs at UT',
+      'Texas residency pathway makes UT cheaper than Purdue at either rate',
+    ],
+    competitorWins: [
+      'Purdue Engineering ranks top 10 nationally; UT Cockrell ranks top 10-15',
+      'Purdue out-of-state at $28,800 is materially cheaper than UT out-of-state ($44,908)',
+      'Purdue in-state at $10,000 is slightly cheaper than UT in-state',
+      'Aerospace engineering at Purdue is particularly distinguished (NASA pipeline)',
+      'Polytechnic Institute and applied engineering offers practical career paths',
+      'Strong agricultural and animal science programs',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 10_000,
+      competitorOutOfState: 28_800,
+      note: 'Purdue is cheaper in both classifications: in-state by about $1,700/year, out-of-state by about $16,100/year. For out-of-state students who establish Texas residency, UT after residency at $11,688 becomes comparable to Purdue in-state and dramatically cheaper than Purdue out-of-state.',
+    },
+    programComparison:
+      'For Engineering: Purdue ranks top 10 in mechanical, aerospace, electrical, and industrial. UT Cockrell ranks top 10-15 in petroleum, chemical, civil, and biomedical. For CS: comparable rankings (both top 15). For Business: McCombs significantly outranks Krannert (now Mitch Daniels School). For Aerospace: Purdue has the strongest aerospace engineering program in the US for many ranking systems (NASA astronaut pipeline). For Liberal Arts: UT outranks Purdue.',
+    admissionsComparison:
+      'Purdue acceptance rate ~67%; UT ~31%. Purdue is significantly more accessible. For Engineering at both schools, admission is competitive; Purdue Engineering admits direct-to-major, UT Cockrell similar. For most majors, Purdue is materially easier to gain admission to.',
+    cultureComparison:
+      'West Lafayette is a classic Big Ten engineering-college town of ~45K. Purdue culture is engineering-and-agriculture focused, with strong polytechnic identity. UT Austin is in urban Austin with music, tech, and state government as the surrounding context. Climate differs dramatically (Indiana winters vs Austin mild winters).',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than Purdue at either rate for non-residents. UT after residency at $11,688 vs Purdue out-of-state at $28,800 saves about $17,100/year. The pathway is the deciding factor in the cost comparison.',
+    faq: [
+      { q: 'Is Purdue better than UT for engineering?', a: 'Depends on discipline. Purdue is stronger in aerospace, mechanical, and industrial engineering. UT Cockrell is stronger in petroleum, chemical, and biomedical engineering. Both are top-15 engineering programs. For Computer Engineering and CS, they are comparable.' },
+      { q: 'Is Purdue cheaper than UT for out-of-state students?', a: 'At full sticker, Purdue is dramatically cheaper at $28,800 vs UT at $44,908 (about $16,100/year less). With the Texas residency pathway, UT becomes cheaper.' },
+      { q: 'My student wants aerospace engineering. Which is better?', a: 'Purdue. Purdue Aerospace is among the strongest in the country (NASA astronaut pipeline, top-3 rankings). UT has Aerospace but Purdue is the clear leader.' },
+      { q: 'Can my Indiana student establish Texas residency for UT?', a: 'Yes, through the standard Texas pathway. Indiana residency is hard to establish at Purdue; the move favors Texas.' },
+      { q: 'What if my student wants to go into industry vs research?', a: 'Both schools place strongly into industry. Purdue\'s polytechnic and applied-engineering orientation may be slightly stronger for traditional manufacturing and aerospace careers. UT places strongly into tech (Apple, Google, Meta) and Texas energy companies.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'georgia-tech',
+    competitorName: 'Georgia Institute of Technology',
+    competitorShortName: 'Georgia Tech',
+    searchPhrase: 'ut austin vs georgia tech',
+    summary:
+      'UT Austin and Georgia Tech are both top public research universities particularly strong in engineering and computer science. Georgia Tech ranks top 10 in many engineering disciplines and top 10 in CS; UT ranks top 10-15 in both. For STEM students, the two schools are direct competitors. Cost: Georgia Tech in-state at ~$12,700 is slightly more expensive than UT in-state at $11,688; Georgia Tech out-of-state at ~$33,800 is about $11,100/year cheaper than UT out-of-state.',
+    utWins: [
+      'McCombs Business significantly outranks Scheller College of Business',
+      'UT has broader liberal arts, humanities, and social sciences than Georgia Tech',
+      'Austin tech industry is comparable to Atlanta but with stronger startup density',
+      'Larger total student body provides broader social and academic environment',
+      'Texas residency pathway makes UT after residency cheaper than Georgia Tech at either rate',
+      'Plan II Honors interdisciplinary program is distinctive vs Georgia Tech\'s narrower focus',
+    ],
+    competitorWins: [
+      'Georgia Tech Engineering and CS rank top 5-10 nationally (slightly above UT)',
+      'Georgia Tech out-of-state at $33,800 is materially cheaper than UT out-of-state',
+      'Georgia Tech\'s narrow STEM focus produces deep career placement into top tech',
+      'Co-op program at Georgia Tech is among the strongest in the country',
+      'Atlanta tech, Coca-Cola HQ, Delta, and major corporate base nearby',
+      'Strong industrial engineering and supply chain programs',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 12_700,
+      competitorOutOfState: 33_800,
+      note: 'Georgia Tech in-state at $12,700 is about $1,000/year more expensive than UT in-state. Georgia Tech out-of-state at $33,800 is about $11,100/year cheaper than UT out-of-state. With the Texas residency pathway, UT after residency at $11,688 becomes cheaper than Georgia Tech at either classification.',
+    },
+    programComparison:
+      'For Engineering: Georgia Tech ranks top 5-10 across multiple disciplines; UT Cockrell ranks top 10-15. For Computer Science: Georgia Tech ranks top 5-8; UT ranks top 10-12. For Industrial Engineering: Georgia Tech is dominant (#1 nationally for many years). For Business: McCombs significantly outranks Scheller. For broader academics (liberal arts, social sciences, humanities), UT is the stronger comprehensive university; Georgia Tech is intentionally STEM-focused.',
+    admissionsComparison:
+      'Georgia Tech acceptance rate ~17%; UT ~31% overall (~8-13% for non-residents). For STEM majors, both schools are similarly selective for the strongest programs. Georgia Tech CS direct admit and UT CS direct admit are both highly competitive (~5-10% acceptance rate).',
+    cultureComparison:
+      'Georgia Tech is in midtown Atlanta, an urban campus within a major metro. The culture is intensely STEM-focused; the student body is dominantly engineering and CS. UT Austin is also urban but with broader academic culture (liberal arts, music, government policy alongside engineering and CS). For students who want a comprehensive university experience, UT offers more breadth; for students who want narrow STEM focus, Georgia Tech delivers.',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than Georgia Tech at either rate. UT after residency at $11,688 vs Georgia Tech out-of-state at $33,800 saves about $22,100/year. Georgia residency for out-of-state college students is hard to establish.',
+    faq: [
+      { q: 'Is Georgia Tech better than UT for engineering?', a: 'On most rankings, slightly yes. Georgia Tech Engineering ranks top 5-10 in most disciplines; UT Cockrell ranks top 10-15. For Industrial Engineering specifically, Georgia Tech is #1. The gap is meaningful but not huge.' },
+      { q: 'Is Georgia Tech better than UT for Computer Science?', a: 'Marginally yes on rankings. Georgia Tech CS ranks top 5-8; UT CS ranks top 10-12. Both produce strong tech industry placement; both recruit at Apple, Google, Meta, Amazon at the highest tier.' },
+      { q: 'Is UT or Georgia Tech a better fit for STEM students who want broad academics?', a: 'UT. Georgia Tech is intentionally STEM-focused; the broader academic environment is limited. UT offers a comprehensive university experience including strong liberal arts, music, business, and government programs alongside top-tier STEM.' },
+      { q: 'How does the Atlanta vs Austin tech industry compare?', a: 'Both are strong tech metros. Atlanta has Coca-Cola, Delta, NCR, Mailchimp, Home Depot HQ, and growing tech. Austin has Apple, Google, Meta, Tesla, Dell, plus deep startup ecosystem. Austin\'s startup density and tech-only employer concentration may be slightly higher; Atlanta\'s broader corporate base is larger.' },
+      { q: 'Can my Georgia student establish Texas residency for UT?', a: 'Yes, through the standard Texas pathway. Georgia residency for UT students is hard to establish in reverse. For Georgia-resident families, Georgia Tech at home rate may be cheaper than UT after pathway, depending on the specific math.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'usc',
+    competitorName: 'University of Southern California',
+    competitorShortName: 'USC',
+    searchPhrase: 'ut austin vs usc',
+    summary:
+      'UT Austin and USC are two top universities with very different funding models. UT is a public flagship; USC is a private research university. USC ranks higher than UT on most overall prestige rankings (top 30 vs top 50 nationally). USC sticker price is about $66,000/year tuition + fees vs UT out-of-state at $44,908. For California families, USC is the in-state option with significant merit aid potential; UT through residency pathway competes on cost.',
+    utWins: [
+      'UT out-of-state at $44,908 is materially cheaper than USC sticker at $66,000',
+      'UT after residency at $11,688 is dramatically cheaper than USC even with merit aid',
+      'McCombs Business is comparable to Marshall School of Business and both are well-regarded',
+      'Cockrell Engineering ranks comparable to USC Viterbi',
+      'Austin tech industry has stronger startup density than Los Angeles',
+      'Texas no state income tax vs California 13% top rate',
+    ],
+    competitorWins: [
+      'USC ranks higher than UT on overall prestige (US News, etc.)',
+      'USC alumni network in LA, the entertainment industry, and Pacific Rim is unmatched',
+      'Marshall School of Business has strong Hollywood and entertainment industry placement',
+      'Viterbi Engineering has strong aerospace and Pacific Rim industry placement',
+      'Cinematic Arts is among the best film programs in the world (UT has Moody but not RTF top tier)',
+      'Strong merit aid for high-academic students (USC frequently awards $20-40K/year)',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 66_000,
+      competitorOutOfState: 66_000,
+      note: 'USC tuition is approximately $66,000/year regardless of residency (USC does not have in-state pricing; it is a private university). UT out-of-state at $44,908 is about $21,000/year cheaper than USC sticker. With the Texas residency pathway, UT becomes dramatically cheaper than USC even with substantial USC merit aid (typical $15-30K/year for strong applicants).',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) and Marshall (top 10) are comparable. McCombs has stronger Bay Area tech placement; Marshall has stronger entertainment industry and Pacific Rim placement. For CS and Engineering: UT and USC are comparable. For Cinematic Arts: USC is among the top 3 film schools in the world; UT does not have a peer program. For Communication: comparable.',
+    admissionsComparison:
+      'USC acceptance rate ~10%; UT overall ~31% (~8-13% for non-residents). USC is materially more selective overall. USC also tends to award substantial merit aid (Presidential, Trustee scholarships) that effectively reduces the actual cost for admitted students; UT institutional aid for non-residents is more limited.',
+    cultureComparison:
+      'USC is in central Los Angeles, with all the cultural, entertainment, and industry adjacency that implies. Greek life is strong. UT Austin is in urban Austin with music, tech, and government as the surrounding context. Both are large urban campuses. USC\'s alumni network in LA is famously tight; UT\'s Texas alumni network is large but less geographically concentrated.',
+    residencyAngle:
+      'For California families admitted to both, the comparison depends on USC merit aid. USC sticker is $66K/yr; with $25K typical merit aid, net is $41K/yr, comparable to UT out-of-state. With UT Texas residency pathway, UT drops to $11,688, dramatically cheaper than USC even with maximum merit aid. The Texas residency pathway is the deciding factor for cost-sensitive families.',
+    faq: [
+      { q: 'Is USC better than UT Austin?', a: 'On overall prestige rankings, USC ranks higher. On specific majors, the comparison varies: USC wins on Cinematic Arts; UT wins on cost (especially with residency pathway); the two are comparable in Business, Engineering, and CS.' },
+      { q: 'Is UT or USC cheaper for out-of-state students?', a: 'At full sticker, UT is materially cheaper than USC ($44,908 vs $66,000). With USC merit aid (typical $15-30K/yr), USC closes the gap or becomes comparable. With UT Texas residency pathway, UT becomes dramatically cheaper.' },
+      { q: 'My California student got into USC with $25K merit and UT. Which is cheaper?', a: 'USC at $66K - $25K = $41K/yr net. UT out-of-state at $44,908/yr full sticker. Comparable. With Texas residency pathway, UT drops to $11,688/yr from year 2 onward. Four-year cost: UT with pathway ~$80K vs USC with merit ~$164K. UT is dramatically cheaper.' },
+      { q: 'Should my student pursue USC merit aid or UT residency pathway?', a: 'Pursue both simultaneously if both schools admit. The decision can wait until both packages are clear. USC merit aid offers vary by year (Presidential/Trustee are renewable); UT residency pathway requires planning during year 1.' },
+      { q: 'What about the Cinematic Arts question?', a: 'For students whose career goal is film or entertainment, USC Cinematic Arts is in a tier of its own. UT does not have a peer program. The choice for these students often favors USC despite cost.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'northwestern',
+    competitorName: 'Northwestern University',
+    competitorShortName: 'Northwestern',
+    searchPhrase: 'ut austin vs northwestern',
+    summary:
+      'UT Austin and Northwestern are two top universities with very different positioning. UT is a public flagship; Northwestern is a private research university ranked top 10 nationally. Northwestern sticker is approximately $66,000/year tuition; UT out-of-state $44,908. For Illinois families, UIUC is the in-state option (covered separately); Northwestern competes nationally with UT for top STEM and humanities applicants.',
+    utWins: [
+      'UT out-of-state at $44,908 is materially cheaper than Northwestern sticker at $66,000',
+      'UT after residency at $11,688 is dramatically cheaper than Northwestern',
+      'McCombs Business is comparable to Kellogg undergraduate at strong fit',
+      'Cockrell Engineering competitive with McCormick (Northwestern Engineering)',
+      'Austin tech industry stronger startup density than Evanston area',
+      'Texas no state income tax vs Illinois 4.95%',
+    ],
+    competitorWins: [
+      'Northwestern ranks top 10 nationally; UT ranks top 50',
+      'Kellogg School of Management is consistently top 5 for MBA, undergrad strong',
+      'McCormick Engineering has strong industrial and biomedical programs',
+      'Medill School of Journalism is top-ranked nationally',
+      'Evanston/Chicago location offers Chicago internship and industry access',
+      'Northwestern need-based aid is substantial for qualifying families (no loans for under $125K AGI)',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 66_000,
+      competitorOutOfState: 66_000,
+      note: 'Northwestern tuition is approximately $66,000/year regardless of residency (private university). UT out-of-state at $44,908 is about $21,000/year cheaper than Northwestern sticker. With the Texas residency pathway, UT becomes dramatically cheaper than Northwestern even with Northwestern need-based aid.',
+    },
+    programComparison:
+      'For Business: Northwestern Kellogg (MBA top 5) has strong undergraduate business presence; McCombs undergrad is comparable but Kellogg has stronger MBA pipeline. For Engineering: McCormick and Cockrell are comparable. For Journalism: Northwestern Medill is dramatically stronger than UT Moody. For Theater: Northwestern is among the top programs in the country.',
+    admissionsComparison:
+      'Northwestern acceptance rate ~7%; UT ~31% overall (~8-13% non-residents). Northwestern is materially more selective. Northwestern admissions emphasizes intellectual rigor and depth of fit; UT admissions for non-residents is similar but slightly less selective.',
+    cultureComparison:
+      'Northwestern is in Evanston, a wealthy suburb north of Chicago. Campus culture is intellectually intense, academically focused, and traditional. Chicago is 30 minutes away by train. UT Austin is in urban Austin with music, tech, and government as the surrounding context. Climate differs dramatically (Chicago winters vs Austin mild winters).',
+    residencyAngle:
+      'For Illinois and other Midwest families considering both, Northwestern\'s strong need-based aid for under $125K AGI families significantly reduces the net price. For higher-income families, the cost gap is large. UT through Texas residency pathway is dramatically cheaper than Northwestern in either aid scenario.',
+    faq: [
+      { q: 'Is Northwestern better than UT Austin?', a: 'On overall prestige, yes. Northwestern ranks top 10 nationally; UT ranks top 50. On specific majors, the comparison varies: Northwestern wins on Journalism (Medill), Theater, and overall prestige; UT competes well in Business, Engineering, and CS at materially lower cost.' },
+      { q: 'Is UT or Northwestern cheaper for out-of-state students?', a: 'UT is substantially cheaper. UT out-of-state at $44,908 vs Northwestern sticker at $66,000 is about $21,000/year less. With Northwestern need-based aid (for families under $125K AGI), Northwestern can be comparable or cheaper. With Texas residency pathway, UT is dramatically cheaper.' },
+      { q: 'My student got into Medill and McCombs. Which?', a: 'For journalism career, Medill is dramatically stronger (top 1-2 nationally). For business career, McCombs is competitive with most undergrad business programs and cheaper. The choice depends on career direction.' },
+      { q: 'Does Northwestern need-based aid help my family?', a: 'Northwestern\'s no-loan policy for families under $125K AGI means students from qualifying families graduate without loans. For middle and higher-income families (over $125K AGI), Northwestern\'s aid is more modest and the cost advantage of UT is substantial.' },
+      { q: 'How does Chicago vs Austin compare for career outcomes?', a: 'Both have strong job markets. Chicago has stronger finance and consulting (Big 4, Big 3 consulting, major hedge funds). Austin has stronger tech (Apple, Google, Meta, plus startups). For families targeting traditional corporate or finance careers, Chicago via Northwestern is strong; for tech, Austin via UT is comparable or better.' },
+    ],
+    published: true,
+  },
 ];
 
 export const getComparison = (slug: string) => COMPARISONS.find(c => c.slug === slug && c.published);
