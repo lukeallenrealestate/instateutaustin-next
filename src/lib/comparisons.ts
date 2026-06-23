@@ -640,6 +640,194 @@ export const COMPARISONS: Comparison[] = [
     ],
     published: true,
   },
+  {
+    slug: 'rice',
+    competitorName: 'Rice University',
+    competitorShortName: 'Rice',
+    searchPhrase: 'ut austin vs rice',
+    summary:
+      'UT Austin and Rice are both top Texas universities with different funding models and academic personalities. Rice is a top-20 private research university (smaller, more selective, more expensive); UT is a top-public flagship (larger, more accessible, much cheaper). Rice has a strong reputation for engineering, computer science, music, and architecture. Cost: Rice sticker is ~$60,000/year; UT in-state is $11,688; UT non-resident is $44,908. With UT Texas residency pathway, UT is dramatically cheaper than Rice even with substantial Rice merit aid.',
+    utWins: [
+      'UT in-state at $11,688 is dramatically cheaper than Rice sticker at $60,000',
+      'UT after Texas residency at $11,688 saves $40,000+/year over Rice with typical Rice merit aid',
+      'McCombs Business at UT outranks Rice Jones School of Business at undergraduate level (Rice Jones is primarily MBA)',
+      'UT alumni network in Texas is much larger than Rice alumni network',
+      'UT campus social life is broader and more vibrant than Rice\'s small intimate campus',
+      'UT Austin location offers more internship and industry access',
+    ],
+    competitorWins: [
+      'Rice ranks higher than UT on overall prestige (top 20 vs top 30)',
+      'Rice undergraduate experience is more intimate (~1,000 students per class vs UT\'s ~8,500)',
+      'Rice has strong residential college system (similar to Oxford/Cambridge)',
+      'Rice Engineering (specifically Computer Science, Bioengineering) ranks competitively with UT',
+      'Rice has strong need-based aid (no loans for under $200K AGI)',
+      'Houston Medical Center adjacency provides unique pre-med opportunities',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 60_000,
+      competitorOutOfState: 60_000,
+      note: 'Rice tuition is approximately $60,000/year regardless of residency (private). With Rice merit aid (typical $10-25K/yr for strong applicants) and need-based aid (substantial for families under $200K AGI), Rice can become comparable to UT non-resident. With UT Texas residency pathway, UT becomes dramatically cheaper than Rice in any scenario.',
+    },
+    programComparison:
+      'For Computer Science: Rice and UT are both top 10-12 nationally. For Engineering: Rice has strong Bioengineering and Computer Engineering; UT Cockrell has stronger Petroleum and Civil. For Business: McCombs significantly outranks Rice Jones at undergraduate level. For Music: Rice Shepherd is one of the top conservatories; UT Butler is competitive but generally one tier below. For Pre-Med: Rice has the Houston Medical Center adjacency advantage.',
+    admissionsComparison:
+      'Rice acceptance rate ~9%; UT ~31% overall (~8-13% non-residents). Rice is more selective on aggregate. Rice admissions emphasizes intellectual fit and demonstrated character; UT for non-residents is similarly selective for top programs.',
+    cultureComparison:
+      'Rice is in central Houston, an urban campus with the Texas Medical Center adjacency. Rice culture is intellectually focused, small (~7,500 undergrad), with the distinctive residential college system. UT Austin is in urban Austin, much larger (~42,000 undergrad), with music, tech, and government as the surrounding context. For students who want a small intimate experience, Rice; for students who want a large urban research university, UT.',
+    residencyAngle:
+      'For Texas families admitted to both Rice and UT, the comparison depends on Rice merit aid. With Rice need-based aid for under-$200K AGI families, Rice can be comparable to UT in-state. For higher-income families, UT in-state ($11,688) is dramatically cheaper than Rice ($60,000) sticker. For out-of-state families, UT Texas residency pathway makes UT dramatically cheaper than Rice in any scenario.',
+    faq: [
+      { q: 'Is Rice better than UT Austin?', a: 'On overall prestige rankings, Rice ranks higher. On specific majors, Rice wins on Music (Shepherd) and pre-med Medical Center adjacency. UT wins on McCombs Business and broader academic environment. Rice provides intimate small-college experience; UT provides large research university experience.' },
+      { q: 'Is Rice more expensive than UT for in-state students?', a: 'Yes, dramatically. Rice sticker at $60,000 vs UT in-state at $11,688. With Rice need-based aid for under-$200K AGI families, Rice can become comparable to UT in-state. For higher-income families, UT is dramatically cheaper.' },
+      { q: 'My Houston student got into Rice and UT McCombs. Which?', a: 'Depends on goals. For McCombs Business specifically, McCombs significantly outranks Rice Jones (which is primarily MBA, not undergraduate business). For overall prestige and intimate small-college experience, Rice. For broader UT alumni network in Texas and Austin location, UT.' },
+      { q: 'Does Rice need-based aid make it competitive with UT?', a: 'For families under $200K AGI, Rice need-based aid can make Rice comparable to UT non-resident sticker. For Texas residents, UT in-state at $11,688 is still cheaper. With UT Texas residency pathway, UT is dramatically cheaper than Rice in any scenario.' },
+      { q: 'What about the residential college system at Rice?', a: 'Rice\'s residential college system (similar to Oxford or Yale) gives each student a small community of ~250-300 within the larger university. Faculty fellows live in the colleges. For students who value tight-knit community and faculty connection, this is a distinctive Rice advantage. UT\'s much larger size means less of this intimate community by default.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'baylor',
+    competitorName: 'Baylor University',
+    competitorShortName: 'Baylor',
+    searchPhrase: 'ut austin vs baylor',
+    summary:
+      'UT Austin and Baylor are both major Texas universities with different missions. UT is a top public flagship; Baylor is a top-ranked private Christian university (Baptist). Baylor has strong pre-med and pre-law pipelines, established business and engineering programs, and a distinctive Christian academic environment. Cost: Baylor sticker is ~$53,000/year; UT in-state $11,688; UT non-resident $44,908. With UT Texas residency, UT is dramatically cheaper than Baylor.',
+    utWins: [
+      'UT in-state at $11,688 is dramatically cheaper than Baylor sticker at $53,000',
+      'UT outranks Baylor on most overall prestige rankings',
+      'McCombs Business significantly outranks Hankamer School of Business',
+      'UT Computer Science and Engineering outrank Baylor equivalents',
+      'Austin tech industry is much stronger than Waco area employment',
+      'Texas residency pathway makes UT dramatically cheaper than Baylor',
+    ],
+    competitorWins: [
+      'Baylor offers a Christian liberal arts education environment, distinctive nationally',
+      'Strong pre-med pipeline through Baylor Scott & White Medical Center adjacency',
+      'Football tradition: Baylor Bears have been competitive in the Big 12',
+      'Smaller undergraduate population (~14,000) provides more intimate experience',
+      'Baylor Law School is well-regarded for those pursuing legal career',
+      'Need-based aid is meaningful for qualifying families',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 53_000,
+      competitorOutOfState: 53_000,
+      note: 'Baylor tuition is approximately $53,000/year regardless of residency (private). With Baylor merit aid for high-academic students ($15-30K/yr typical), Baylor can become comparable to UT non-resident. UT in-state at $11,688 is dramatically cheaper than Baylor at any rate.',
+    },
+    programComparison:
+      'For Business: McCombs significantly outranks Hankamer. For Engineering: UT Cockrell significantly outranks Baylor Engineering. For Pre-Med: comparable; Baylor has strong med school adjacency (Baylor Scott & White); UT has Dell Medical and Texas Medical pipeline. For Religious Studies, Theology: Baylor is one of the top programs in the country. For Music: Baylor School of Music is well-regarded; UT Butler comparable.',
+    admissionsComparison:
+      'Baylor acceptance rate ~57%; UT ~31% overall. Baylor is more accessible than UT for general admission. Baylor admissions considers fit with the Christian academic mission alongside academic profile.',
+    cultureComparison:
+      'Baylor is in Waco, a small Texas city of ~140K. Campus culture is distinctly Christian (Baptist tradition), conservative, smaller-school feel. UT Austin is in urban Austin, secular, politically diverse, large research university. Choice depends on cultural fit alongside academic fit.',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than Baylor at any rate. UT in-state $11,688 vs Baylor sticker $53,000 saves $41,000+/year. Baylor need-based aid can partially close the gap for qualifying families.',
+    faq: [
+      { q: 'Is Baylor better than UT for pre-med?', a: 'Mixed picture. Baylor has strong pre-med advising and Baylor Scott & White Medical Center adjacency in Temple. UT has Dell Medical School in Austin plus the broader Texas Medical Center connections in Houston. Both produce successful medical school applicants at similar rates.' },
+      { q: 'Is Baylor cheaper than UT for in-state students?', a: 'No. Baylor sticker at $53,000 is dramatically more expensive than UT in-state at $11,688. With Baylor merit aid and need-based aid, the gap closes but UT in-state typically remains cheaper.' },
+      { q: 'My Texas student wants a Christian college environment.', a: 'Baylor is the strongest option among major Texas universities for Christian academic environment. Other strong options: Houston Christian University, Texas Christian University (more secular but with Christian heritage). UT is fully secular with no religious affiliation. For students who value Christian academic community, Baylor is a meaningful choice despite the cost premium.' },
+      { q: 'Can my student establish Texas residency from Baylor?', a: 'No. Baylor is in Texas, so Texas residency would already apply for Texas-resident students. For out-of-state students at Baylor, Texas residency for tuition is irrelevant since Baylor is private (no in-state pricing). However, an out-of-state student attending Baylor could establish Texas residency over time for a different reason (Texas state-level benefits, post-graduation Texas residence).' },
+      { q: 'What about football tradition?', a: 'Baylor Bears have been competitive in the Big 12; football is part of campus life. UT Longhorn football is one of the strongest traditions in college football. For students who value top-tier college football experience, UT is the clear choice.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'smu',
+    competitorName: 'Southern Methodist University',
+    competitorShortName: 'SMU',
+    searchPhrase: 'ut austin vs smu',
+    summary:
+      'UT Austin and SMU are both Texas universities with different missions and student profiles. UT is a top public flagship; SMU is a private university based in Dallas with strong undergraduate programs in business, engineering, and arts. SMU has a distinctive Greek life culture, strong Cox School of Business, and Dallas industry adjacency. Cost: SMU sticker is ~$65,000/year; UT in-state $11,688; UT non-resident $44,908. With UT Texas residency, UT is dramatically cheaper.',
+    utWins: [
+      'UT in-state at $11,688 is dramatically cheaper than SMU sticker at $65,000',
+      'UT outranks SMU on most overall prestige rankings (UT #32 vs SMU #91)',
+      'McCombs Business outranks Cox School of Business',
+      'UT alumni network across Texas is dramatically larger',
+      'Texas residency pathway makes UT dramatically cheaper than SMU',
+      'UT campus social life is broader and more diverse than SMU',
+    ],
+    competitorWins: [
+      'SMU Cox School of Business is well-regarded for Dallas-area placement',
+      'SMU Lyle School of Engineering is strong in some disciplines',
+      'Dallas location provides immediate industry access (finance, consulting, energy)',
+      'SMU substantial merit aid for top applicants ($15-35K/yr typical)',
+      'Smaller undergraduate population (~7,500) provides intimate experience',
+      'Strong Greek life culture for students who value that environment',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 65_000,
+      competitorOutOfState: 65_000,
+      note: 'SMU tuition is approximately $65,000/year regardless of residency (private). With SMU merit aid for top applicants ($15-35K/yr), SMU can become $30-50K/yr net. UT in-state at $11,688 is dramatically cheaper than SMU at any rate.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) outranks Cox (top 50). McCombs has stronger national reach; Cox has strong Dallas-area placement. For Engineering: UT Cockrell outranks SMU Lyle on most rankings. For Liberal Arts: UT generally outranks SMU. For Performing Arts: SMU Meadows School has strong tradition; UT Butler comparable. For Pre-Med, Pre-Law: comparable.',
+    admissionsComparison:
+      'SMU acceptance rate ~52%; UT ~31% overall. SMU is more accessible than UT for general admission. SMU offers merit aid generously to top applicants.',
+    cultureComparison:
+      'SMU is in University Park, an affluent inner-Dallas neighborhood. Greek life is central (approximately 50% of students go Greek); culture is conservative-leaning, affluent, traditional. UT Austin is in urban Austin, larger, politically more diverse, less Greek-life-centric. Choice depends on cultural fit alongside academic fit.',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than SMU at any rate. UT in-state $11,688 vs SMU sticker $65,000 saves $53,000+/year. SMU merit aid can partially close the gap for top applicants.',
+    faq: [
+      { q: 'Is SMU better than UT Austin?', a: 'On overall prestige rankings, UT outranks SMU. On specific majors, SMU Cox Business has strong Dallas-area placement but McCombs significantly outranks Cox nationally. SMU Meadows School of the Arts is well-regarded for performing arts.' },
+      { q: 'Is SMU cheaper than UT for in-state students?', a: 'No. SMU sticker at $65,000 is dramatically more expensive than UT in-state at $11,688. With SMU merit aid, the gap closes but UT in-state remains cheaper.' },
+      { q: 'Why would my student choose SMU over UT?', a: 'Common reasons: (1) Dallas location for immediate industry access; (2) smaller intimate undergraduate experience; (3) strong Greek life culture; (4) substantial SMU merit aid; (5) Cox Business School fit for Dallas-targeted career; (6) family ties to SMU.' },
+      { q: 'What about SMU football and traditions?', a: 'SMU returned to the ACC in 2024 with renewed football investment. SMU traditions are strong but historically smaller-scale than UT Longhorn culture. For families who want top-tier college football, UT is the stronger choice.' },
+      { q: 'Does SMU merit aid close the gap with UT?', a: 'Partially. SMU offers $15-35K/yr merit aid for top applicants. With $25K merit, SMU net is ~$40K/yr vs UT non-resident at $44,908. Comparable. With UT Texas residency pathway, UT drops to $11,688, dramatically cheaper than SMU in any scenario.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'tcu',
+    competitorName: 'Texas Christian University',
+    competitorShortName: 'TCU',
+    searchPhrase: 'ut austin vs tcu',
+    summary:
+      'UT Austin and TCU are both Texas universities with different missions and student profiles. UT is a top public flagship; TCU is a private Christian university in Fort Worth with strong programs in business, communications, and nursing. TCU has a distinctive Greek life culture and football tradition. Cost: TCU sticker is ~$60,000/year; UT in-state $11,688; UT non-resident $44,908. With UT Texas residency, UT is dramatically cheaper.',
+    utWins: [
+      'UT in-state at $11,688 is dramatically cheaper than TCU sticker at $60,000',
+      'UT outranks TCU on most overall prestige rankings (UT top 30 vs TCU top 90)',
+      'McCombs Business significantly outranks Neeley School of Business',
+      'UT Computer Science and Cockrell Engineering outrank TCU equivalents',
+      'UT alumni network in Texas is dramatically larger',
+      'Texas residency pathway makes UT dramatically cheaper than TCU',
+    ],
+    competitorWins: [
+      'TCU offers Christian academic environment (less strict than Baylor)',
+      'TCU Football tradition; Horned Frogs in the Big 12',
+      'Strong Greek life culture (~40% of students go Greek)',
+      'Smaller undergraduate population (~10,000) provides intimate experience',
+      'Fort Worth location provides industry access (finance, oil and gas, aerospace)',
+      'TCU substantial merit aid for top applicants',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 60_000,
+      competitorOutOfState: 60_000,
+      note: 'TCU tuition is approximately $60,000/year regardless of residency (private). With TCU merit aid for top applicants ($10-30K/yr), TCU can become $30-50K/yr net. UT in-state at $11,688 is dramatically cheaper than TCU at any rate.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) significantly outranks Neeley (top 50-60). For Engineering: UT Cockrell significantly outranks TCU Engineering. For Communications: TCU Bob Schieffer College of Communication is well-regarded; UT Moody outranks but TCU is solid. For Nursing: TCU Harris College of Nursing is well-regarded; UT Nursing is competitive. For Pre-Med, Pre-Law: comparable.',
+    admissionsComparison:
+      'TCU acceptance rate ~50%; UT ~31% overall. TCU is more accessible than UT for general admission. TCU offers merit aid generously to top applicants.',
+    cultureComparison:
+      'TCU is in Fort Worth, a smaller Texas metro of ~950K. Campus culture combines Christian heritage (less strict than Baylor), traditional school spirit, and strong Greek life. UT Austin is in urban Austin, larger, politically more diverse, less Greek-life-centric.',
+    residencyAngle:
+      'Texas residency pathway makes UT cheaper than TCU at any rate. UT in-state $11,688 vs TCU sticker $60,000 saves $48,000+/year.',
+    faq: [
+      { q: 'Is TCU better than UT Austin?', a: 'On overall prestige rankings, UT outranks TCU. UT outranks TCU in nearly every academic comparison. TCU is competitive in Nursing and Communications, and has distinctive Christian heritage culture for families who value that.' },
+      { q: 'Is TCU cheaper than UT for in-state students?', a: 'No. TCU sticker at $60,000 is dramatically more expensive than UT in-state at $11,688. With TCU merit aid, the gap closes but UT in-state remains cheaper.' },
+      { q: 'Why would my student choose TCU over UT?', a: 'Common reasons: (1) Fort Worth location for industry access; (2) smaller intimate undergraduate experience; (3) strong Greek life culture; (4) substantial TCU merit aid; (5) Christian academic environment; (6) Horned Frog football tradition; (7) family ties to TCU.' },
+      { q: 'What about TCU football?', a: 'TCU Football has been competitive in the Big 12; Gary Patterson era produced multiple top-10 seasons. UT Longhorn football has a stronger national tradition but TCU is a respected Big 12 program.' },
+      { q: 'Does TCU merit aid close the gap with UT?', a: 'Partially. TCU offers $10-30K/yr merit aid for top applicants. With $20K merit, TCU net is ~$40K/yr vs UT non-resident at $44,908. Comparable. With UT Texas residency pathway, UT drops to $11,688, dramatically cheaper than TCU in any scenario.' },
+    ],
+    published: true,
+  },
 ];
 
 export const getComparison = (slug: string) => COMPARISONS.find(c => c.slug === slug && c.published);
