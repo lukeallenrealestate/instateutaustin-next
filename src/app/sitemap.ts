@@ -4,6 +4,7 @@ import { STATES } from '@/lib/states';
 import { BUILDINGS } from '@/lib/buildings';
 import { publishedColleges } from '@/lib/colleges';
 import { publishedScenarios } from '@/lib/scenarios';
+import { publishedComparisons } from '@/lib/comparisons';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   if (SITE.PRE_LAUNCH) return [];
@@ -28,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/rule-3-vs-rule-4',                       p: 0.9,  cf: 'monthly' as const },
     { url: '/12-month-timeline',                      p: 0.9,  cf: 'monthly' as const },
     { url: '/faq',                                    p: 0.9,  cf: 'monthly' as const },
+    { url: '/by-state',                               p: 0.85, cf: 'monthly' as const },
+    { url: '/by-college',                             p: 0.85, cf: 'monthly' as const },
     { url: '/about',                                  p: 0.6,  cf: 'yearly'  as const },
     { url: '/contact',                                p: 0.7,  cf: 'yearly'  as const },
     { url: '/disclaimer',                             p: 0.4,  cf: 'yearly'  as const },
@@ -58,7 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     cf: 'monthly' as const,
   }));
 
-  return [...core, ...collegeUrls, ...scenarioUrls, ...stateUrls, ...buildingUrls].map(({ url, p, cf }) => ({
+  const comparisonUrls = publishedComparisons().map(c => ({
+    url: `/ut-austin-vs-${c.slug}`,
+    p: 0.85,
+    cf: 'monthly' as const,
+  }));
+
+  return [...core, ...collegeUrls, ...scenarioUrls, ...stateUrls, ...comparisonUrls, ...buildingUrls].map(({ url, p, cf }) => ({
     url: `${SITE.url}${url}`,
     lastModified: today,
     changeFrequency: cf,

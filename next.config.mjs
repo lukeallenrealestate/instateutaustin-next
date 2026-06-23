@@ -30,6 +30,11 @@ const nextConfig = {
         source: '/ut-austin-residency-:scenario',
         destination: '/residency/:scenario',
       },
+      {
+        // SEO-friendly /ut-austin-vs-texas-am rewrites to /comparisons/texas-am
+        source: '/ut-austin-vs-:school',
+        destination: '/comparisons/:school',
+      },
     ];
   },
 };

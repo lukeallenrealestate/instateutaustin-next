@@ -31,6 +31,8 @@ export function Footer() {
           <FootCol title="Plan & Save" links={[
             ['/tuition-calculator', 'Tuition Calculator'],
             ['/parent-guide', 'Parent Guide'],
+            ['/by-state', 'By Origin State'],
+            ['/by-college', 'By UT College'],
             ['/condos-near-ut', 'Condos Near UT'],
             ['/faq', 'FAQ'],
           ]}/>

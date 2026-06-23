@@ -45,5 +45,5 @@ export const SITE = {
   // production launch at instateutaustin.com.
   PRE_LAUNCH: false,
 
-  lastReviewed: '2026-06-11',
+  lastReviewed: '2026-06-23',
 } as const;

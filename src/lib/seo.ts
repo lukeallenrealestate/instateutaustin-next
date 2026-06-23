@@ -11,7 +11,7 @@ interface PageMetaInput {
 
 /** Normalize the home path so canonical, OG, and breadcrumb URLs all agree.
  * Without this, `${SITE.url}${'/'}` produces a trailing slash that conflicts
- * with the canonical (no slash) — a small E-E-A-T cleanup. */
+ * with the canonical (no slash), a small E-E-A-T cleanup. */
 function absUrl(path: string) {
   return path === '/' ? SITE.url : `${SITE.url}${path}`;
 }
@@ -21,14 +21,56 @@ function absUrl(path: string) {
  * is the correct E-E-A-T signal. */
 export const AUTHOR_PERSON = {
   '@type': 'Person' as const,
+  '@id': `${SITE.url}/about#luke-allen`,
   name: 'Luke Allen',
   url: `${SITE.url}/about`,
   jobTitle: 'Texas REALTOR® (TREC #788149)',
+  description: 'Texas REALTOR licensed by the Texas Real Estate Commission (TREC #788149) at Austin Marketing + Development Group, specializing in helping out-of-state UT Austin families establish Texas residency for in-state tuition.',
+  knowsAbout: [
+    'Texas Education Code §54.052',
+    'Texas residency for tuition purposes',
+    'University of Texas at Austin admissions',
+    'Texas Higher Education Coordinating Board (THECB) rules',
+    'Austin Texas real estate',
+    'Texas property law',
+  ],
+  hasOccupation: {
+    '@type': 'Occupation' as const,
+    name: 'Real Estate Agent',
+    occupationLocation: { '@type': 'State' as const, name: 'Texas' },
+    occupationalCategory: 'Real Estate',
+  },
   worksFor: {
     '@type': 'Organization' as const,
     name: 'Austin Marketing + Development Group',
   },
+  sameAs: [
+    'https://www.har.com/luke-allen/dir_788149',
+  ],
 };
+
+/** WebSite schema with SearchAction. Enables Google sitelinks search box and
+ * marks the site as a coherent web entity (not just a collection of pages). */
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE.url}#website`,
+    url: SITE.url,
+    name: SITE.name,
+    description: 'The complete guide to UT Austin in-state tuition for out-of-state families. Texas residency pathway, savings math, and property strategy.',
+    publisher: { '@id': `${SITE.url}/about#luke-allen` },
+    inLanguage: 'en-US',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE.url}/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
 
 export function pageMetadata({ title, description, path, ogImage, noindex }: PageMetaInput): Metadata {
   const url = absUrl(path);

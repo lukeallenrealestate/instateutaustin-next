@@ -6,7 +6,7 @@ import { Analytics } from '@/components/Analytics';
 import { Schema } from '@/components/Schema';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { MobileBar } from '@/components/MobileBar';
-import { organizationSchema } from '@/lib/seo';
+import { organizationSchema, websiteSchema } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 import './globals.css';
 
@@ -50,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${fraunces.variable} ${jetbrains.variable}`}>
       <head>
         <Schema data={organizationSchema()} />
+        <Schema data={websiteSchema()} />
       </head>
       <body className="pt-16 pb-20 md:pb-0">
         <ScrollProgress />
