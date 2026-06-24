@@ -828,6 +828,194 @@ export const COMPARISONS: Comparison[] = [
     ],
     published: true,
   },
+  {
+    slug: 'notre-dame',
+    competitorName: 'University of Notre Dame',
+    competitorShortName: 'Notre Dame',
+    searchPhrase: 'ut austin vs notre dame',
+    summary:
+      'UT Austin and Notre Dame are two distinguished universities with different positioning. UT is a top public flagship; Notre Dame is a top-20 private Catholic research university. Notre Dame ranks higher than UT on overall prestige rankings and has a distinctive Catholic intellectual tradition. Cost: Notre Dame sticker is ~$65,000/year; UT non-resident $44,908. With UT Texas residency pathway, UT is dramatically cheaper.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Notre Dame sticker at $65,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Notre Dame even with merit aid',
+      'McCombs Business outranks Mendoza on undergraduate Business rankings',
+      'UT alumni network in Texas is much larger; Notre Dame network strongest in Chicago and East Coast',
+      'Austin tech industry pipeline is stronger than South Bend area employment',
+      'Larger comprehensive university with broader academic environment',
+    ],
+    competitorWins: [
+      'Notre Dame ranks higher on overall prestige (top 20 vs UT top 30)',
+      'Mendoza College of Business consistently top 10-15 undergrad business',
+      'Notre Dame has distinctive Catholic intellectual tradition; strong theology and philosophy',
+      'Strong football tradition (the Fighting Irish)',
+      'Notre Dame alumni network is exceptionally loyal',
+      'Need-based aid is substantial (no loans for families under $250K AGI)',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 65_000,
+      competitorOutOfState: 65_000,
+      note: 'Notre Dame tuition is approximately $65,000/year regardless of residency (private). With Notre Dame need-based aid for under-$250K AGI families, Notre Dame can be comparable to UT non-resident. UT with Texas residency pathway is dramatically cheaper than Notre Dame in any scenario.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) competitive with Mendoza (top 10-15); McCombs has stronger undergrad accessibility. For Engineering: Notre Dame Engineering is well-regarded but UT Cockrell outranks in most disciplines. For CS: UT outranks Notre Dame CS. For Liberal Arts: Notre Dame has strong philosophy, theology, history; UT has Plan II Honors as distinctive. For Pre-Med: comparable.',
+    admissionsComparison:
+      'Notre Dame acceptance rate ~13%; UT ~31% overall. Notre Dame is more selective. Notre Dame admissions considers Catholic identity and mission alignment alongside academic profile.',
+    cultureComparison:
+      'Notre Dame is in South Bend, Indiana, a smaller city of ~100K. Campus culture is Catholic, traditional, intensely community-oriented. Football (Fighting Irish) is central to school identity. UT Austin is in urban Austin, secular, politically diverse. Choice often depends on religious and cultural fit.',
+    residencyAngle:
+      'For Catholic families considering Notre Dame vs UT, the religious dimension may be the deciding factor. Cost-wise, UT with Texas residency pathway is dramatically cheaper. For families where cost is decisive, UT through pathway wins; for families where Notre Dame Catholic identity is central, ND may be worth the premium.',
+    faq: [
+      { q: 'Is Notre Dame better than UT?', a: 'On overall prestige rankings, yes. Notre Dame ranks top 20 nationally; UT ranks top 30. On specific majors, the comparison varies: Notre Dame wins on theology/philosophy; UT wins on broader public-university breadth and CS.' },
+      { q: 'Is UT cheaper than Notre Dame?', a: 'Yes, materially. UT non-resident at $44,908 vs Notre Dame sticker at $65,000 is about $20,000/yr less. With Notre Dame need-based aid, the gap closes. With UT Texas residency pathway, UT becomes dramatically cheaper than Notre Dame in any scenario.' },
+      { q: 'My student wants Mendoza Business. Should we choose Notre Dame over McCombs?', a: 'Both are top-10 undergraduate business programs. McCombs has stronger Bay Area tech and Texas placement; Mendoza has stronger Chicago/East Coast placement and Catholic university network. For families where cost matters, McCombs is dramatically cheaper. For families where Catholic identity matters, Mendoza is the cultural choice.' },
+      { q: 'Does Notre Dame need-based aid close the cost gap?', a: 'For families under $250K AGI, Notre Dame\'s no-loan policy and substantial need-based aid can make Notre Dame comparable to UT non-resident. For higher-income families, the gap remains substantial. With UT Texas residency pathway, UT is dramatically cheaper than Notre Dame for nearly all families.' },
+      { q: 'What about Notre Dame football tradition?', a: 'Notre Dame Fighting Irish football is one of the most storied college football programs in the country, with the unique status of an independent (not in any conference). For students who value classic college football and the Notre Dame culture, the football tradition is genuinely distinctive.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'vanderbilt',
+    competitorName: 'Vanderbilt University',
+    competitorShortName: 'Vanderbilt',
+    searchPhrase: 'ut austin vs vanderbilt',
+    summary:
+      'UT Austin and Vanderbilt are both top universities with different funding models. UT is a top public flagship; Vanderbilt is a top-15 private research university in Nashville. Vanderbilt has built a strong national reputation in recent years with selective admissions, generous merit aid (Cornelius Vanderbilt Scholarships), and strong programs in business, engineering, education, and music. Cost: Vanderbilt sticker is ~$65,000/year; UT non-resident $44,908. With UT Texas residency pathway, UT is dramatically cheaper.',
+    utWins: [
+      'UT non-resident at $44,908 is cheaper than Vanderbilt sticker at $65,000',
+      'UT with Texas residency pathway is dramatically cheaper than Vanderbilt even with Cornelius Vanderbilt Scholarship',
+      'McCombs Business is comparable to Owen Graduate School of Management undergrad',
+      'UT alumni network is much larger than Vanderbilt',
+      'Austin tech industry pipeline is stronger than Nashville area',
+      'Texas residency pathway is unique among top publics',
+    ],
+    competitorWins: [
+      'Vanderbilt ranks top 15 nationally (UT top 30)',
+      'Cornelius Vanderbilt Scholarships are generous (full ride for select admits)',
+      'Vanderbilt has strong programs in Education (Peabody), Music (Blair), and Business (Owen)',
+      'Nashville location: growing healthcare, music industry, finance',
+      'Vanderbilt admissions is significantly more selective (~7% vs UT ~31%)',
+      'Need-based aid is generous (no loans for under $200K AGI)',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 65_000,
+      competitorOutOfState: 65_000,
+      note: 'Vanderbilt tuition is approximately $65,000/year regardless of residency (private). With Cornelius Vanderbilt Scholarship for ~120-150 students per year (full ride), Vanderbilt can become $0 cost for selected admits. For others, with merit aid ($15-30K typical) and need-based aid, Vanderbilt approaches comparable cost to UT non-resident. With UT Texas residency pathway, UT becomes dramatically cheaper.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) comparable to Vanderbilt Owen at undergrad level. For Education: Vanderbilt Peabody is consistently top 5 nationally; UT Education is solid but not comparable. For Music: Vanderbilt Blair School of Music is highly regarded; UT Butler comparable. For Engineering: comparable; both top 30 range. For pre-med: comparable.',
+    admissionsComparison:
+      'Vanderbilt acceptance rate ~7%; UT ~31% overall. Vanderbilt is significantly more selective. Cornelius Vanderbilt Scholarship competition is extremely selective (top 5% of admitted students).',
+    cultureComparison:
+      'Vanderbilt is in Nashville, a growing music/entertainment city of ~700K. Campus culture is academically intense, traditional southern university with strong school spirit. UT Austin is in urban Austin, broader range of student backgrounds. Both have strong football traditions; Vanderbilt football has been less competitive in the SEC.',
+    residencyAngle:
+      'For students admitted to both, the comparison depends on Vanderbilt aid offer. With Cornelius Vanderbilt full-ride, Vanderbilt is dramatically cheaper than any UT scenario. With moderate Vanderbilt aid and UT Texas residency pathway, UT becomes much cheaper.',
+    faq: [
+      { q: 'Is Vanderbilt better than UT?', a: 'On overall prestige rankings, yes. Vanderbilt ranks top 15 nationally; UT ranks top 30. On specific programs, Vanderbilt wins on Education (Peabody, top 5), Music (Blair), and overall academic prestige. UT competes well on Business (McCombs), Engineering, and CS at materially lower cost.' },
+      { q: 'Should we apply to Vanderbilt for the Cornelius Vanderbilt Scholarship?', a: 'Cornelius Vanderbilt Scholarships are extremely selective (full ride for ~120-150 students per year out of ~3,000 admitted). Strong applicants should apply but should not assume they will receive the scholarship. Have a backup plan including UT and the Texas residency pathway analysis.' },
+      { q: 'Is UT cheaper than Vanderbilt for out-of-state students?', a: 'At full sticker, UT is cheaper ($44,908 vs $65,000). With Vanderbilt merit aid (typical $15-30K/yr) and/or Cornelius Vanderbilt scholarship, Vanderbilt can be comparable or cheaper. With UT Texas residency pathway, UT is dramatically cheaper in nearly all scenarios.' },
+      { q: 'How does Nashville compare to Austin?', a: 'Both are growing Sun Belt cities with strong music and creative culture. Nashville has stronger country music and healthcare industries; Austin has stronger tech industry and broader cultural diversity. Both are affordable relative to coastal metros. For students focused on music industry careers, Nashville may be the stronger choice; for tech, Austin is.' },
+      { q: 'What about Vanderbilt Peabody for Education?', a: 'Vanderbilt Peabody College of Education is consistently top 5 nationally and is one of Vanderbilt\'s strongest selling points. For students serious about education careers (teaching, education policy, education research), Peabody is dramatically stronger than UT Education. The premium is meaningful for this specific career path.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'duke',
+    competitorName: 'Duke University',
+    competitorShortName: 'Duke',
+    searchPhrase: 'ut austin vs duke',
+    summary:
+      'UT Austin and Duke are both top universities with very different positioning. UT is a top public flagship; Duke is a top-10 private research university in Durham, NC. Duke ranks higher than UT on overall prestige and has strong programs in Trinity College of Arts and Sciences, Pratt School of Engineering, Fuqua School of Business, and Duke Law/Medical. Cost: Duke sticker is ~$66,000/year; UT non-resident $44,908. With UT Texas residency pathway, UT is dramatically cheaper.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Duke sticker at $66,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Duke even with merit aid',
+      'McCombs Business (top 10 undergrad) is comparable to Fuqua undergrad presence',
+      'UT alumni network is much larger; Duke network is exceptionally tight but smaller',
+      'Austin tech industry pipeline is stronger than Research Triangle area',
+      'Texas residency pathway is unique to UT among top publics',
+    ],
+    competitorWins: [
+      'Duke ranks top 10 nationally (UT top 30)',
+      'Pratt School of Engineering ranks top 25; biomedical engineering particularly strong',
+      'Trinity College of Arts and Sciences is among the top undergrad liberal arts programs',
+      'Duke Medicine and Duke Law have unmatched intellectual adjacency',
+      'Need-based aid is generous (no loans for under $125K AGI)',
+      'Duke basketball is one of the strongest traditions in college sports',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 66_000,
+      competitorOutOfState: 66_000,
+      note: 'Duke tuition is approximately $66,000/year regardless of residency (private). With Duke merit aid for top admits ($15-30K typical) and need-based aid for under-$125K AGI families, Duke can be comparable to UT non-resident. With UT Texas residency pathway, UT becomes dramatically cheaper.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) undergrad competitive with Fuqua undergrad presence; Fuqua is primarily MBA. For Engineering: Duke Pratt strong in biomedical and computer engineering; UT Cockrell competitive. For Computer Science: comparable; both top 15. For Pre-Med: Duke has unmatched Duke Medicine adjacency. For Trinity Liberal Arts: distinctly stronger than UT for elite liberal arts experience.',
+    admissionsComparison:
+      'Duke acceptance rate ~6%; UT ~31% overall. Duke is dramatically more selective. Duke admissions emphasizes intellectual fit, leadership impact, and demonstrated character.',
+    cultureComparison:
+      'Duke is in Durham, NC, a research-triangle city of ~290K. Campus culture is intellectually intense, traditional Southern (with national reach), strong school spirit centered on basketball. UT Austin is in urban Austin, larger, more politically diverse, music-and-tech focused. Choice depends on regional preference and cultural fit.',
+    residencyAngle:
+      'For students admitted to both, Duke financial aid and merit aid offers determine the cost comparison. Duke need-based aid for under-$125K AGI families makes Duke comparable to UT non-resident. UT Texas residency pathway makes UT dramatically cheaper than Duke in nearly all scenarios.',
+    faq: [
+      { q: 'Is Duke better than UT?', a: 'On overall prestige rankings, yes. Duke ranks top 10 nationally; UT ranks top 30. On specific programs, Duke wins on Trinity Liberal Arts (top 5), Pratt Engineering, and Medicine adjacency. UT competes well on Business (McCombs) and CS at materially lower cost.' },
+      { q: 'Is UT cheaper than Duke for out-of-state students?', a: 'Yes. UT non-resident at $44,908 is dramatically cheaper than Duke sticker at $66,000 (about $21,000/yr less). With Duke need-based aid for under-$125K AGI families, Duke can be comparable. With UT Texas residency pathway, UT is dramatically cheaper in nearly all scenarios.' },
+      { q: 'What about Duke pre-med through Duke Medicine?', a: 'Duke pre-med has unmatched intellectual adjacency to Duke University Medical Center, one of the top medical centers in the country. For students serious about academic medicine careers, this is genuinely distinctive. UT has Dell Medical School (newer) but Duke Medicine is in a different tier of medical school adjacency.' },
+      { q: 'Does Duke financial aid match Vanderbilt/Northwestern/etc.?', a: 'Duke has strong need-based aid (no loans under $125K AGI) but is less generous than Princeton, Yale, or some peers. Merit aid is meaningful but Duke does not have a flagship full-ride like Cornelius Vanderbilt or Robertson Scholars at UNC.' },
+      { q: 'How does the basketball tradition compare?', a: 'Duke basketball is one of the most storied programs in the country (multiple national championships, Coach K era through 2022). UT basketball is competitive but not in the Duke tier. For students who value top-tier college basketball culture, Duke is dramatically stronger.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'penn-state',
+    competitorName: 'Penn State University',
+    competitorShortName: 'Penn State',
+    searchPhrase: 'ut austin vs penn state',
+    summary:
+      'UT Austin and Penn State are both large public research universities. UT is a top-30 nationally; Penn State is in the top 60. Both have strong engineering, business, and broader academic offerings. Cost: Penn State in-state at ~$19,500 is significantly more expensive than UT in-state; Penn State out-of-state at ~$40,800 is comparable to UT non-resident. With UT Texas residency pathway, UT becomes much cheaper than Penn State.',
+    utWins: [
+      'UT in-state at $11,688 is dramatically cheaper than Penn State in-state at $19,500',
+      'UT ranks higher than Penn State on most overall prestige rankings',
+      'McCombs Business significantly outranks Smeal College of Business undergraduate program',
+      'UT Computer Science outranks Penn State CS',
+      'Austin tech industry pipeline is stronger than State College area',
+      'Texas residency pathway makes UT after residency dramatically cheaper than Penn State at either rate',
+    ],
+    competitorWins: [
+      'Penn State out-of-state at $40,800 is slightly cheaper than UT non-resident ($44,908)',
+      'Penn State Engineering ranks competitive with UT Cockrell in some disciplines',
+      'Penn State has stronger agricultural and forestry programs',
+      'Big Ten football tradition; Beaver Stadium is iconic',
+      'Penn State branch campus system (24 campuses) provides flexibility',
+      'Larger total enrollment provides broader major options',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 19_500,
+      competitorOutOfState: 40_800,
+      note: 'Penn State in-state at $19,500 is about $7,800/year more expensive than UT in-state. Penn State out-of-state at $40,800 is about $4,100/year cheaper than UT non-resident. With UT Texas residency pathway, UT after residency at $11,688 becomes dramatically cheaper than Penn State at either rate.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) significantly outranks Smeal (top 25). For Engineering: comparable; Penn State strong in industrial and aerospace; UT Cockrell strong in petroleum and chemical. For CS: UT outranks Penn State. For Agriculture: Penn State has agriculture programs; UT does not. For Football tradition: Penn State has the stronger tradition (though both are competitive).',
+    admissionsComparison:
+      'Penn State acceptance rate ~55%; UT ~31% overall. Penn State is significantly more accessible than UT for general admission. Penn State Schreyer Honors College is competitive but more accessible than UT honors programs.',
+    cultureComparison:
+      'Penn State (University Park) is in State College, PA, a classic Big Ten college town of ~40K. Campus culture is football-and-Greek-life centered, traditional, less diverse than UT. UT Austin is in urban Austin, much larger, more politically diverse, less focused on traditional college sports culture.',
+    residencyAngle:
+      'For Pennsylvania-resident families, Penn State at home rate ($19,500) is more expensive than UT in-state ($11,688). The Texas residency pathway makes UT after residency at $11,688 about $7,800/year cheaper than Penn State in-state. For non-Pennsylvania OOS families, the comparison favors UT after residency.',
+    faq: [
+      { q: 'Is UT better than Penn State?', a: 'On overall prestige rankings, yes. UT ranks top 30; Penn State ranks top 60. UT outranks Penn State in Business (McCombs), CS, and most overall rankings. Penn State has strong agricultural, industrial engineering, and meteorology programs.' },
+      { q: 'Is Penn State cheaper than UT for out-of-state students?', a: 'At full sticker, Penn State out-of-state at $40,800 is about $4,100/year cheaper than UT non-resident ($44,908). With UT Texas residency pathway, UT becomes dramatically cheaper.' },
+      { q: 'Is Penn State cheaper than UT for in-state students?', a: 'No. Penn State in-state at $19,500 is much more expensive than UT in-state at $11,688. For Pennsylvania families with Texas residency pathway access, UT can be dramatically cheaper than Penn State.' },
+      { q: 'What about Beaver Stadium and Penn State football?', a: 'Beaver Stadium (107,000 capacity) is one of the largest college football stadiums and the Penn State football tradition is among the strongest in college sports. For families who value top-tier college football experience, Penn State has a meaningful tradition.' },
+      { q: 'Can my Pennsylvania student establish Texas residency?', a: 'Yes, through the standard Texas pathway. Pennsylvania in-state tuition at Penn State ($19,500) is so much more expensive than UT after residency ($11,688) that the move is financially favorable for many Pennsylvania families. Pennsylvania top income tax rate is 3.07%, so the tax move savings is modest but real.' },
+    ],
+    published: true,
+  },
 ];
 
 export const getComparison = (slug: string) => COMPARISONS.find(c => c.slug === slug && c.published);
