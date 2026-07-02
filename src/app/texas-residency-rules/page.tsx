@@ -27,8 +27,8 @@ const SECTIONS: TocSection[] = [
   { id: 'sources',                  label: 'Sources' },
 ];
 
-const TITLE = 'Texas Residency Rules for UT Austin In-State Tuition';
-const DESCRIPTION = `The complete legal guide to Texas residency rules for UT Austin in-state tuition. THECB framework, §54.052, the 12-month domicile clock, dependent vs. independent, the property pathway, and the failure modes.`;
+const TITLE = 'UT Austin Residency Guide (2026): Texas Rules for In-State Tuition';
+const DESCRIPTION = `The complete UT residency guide for out-of-state families. Texas Education Code §54.052, the THECB framework, the 12-month domicile clock, dependent vs. independent, the property pathway, and every failure mode. Save ~${fmtUSD(TUITION.annualSavings)}/year at UT Austin.`;
 const PATH = '/texas-residency-rules';
 
 export const metadata: Metadata = pageMetadata({
@@ -107,9 +107,9 @@ export default function ResidencyRulesPage() {
       <Schema data={faqPageSchema(FAQ)} />
 
       <PageHero
-        eyebrow="The authoritative explanation"
-        title={<h1 className="text-ink max-w-[22ch]">Texas Residency Rules for UT Austin In-State Tuition</h1>}
-        lede="The complete legal framework: Texas Education Code §54.052, the THECB Residency Rules, the 12-month domicile clock, the dependent/independent distinction, the property pathway, and the failure modes, written for parents."
+        eyebrow="The authoritative UT residency guide"
+        title={<h1 className="text-ink max-w-[24ch]">The UT Austin Residency Guide: Texas Rules for In-State Tuition</h1>}
+        lede="The complete UT residency guide for out-of-state families. Texas Education Code §54.052, the THECB Residency Rules, the 12-month domicile clock, the dependent/independent distinction, the property pathway, and every failure mode, written for parents."
         meta={<>
           <span><Dot /> Last reviewed {SITE.lastReviewed}</span>
           <span><Dot /> ~9,400 words</span>
@@ -127,8 +127,8 @@ export default function ResidencyRulesPage() {
             <AuthorBox blurb="Has personally walked dozens of out-of-state families through the 12-month domicile clock, Rule #3 condo purchases in West Campus, and Rule #4 multifamily acquisitions in East Austin." />
 
             {/* QUICK ANSWER */}
-            <QuickAnswer label="The 60-second answer">
-              UT Austin charges in-state tuition (~{fmtUSD(TUITION.inStatePerYear)}/year) to students whose parents (on the dependent branch) or who themselves (on the independent branch) maintain a Texas domicile for 12 continuous months before a term&apos;s census date. The most reliable pathway for out-of-state families is real-property ownership plus the supporting indicia (Texas driver&apos;s license, vehicle registration, voter registration, and a federal tax return with a Texas address). The petition is filed through UT&apos;s MyStatus portal, decided in 2 to 4 weeks, and produces a recalculated bill at the resident rate, roughly {fmtUSD(TUITION.annualSavings)}/year cheaper.
+            <QuickAnswer label="The 60-second UT residency guide">
+              UT Austin charges in-state tuition (~{fmtUSD(TUITION.inStatePerYear)}/year) to students whose parents (on the dependent branch) or who themselves (on the independent branch) maintain a Texas domicile for 12 continuous months before a term&apos;s census date. The most reliable pathway for out-of-state families is real-property ownership plus the supporting indicia (Texas driver&apos;s license, vehicle registration, voter registration, and a federal tax return with a Texas address). The petition is filed through UT&apos;s MyStatus portal, decided in 2 to 4 weeks, and produces a recalculated bill at the resident rate, roughly {fmtUSD(TUITION.annualSavings)}/year cheaper. This is the complete UT residency guide for out-of-state families.
             </QuickAnswer>
 
             {/* Mobile-only Jump-to; desktop sticky TOC is in the right sidebar. */}

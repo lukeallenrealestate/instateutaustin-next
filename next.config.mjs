@@ -5,9 +5,6 @@ const nextConfig = {
   // Site is statically generated where possible. Lead-proxy /api/contact runs on
   // Vercel's edge runtime; everything else is pre-rendered at build time.
   // Image optimization stays on Vercel default.
-  async redirects() {
-    return [];
-  },
   // The state-page SEO URL (/california-families-...) rewrites internally to
   // a clean dynamic route (/families/california). The browser URL stays
   // SEO-friendly; Next.js renders from the clean route.
@@ -35,6 +32,13 @@ const nextConfig = {
         source: '/ut-austin-vs-:school',
         destination: '/comparisons/:school',
       },
+    ];
+  },
+  async redirects() {
+    return [
+      // Exact-match URL for "ut residency guide" and "ut austin residency guide"
+      { source: '/ut-residency-guide',       destination: '/texas-residency-rules', permanent: true },
+      { source: '/ut-austin-residency-guide', destination: '/texas-residency-rules', permanent: true },
     ];
   },
 };
