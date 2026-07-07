@@ -243,5 +243,5 @@ const PATHS = [
   { href: '/tuition-calculator',    title: 'The Tuition Calculator',     desc: 'Plug in your student\'s enrollment year, college, and credit load. Get a defensible savings number.', cta: 'Run your numbers' },
   { href: '/12-month-timeline',     title: 'The 12-Month Timeline',      desc: 'A month-by-month operating plan. Tasks, deadlines, documents.', cta: 'See the timeline' },
   { href: '/residency-checklist',   title: 'The Document Checklist',     desc: 'Every document UT may ask for, by path. The three common reasons petitions are denied.', cta: 'Get the checklist' },
-  { href: '/condos-near-ut',        title: 'Condos Near UT Austin',      desc: 'How to evaluate UT-area condos for the residency pathway. HOA gotchas, neighborhood map.', cta: 'Read the buyer\'s guide' },
+  { href: '/buying-a-condo-for-ut-austin-in-state-tuition', title: 'Buying a Condo for UT In-State Tuition', desc: 'The complete strategy for buying a Texas condo to qualify for UT Austin in-state tuition. Math, financing, structure, execution.', cta: 'Read the condo strategy' },
 ];

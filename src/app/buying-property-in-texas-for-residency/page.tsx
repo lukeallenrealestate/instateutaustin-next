@@ -10,8 +10,8 @@ import { ContactSection } from '@/components/ContactSection';
 import { TUITION, fmtUSD } from '@/lib/tuition';
 import { SITE } from '@/lib/site';
 
-const TITLE = 'Buying Property in Texas for Residency (Out-of-State UT Families)';
-const DESCRIPTION = `Complete guide to buying Texas real estate as part of the UT Austin residency pathway. Property types, neighborhoods near campus, the Rule #3 vs Rule #4 framework, financing, taxes, and the four-year math that justifies the purchase.`;
+const TITLE = 'Buying Property in Texas for UT Austin In-State Tuition (Condo + Residency)';
+const DESCRIPTION = `Complete guide to buying property in Texas (condo, house, or duplex) for University of Texas at Austin in-state tuition. The residency pathway, property types, neighborhoods near campus, Rule #3 vs Rule #4, financing, taxes, and the four-year math showing ~$99,660 tuition savings.`;
 const PATH = '/buying-property-in-texas-for-residency';
 
 export const metadata: Metadata = pageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH });

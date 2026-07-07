@@ -39,6 +39,22 @@ const nextConfig = {
       // Exact-match URL for "ut residency guide" and "ut austin residency guide"
       { source: '/ut-residency-guide',       destination: '/texas-residency-rules', permanent: true },
       { source: '/ut-austin-residency-guide', destination: '/texas-residency-rules', permanent: true },
+
+      // Exact-match URLs for "buying a condo for UT in-state tuition" query variants
+      { source: '/how-to-buy-a-condo-for-ut-in-state-tuition',      destination: '/buying-a-condo-for-ut-austin-in-state-tuition', permanent: true },
+      { source: '/university-of-texas-buying-a-condo',              destination: '/buying-a-condo-for-ut-austin-in-state-tuition', permanent: true },
+      { source: '/buying-a-condo-for-ut-tuition',                   destination: '/buying-a-condo-for-ut-austin-in-state-tuition', permanent: true },
+      { source: '/buying-a-condo-for-in-state-tuition-ut-austin',   destination: '/buying-a-condo-for-ut-austin-in-state-tuition', permanent: true },
+      { source: '/purchasing-a-condo-for-ut-austin-residency',      destination: '/buying-a-condo-for-ut-austin-in-state-tuition', permanent: true },
+      { source: '/austin-condo-for-in-state-tuition',               destination: '/buying-a-condo-for-ut-austin-in-state-tuition', permanent: true },
+
+      // West Campus specific query variants
+      { source: '/west-campus-condo-for-in-state-tuition',          destination: '/west-campus-condos-in-state-tuition', permanent: true },
+      { source: '/west-campus-condo-ut-residency',                  destination: '/west-campus-condos-in-state-tuition', permanent: true },
+
+      // Real estate strategy variants
+      { source: '/austin-real-estate-for-ut-tuition',               destination: '/austin-real-estate-ut-residency-strategy', permanent: true },
+      { source: '/investment-property-ut-austin-residency',         destination: '/austin-real-estate-ut-residency-strategy', permanent: true },
     ];
   },
 };
