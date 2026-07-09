@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { pageMetadata, breadcrumb, articleSchema, faqPageSchema, howToSchema } from '@/lib/seo';
+import { pageMetadata, breadcrumb, articleSchema, faqPageSchema, howToSchema, realEstateAgentSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
 import { PageHero } from '@/components/PageHero';
@@ -47,6 +47,7 @@ export default function BuyingCondoPage() {
       <Schema data={articleSchema({ headline: TITLE, description: DESCRIPTION, path: PATH, datePublished: '2026-06-23', dateModified: SITE.lastReviewed })} />
       <Schema data={faqPageSchema(FAQ)} />
       <Schema data={howToSchema({ name: 'How to buy a condo for UT Austin in-state tuition', description: 'Step-by-step guide to buying a Texas condo and qualifying for UT Austin in-state tuition under Texas Education Code §54.052.', totalTime: 'P12M', steps: HOWTO_STEPS })} />
+      <Schema data={realEstateAgentSchema()} />
 
       <PageHero
         eyebrow="The complete strategy · UT residency pathway"

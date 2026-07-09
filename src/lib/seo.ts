@@ -132,11 +132,102 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE.url}#organization`,
     name: SITE.name,
     url: SITE.url,
     logo: `${SITE.url}/opengraph-image`,
     description: 'Guide to UT Austin in-state tuition strategy and Texas residency rules for out-of-state families. Published by Luke Allen, Texas REALTOR® (TREC #788149), Austin Marketing + Development Group.',
     founder: AUTHOR_PERSON,
+    address: {
+      '@type': 'PostalAddress' as const,
+      addressLocality: 'Austin',
+      addressRegion: 'TX',
+      addressCountry: 'US',
+    },
+    areaServed: {
+      '@type': 'State' as const,
+      name: 'Texas',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint' as const,
+      telephone: '+1-254-718-2567',
+      email: 'luke@austinmdg.com',
+      contactType: 'customer service',
+      areaServed: 'US',
+      availableLanguage: 'English',
+    },
+  };
+}
+
+/** RealEstateAgent schema for Luke Allen. Applied to real-estate pages
+ * (condo, property, residency-with-real-estate). Signals to Google
+ * that these pages are authored by a licensed real estate professional,
+ * a substantial E-E-A-T signal for YMYL real estate content. */
+export function realEstateAgentSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateAgent',
+    '@id': `${SITE.url}/about#real-estate-agent`,
+    name: 'Luke Allen',
+    url: `${SITE.url}/about`,
+    image: `${SITE.url}/opengraph-image`,
+    telephone: '+1-254-718-2567',
+    email: 'luke@austinmdg.com',
+    description: 'Texas REALTOR® (TREC #788149) at Austin Marketing + Development Group, specializing in helping out-of-state UT Austin families acquire Texas property as part of the residency pathway to in-state tuition.',
+    address: {
+      '@type': 'PostalAddress' as const,
+      addressLocality: 'Austin',
+      addressRegion: 'TX',
+      addressCountry: 'US',
+    },
+    areaServed: [
+      { '@type': 'City' as const, name: 'Austin' },
+      { '@type': 'State' as const, name: 'Texas' },
+    ],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential' as const,
+      credentialCategory: 'license',
+      recognizedBy: {
+        '@type': 'Organization' as const,
+        name: 'Texas Real Estate Commission',
+      },
+      identifier: 'TREC #788149',
+    },
+    knowsAbout: [
+      'Austin real estate',
+      'West Campus condos',
+      'UT Austin residency pathway',
+      'Texas Education Code §54.052',
+      'Investment property in Texas',
+      'Rule #3 vs Rule #4 residency structures',
+    ],
+    memberOf: {
+      '@type': 'Organization' as const,
+      name: 'Austin Marketing + Development Group',
+    },
+  };
+}
+
+/** ItemList schema for hub pages (/by-state, /by-college, etc.). Helps
+ * Google understand the page as a navigation index rather than a
+ * standalone article. */
+export function itemListSchema(opts: {
+  name: string;
+  description?: string;
+  items: Array<{ name: string; path: string }>;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: opts.name,
+    description: opts.description,
+    numberOfItems: opts.items.length,
+    itemListElement: opts.items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      url: absUrl(item.path),
+    })),
   };
 }
 

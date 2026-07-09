@@ -7,7 +7,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { publishedStates } from '@/lib/states';
-import { pageMetadata, breadcrumb, articleSchema } from '@/lib/seo';
+import { pageMetadata, breadcrumb, articleSchema, itemListSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { PageHero } from '@/components/PageHero';
 import { QuickAnswer } from '@/components/QuickAnswer';
@@ -38,6 +38,11 @@ export default function ByStatePage() {
         path: '/by-state',
         datePublished: '2026-06-23',
         dateModified: SITE.lastReviewed,
+      })} />
+      <Schema data={itemListSchema({
+        name: `UT Austin residency guides for ${states.length} origin states`,
+        description: 'Per-state guides for out-of-state families pursuing UT Austin in-state tuition through the Texas residency pathway.',
+        items: sorted.map(s => ({ name: `${s.name} families`, path: `/${s.slug}-families-ut-austin-in-state-tuition` })),
       })} />
 
       <PageHero

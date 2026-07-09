@@ -7,7 +7,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { publishedColleges } from '@/lib/colleges';
-import { pageMetadata, breadcrumb, articleSchema } from '@/lib/seo';
+import { pageMetadata, breadcrumb, articleSchema, itemListSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { PageHero } from '@/components/PageHero';
 import { QuickAnswer } from '@/components/QuickAnswer';
@@ -38,6 +38,11 @@ export default function ByCollegePage() {
         path: '/by-college',
         datePublished: '2026-06-23',
         dateModified: SITE.lastReviewed,
+      })} />
+      <Schema data={itemListSchema({
+        name: 'UT Austin tuition guides by college',
+        description: 'Per-college tuition breakdowns for every UT Austin undergraduate college and its differential tuition structure.',
+        items: sorted.map(c => ({ name: c.name, path: `/ut-austin-${c.slug}-tuition` })),
       })} />
 
       <PageHero

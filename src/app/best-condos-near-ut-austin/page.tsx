@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { pageMetadata, breadcrumb, articleSchema, faqPageSchema } from '@/lib/seo';
+import { pageMetadata, breadcrumb, articleSchema, faqPageSchema, realEstateAgentSchema } from '@/lib/seo';
 import { Schema } from '@/components/Schema';
 import { QuickAnswer } from '@/components/QuickAnswer';
 import { PageHero } from '@/components/PageHero';
@@ -30,6 +30,7 @@ export default function BestCondosPage() {
       <Schema data={breadcrumb([{ name: 'Home', path: '/' }, { name: 'Best Condos Near UT Austin', path: PATH }])} />
       <Schema data={articleSchema({ headline: TITLE, description: DESCRIPTION, path: PATH, datePublished: '2026-06-23', dateModified: SITE.lastReviewed })} />
       <Schema data={faqPageSchema(FAQ)} />
+      <Schema data={realEstateAgentSchema()} />
 
       <PageHero
         eyebrow="Best condos near UT Austin"
