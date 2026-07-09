@@ -1016,6 +1016,282 @@ export const COMPARISONS: Comparison[] = [
     ],
     published: true,
   },
+  {
+    slug: 'yale',
+    competitorName: 'Yale University',
+    competitorShortName: 'Yale',
+    searchPhrase: 'ut austin vs yale',
+    summary:
+      'UT Austin and Yale represent two very different university models. Yale is a top-5 private Ivy League research university with an approximately 5% acceptance rate. UT is a top-30 public flagship. Yale sticker: ~$67,000/year. UT non-resident: $44,908/year. Yale offers generous need-based aid (no loans under $150K AGI). For the small percentage of students admitted to both, the decision typically depends on financial fit and career trajectory.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Yale sticker at $67,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Yale in nearly any scenario',
+      'McCombs Business provides direct-admit undergraduate business (Yale does not have undergrad business school)',
+      'Cockrell Engineering top 10-15 (Yale Engineering ranks lower)',
+      'Austin tech industry deeper than New Haven',
+      'UT alumni network in Texas dominates finance, energy, tech',
+    ],
+    competitorWins: [
+      'Yale ranks top 5 nationally (UT top 30)',
+      'Yale need-based aid: no loans under $150K AGI; extremely generous financial aid',
+      'Yale Law, Yale Medicine, Yale School of Management are elite',
+      'Yale residential college system provides intimate community within a top-tier university',
+      'Yale School of Music is world-renowned',
+      'Yale alumni network on the East Coast and in academia is unmatched',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 67_000,
+      competitorOutOfState: 67_000,
+      note: 'Yale sticker is approximately $67,000/year (private, no in-state pricing). With Yale need-based aid for under-$150K AGI families, Yale can be $0-$10,000/year net. For higher-income families, Yale runs $50K-$67K/year net after modest aid. UT with Texas residency pathway is dramatically cheaper than Yale in nearly all scenarios except lowest-income full-need-met cases.',
+    },
+    programComparison:
+      'For overall prestige: Yale wins decisively. For undergrad Business: UT wins (McCombs direct admit; Yale has no undergrad business). For Engineering: UT wins (Yale Engineering is smaller and less specialized). For Liberal Arts: Yale wins (Yale College is among top 3 in the country). For Music: Yale wins (Yale School of Music elite). For Law and Medicine: Yale is elite; comparison at undergrad level less relevant.',
+    admissionsComparison:
+      'Yale acceptance rate ~5%; UT ~31% overall (~8-13% OOS). Yale is dramatically more selective. Yale admits emphasize intellectual distinction, character, and leadership.',
+    cultureComparison:
+      'Yale is in New Haven, CT, with residential college system providing intimate community within a large institution. UT Austin is in urban Austin, secular, large public research university. Both have strong athletic traditions (Yale football history; UT Longhorn football).',
+    residencyAngle:
+      'For students admitted to Yale with strong aid: Yale is often financially competitive with UT non-resident. For UT after Texas residency pathway: UT drops to $11,688 vs Yale full sticker $67,000. Even Yale need-based aid rarely produces $0 for middle-income families, so UT after residency remains competitive.',
+    faq: [
+      { q: 'Is Yale better than UT Austin?', a: 'On overall prestige, dramatically yes. Yale ranks top 5 nationally; UT ranks top 30. On specific programs: Yale wins on liberal arts, prestige, law/medicine graduate schools. UT competes well on undergrad business (McCombs), engineering, and CS at materially lower cost.' },
+      { q: 'Is UT Austin cheaper than Yale?', a: 'Yes, significantly. UT non-resident at $44,908 is $22,000/yr cheaper than Yale sticker at $67,000. Yale need-based aid can close the gap for lower-income families. With UT Texas residency pathway, UT drops to $11,688, making it dramatically cheaper than Yale in nearly all cases.' },
+      { q: 'My student was admitted to both. Which do we choose?', a: 'This is a rare and enviable position. Considerations: (1) does the family qualify for substantial Yale need-based aid that closes the cost gap? (2) is the student pursuing a career where Yale prestige matters (elite finance, elite law, academia)? (3) is the student pursuing a field where UT is stronger (business, engineering, tech)? (4) do they want a smaller intimate liberal arts college experience (Yale residential colleges) or larger urban research university (UT)? Both are strong choices; the answer is family-specific.' },
+      { q: 'Does Yale need-based aid make Yale free for my family?', a: 'For families with AGI under $75K, Yale is typically fully covered (no tuition or fees). For families under $150K AGI, Yale is typically covered with no loans required. For families $150K-$250K AGI, Yale provides substantial aid but families contribute meaningfully. For families over $250K AGI, aid is more modest and cost approaches sticker.' },
+      { q: 'Does the UT Texas residency pathway close the gap?', a: 'For families in the middle-income bracket where Yale aid is meaningful but not full, UT with Texas residency pathway at $11,688/year is often the cheaper option. For families in the highest-income bracket, UT residency pathway is dramatically cheaper. For families in the lowest-income bracket receiving full Yale need-based aid, Yale may be free while UT after pathway is $11,688; individual case comparison needed.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'harvard',
+    competitorName: 'Harvard University',
+    competitorShortName: 'Harvard',
+    searchPhrase: 'ut austin vs harvard',
+    summary:
+      'UT Austin and Harvard represent very different university models. Harvard is the top-ranked US private university with an approximately 4% acceptance rate. UT is a top-30 public flagship. Harvard sticker: ~$65,000/year. UT non-resident: $44,908/year. Harvard offers extremely generous need-based aid (free for families under $85K, no loans under $180K). For the tiny percentage admitted to both, decisions typically favor Harvard for prestige, UT for cost among high-income families.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Harvard sticker at $65,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Harvard for high-income families',
+      'McCombs Business direct-admit undergraduate business (Harvard has no undergrad business school)',
+      'Cockrell Engineering top 10-15 (Harvard Engineering ranks similarly but smaller)',
+      'Austin tech industry has more startup density than Cambridge-Boston',
+      'UT alumni network in Texas markets is materially larger than Harvard',
+    ],
+    competitorWins: [
+      'Harvard ranks #1-#2 nationally (UT top 30)',
+      'Harvard need-based aid: free tuition + fees + room + board for families under $85K AGI',
+      'Harvard alumni network is world-class; especially strong in finance, law, medicine, academia, and politics',
+      'Harvard Business School, Harvard Law, Harvard Medical are among the world\'s top programs',
+      'Harvard prestige creates lifelong career advantage across virtually every field',
+      'Harvard College is one of the most academically distinguished undergraduate programs in the world',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 65_000,
+      competitorOutOfState: 65_000,
+      note: 'Harvard sticker approximately $65,000/year. For families under $85K AGI: Harvard is free (full tuition, fees, room, board covered). For families $85K-$180K AGI: Harvard is substantial aid; typical family contribution $5K-$25K/year. For families $180K-$250K AGI: modest aid; typical $25K-$50K/year. For families over $250K AGI: minimal aid; typical $55K-$65K/year. UT with Texas residency pathway is cheaper for higher-income families.',
+    },
+    programComparison:
+      'For overall prestige: Harvard wins decisively. For undergrad Business: UT wins (McCombs direct admit vs Harvard no undergrad business). For CS: Harvard and UT both top 15; comparable. For Engineering: comparable at similar tier. For Liberal Arts, Government, History, Economics: Harvard wins. For Pre-Med and Pre-Law: Harvard has substantial advantage.',
+    admissionsComparison:
+      'Harvard acceptance rate ~4%; UT ~31% overall (~8-13% OOS). Harvard is dramatically more selective. Harvard admits emphasize academic distinction, exceptional achievement, leadership, character, and diversity of experience.',
+    cultureComparison:
+      'Harvard is in Cambridge, MA, urban college environment. Culture is intellectually intense, house system for residential experience. UT Austin is in urban Austin, large public research university. Both have strong intellectual environments; Harvard\'s is more focused, UT\'s is broader.',
+    residencyAngle:
+      'For students admitted to Harvard with substantial need-based aid: Harvard is often free or nearly so, materially cheaper than any UT scenario. For higher-income families: UT with Texas residency pathway is dramatically cheaper than Harvard.',
+    faq: [
+      { q: 'Is Harvard better than UT Austin?', a: 'On overall prestige and academic distinction, dramatically yes. Harvard ranks #1-#2 nationally. Harvard alumni network provides career advantages across finance, law, medicine, government, and academia that UT cannot match. UT competes well on undergrad business (McCombs direct admit vs Harvard no undergrad business), and on cost.' },
+      { q: 'Is UT Austin cheaper than Harvard?', a: 'For higher-income families (over $250K AGI), yes: UT non-resident at $44,908 vs Harvard ~$65,000 net. For lower-income families under $85K AGI: Harvard is free while UT non-resident is $44,908. With UT Texas residency pathway, UT drops to $11,688 for middle-and-higher-income families.' },
+      { q: 'My student was admitted to both. Which do we choose?', a: 'For families where Harvard need-based aid brings cost near $0, Harvard is the choice for most families. For higher-income families where Harvard is $50K-$65K/year, the cost advantage of UT (especially after residency) can be substantial. The career trajectory question matters: Harvard opens doors that UT cannot open for certain careers.' },
+      { q: 'What is Harvard\'s no-loan policy?', a: 'Harvard has committed to eliminating loans from financial aid packages for families under $180K AGI (as of recent policies; verify current). Families in this bracket contribute what they can afford through work and family contribution but do not incur student loans. Yale, Princeton, Stanford, MIT have similar policies.' },
+      { q: 'How does UT after residency compare to Harvard for a $200K AGI family?', a: 'Harvard for $200K AGI: typically $30K-$40K/year net. UT non-resident: $44,908/year full sticker. UT after Texas residency: $11,688/year (year 2 onward). For this family, UT after residency is dramatically cheaper than Harvard, but Harvard prestige may justify the premium.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'mit',
+    competitorName: 'Massachusetts Institute of Technology',
+    competitorShortName: 'MIT',
+    searchPhrase: 'ut austin vs mit',
+    summary:
+      'UT Austin and MIT are both known for STEM excellence but differ in structure. MIT is a top-3 US private research university focused on science, engineering, and technology, with an approximately 4% acceptance rate. UT is a top-30 public flagship with strong CS (top 10-12) and Engineering (top 10-15). MIT sticker: ~$65,000/year. UT non-resident: $44,908. For STEM students admitted to both, MIT typically wins on prestige and research; UT wins on cost, especially with residency pathway.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than MIT sticker at $65,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than MIT for high-income families',
+      'McCombs Business direct-admit undergraduate business (MIT Sloan is graduate-heavy)',
+      'Broader academic environment beyond STEM (Liberal Arts, Music, Government at UT)',
+      'Austin tech ecosystem is strong (Apple, Google, Meta, Tesla)',
+      'Larger student body provides broader social and academic environment',
+    ],
+    competitorWins: [
+      'MIT ranks #2-#4 nationally (UT top 30)',
+      'MIT CS and Engineering rank #1-#3 in nearly every discipline',
+      'MIT alumni network in tech (Silicon Valley) and startups is unmatched',
+      'MIT undergraduate research opportunities and lab access are elite',
+      'MIT need-based aid: no loans for families under $180K AGI',
+      'MIT culture is intensely STEM-focused (advantage for students who want that)',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 65_000,
+      competitorOutOfState: 65_000,
+      note: 'MIT sticker approximately $65,000/year (private). MIT need-based aid: free for families under $75K AGI; no loans under $180K AGI; substantial aid up to $250K AGI. For higher-income families, MIT approaches sticker cost. UT with Texas residency pathway is cheaper than MIT for middle-and-higher-income families.',
+    },
+    programComparison:
+      'For Engineering: MIT wins decisively (#1-#3 in most disciplines vs UT #10-#15). For Computer Science: MIT #1 vs UT #10-#12. For Physics, Math, Chemistry, Biology: MIT wins. For undergrad Business: UT wins (McCombs direct admit; MIT Sloan is primarily grad). For Liberal Arts, Humanities: UT has broader offerings.',
+    admissionsComparison:
+      'MIT acceptance rate ~4%; UT ~31% overall. MIT is dramatically more selective. MIT admits emphasize STEM aptitude, research potential, and technical achievement.',
+    cultureComparison:
+      'MIT is in Cambridge, MA, intensely STEM-focused, technically-oriented student body. Culture is problem-solving, engineering, research. UT Austin is broader; CS and Engineering coexist with Business, Liberal Arts, Music. MIT is a technical institute; UT is a comprehensive university.',
+    residencyAngle:
+      'For students admitted to MIT with substantial need-based aid: MIT is often the cheaper option. For higher-income families: UT after Texas residency pathway is dramatically cheaper than MIT. For families where prestige and specific STEM programs are decisive: MIT premium may be justified.',
+    faq: [
+      { q: 'Is MIT better than UT for engineering and CS?', a: 'Yes, decisively. MIT Engineering and CS rank #1-#3 nationally. UT ranks top 10-15. MIT provides intellectual environment and research opportunities that UT cannot match. However, UT CS and Cockrell Engineering are still elite programs with strong career outcomes.' },
+      { q: 'Is UT CS worth choosing over MIT?', a: 'Cost is the primary consideration. For families where MIT cost is $60K+/year and UT after residency is $11,688: 4-year cost difference is ~$200,000. That premium can be justified for MIT prestige and network in certain careers (elite research, top academic PhDs, top tech). For most students, UT CS provides comparable career outcomes to MIT CS at dramatically lower cost.' },
+      { q: 'What percentage of students choose UT over MIT after being admitted to both?', a: 'Small but non-zero. Most students admitted to both choose MIT. However, families for whom UT provides substantial cost advantages (especially with Texas residency pathway) sometimes choose UT. Also, students who prefer a broader academic environment over MIT\'s intense STEM focus sometimes choose UT.' },
+      { q: 'Does UT CS compete with MIT CS in industry recruiting?', a: 'For entry-level tech roles at Google, Meta, Apple, Amazon: yes, competitive. UT CS graduates and MIT CS graduates receive comparable offers at these companies. For elite research positions, quant trading, or PhD placement: MIT has advantage. For most industry careers: comparable outcomes.' },
+      { q: 'How does UT after Texas residency compare to MIT?', a: 'UT after Texas residency: $11,688/year × 3 years + $44,908 year 1 = ~$80K total 4-year tuition. MIT for $200K AGI family: ~$40K/year × 4 = ~$160K total 4-year tuition. UT is about $80K cheaper over 4 years. MIT prestige may justify the premium for many families; the cost delta is meaningful.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'princeton',
+    competitorName: 'Princeton University',
+    competitorShortName: 'Princeton',
+    searchPhrase: 'ut austin vs princeton',
+    summary:
+      'UT Austin and Princeton represent different university models. Princeton is a top-3 US private Ivy League research university with a small undergraduate focus (~5,000 undergrads) and approximately 4-5% acceptance rate. UT is a large public flagship (~42,000 undergrads). Princeton sticker: ~$66,000/year. UT non-resident: $44,908. Princeton offers exceptional need-based aid. For the rare student admitted to both, decisions typically favor Princeton for prestige and intimate experience, UT for cost among high-income families.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Princeton sticker at $66,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Princeton for high-income families',
+      'McCombs Business direct-admit undergraduate business (Princeton has no undergrad business school; Woodrow Wilson School is public policy)',
+      'Cockrell Engineering competitive (Princeton Engineering is small but strong)',
+      'Austin tech industry more developed than Princeton area',
+      'UT has broader undergraduate program breadth',
+    ],
+    competitorWins: [
+      'Princeton ranks #1-#3 nationally',
+      'Princeton need-based aid is among the most generous (no loans for any family; grants replace loans)',
+      'Princeton undergraduate focus is distinctive; small classes, direct faculty access',
+      'Princeton alumni network in finance, government, law, academia is exceptional',
+      'Princeton School of Engineering and Applied Science is small but elite',
+      'Princeton mathematics and economics are top-3 nationally',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 66_000,
+      competitorOutOfState: 66_000,
+      note: 'Princeton sticker approximately $66,000/year. Princeton need-based aid: no loans in packages; grants scale by family income. For families under $100K AGI: often full ride. For families $100K-$300K AGI: substantial aid. For families over $300K AGI: minimal aid. UT with Texas residency pathway is dramatically cheaper than Princeton for higher-income families.',
+    },
+    programComparison:
+      'For overall prestige and academic depth: Princeton wins. For Economics, Mathematics, Physics: Princeton is top-3 nationally. For CS: Princeton and UT are both top 15. For undergrad Business: UT wins (McCombs direct admit). For Engineering: comparable at similar tier; Princeton smaller but strong.',
+    admissionsComparison:
+      'Princeton acceptance rate ~4-5%; UT ~31% overall. Princeton is dramatically more selective. Princeton emphasizes intellectual distinction and character.',
+    cultureComparison:
+      'Princeton, NJ, is a small suburban college town. Princeton has strong undergraduate focus with residential colleges and eating clubs. UT Austin is urban, larger, more politically diverse. Culture differences are significant.',
+    residencyAngle:
+      'For students admitted to Princeton with full or substantial need-based aid: Princeton is competitive or cheaper than UT. For higher-income families: UT after Texas residency pathway is dramatically cheaper. The typical Princeton admit family should model both scenarios; the answer depends on specific financial situation.',
+    faq: [
+      { q: 'Is Princeton better than UT?', a: 'On overall prestige, absolutely. Princeton ranks top 3 nationally with unmatched undergraduate focus. UT ranks top 30. Princeton is one of the strongest liberal arts and STEM undergraduate experiences in the world.' },
+      { q: 'Is UT Austin cheaper than Princeton?', a: 'For higher-income families: yes, UT is materially cheaper. For lower-income families with substantial Princeton aid: Princeton can be cheaper or free. With UT Texas residency pathway, UT drops to $11,688, dramatically cheaper than Princeton in nearly all high-income scenarios.' },
+      { q: 'How generous is Princeton financial aid?', a: 'Princeton is among the most generous need-based aid providers. Princeton has committed to eliminating loans from all financial aid packages, replacing them with grants. For families under $100K AGI, Princeton is typically free or nearly free (full tuition, fees, room, and board covered).' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'cornell',
+    competitorName: 'Cornell University',
+    competitorShortName: 'Cornell',
+    searchPhrase: 'ut austin vs cornell',
+    summary:
+      'UT Austin and Cornell are both large research universities with different funding models. Cornell is a top-15 private Ivy League university in Ithaca, NY (with some public statutory colleges). UT is a top-30 public flagship. Cornell sticker: ~$67,000/year (private colleges) or lower for New York state statutory colleges. UT non-resident: $44,908. For non-New-York families, Cornell is more expensive than UT.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Cornell sticker at $67,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Cornell',
+      'McCombs Business is competitive with Dyson School of Applied Economics and Management',
+      'Austin tech industry pipeline exists; Cornell Ithaca isolated',
+      'UT alumni network in Texas is much larger than Cornell in region',
+      'UT weather (Austin) vs Ithaca winters',
+    ],
+    competitorWins: [
+      'Cornell ranks top 15 nationally (UT top 30)',
+      'Cornell Ag, Hotel, Human Ecology are elite in their niches',
+      'Cornell Engineering (Bethe/Meinig) has strong reputation',
+      'Cornell Law and Cornell Vet are elite graduate programs',
+      'Ivy League brand recognition',
+      'Diverse specialized undergrad colleges provide unique programs',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 67_000,
+      competitorOutOfState: 67_000,
+      note: 'Cornell has private (endowed) colleges at ~$67K/year and state statutory colleges (Cornell CALS Ag, Human Ecology, ILR) at lower rates for New York residents (~$44K/year for NY residents). For non-NY OOS students, all Cornell colleges are ~$67K/year. UT non-resident cheaper across the board.',
+    },
+    programComparison:
+      'For overall prestige: Cornell wins. For Agriculture: Cornell CALS is top-3 nationally (UT has no ag). For Hotel Administration: Cornell is #1 (UT has no hotel program). For Engineering: comparable. For CS: comparable. For Business: McCombs competitive with Dyson.',
+    admissionsComparison:
+      'Cornell acceptance rate ~7-8%; UT ~31% overall. Cornell is more selective. Different colleges within Cornell have different admission processes.',
+    cultureComparison:
+      'Cornell is in Ithaca, NY, remote college-town environment. Cornell has 8 undergraduate colleges with distinctive cultures. UT Austin is in urban Austin, single unified campus culture. Weather differs dramatically.',
+    residencyAngle:
+      'For non-New-York families: Cornell at $67K vs UT non-resident $44,908, with UT after Texas residency at $11,688 dramatically cheaper. For New York families: Cornell statutory colleges at NY rate ~$44K vs UT non-resident $44,908 comparable; UT after Texas residency dramatically cheaper.',
+    faq: [
+      { q: 'Is Cornell better than UT?', a: 'On overall prestige, yes. Cornell ranks top 15; UT top 30. On specific programs, Cornell wins on Agriculture, Hotel Administration, Vet Medicine (all programs UT does not have). On CS and Engineering, comparable.' },
+      { q: 'Is Cornell cheaper than UT for New York residents?', a: 'For NY residents in Cornell statutory colleges (CALS Ag, Human Ecology, ILR): Cornell in-state is ~$44K/year, comparable to UT non-resident. For NY residents in Cornell endowed colleges (Arts, Engineering, etc.): $67K/year, dramatically more expensive than UT non-resident.' },
+      { q: 'What are Cornell statutory colleges?', a: 'Four Cornell colleges receive New York state funding and offer reduced tuition to NY residents: CALS (Ag), Human Ecology, ILR (Industrial Labor Relations), and Vet Medicine (grad). These provide a public-university tuition rate to NY residents while offering an Ivy League education.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'emory',
+    competitorName: 'Emory University',
+    competitorShortName: 'Emory',
+    searchPhrase: 'ut austin vs emory',
+    summary:
+      'UT Austin and Emory are both large research universities with different structures. Emory is a top-25 private research university in Atlanta with strong programs in business (Goizueta), medicine, and public health. UT is a top-30 public flagship. Emory sticker: ~$60,000/year. UT non-resident: $44,908. Emory is materially more expensive than UT non-resident, and dramatically more expensive than UT after Texas residency.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Emory sticker at $60,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Emory',
+      'McCombs Business ranks top 10 (Goizueta top 15)',
+      'Cockrell Engineering top 10-15 (Emory has no engineering)',
+      'Austin tech pipeline stronger than Atlanta tech',
+      'UT alumni network in Texas is much larger',
+    ],
+    competitorWins: [
+      'Emory ranks top 25 nationally',
+      'Goizueta Business School is well-regarded (top 15 undergrad business)',
+      'Emory pre-med and med school connections are elite',
+      'Rollins School of Public Health is top-5 nationally',
+      'Atlanta location provides diverse industry access',
+      'Emory need-based aid is generous',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 60_000,
+      competitorOutOfState: 60_000,
+      note: 'Emory sticker approximately $60,000/year (private). Emory need-based aid meaningful for lower-and-middle-income families. For higher-income families: Emory approaches sticker. UT with Texas residency pathway dramatically cheaper.',
+    },
+    programComparison:
+      'For Business: McCombs (top 10) outranks Goizueta (top 15). For Engineering: UT has program; Emory has none. For Pre-Med: Emory has strong medical school adjacency (Emory University Hospital, CDC nearby). For Public Health: Emory Rollins top-5 nationally.',
+    admissionsComparison:
+      'Emory acceptance rate ~13%; UT ~31% overall. Emory is more selective on aggregate. Both admissions are competitive.',
+    cultureComparison:
+      'Emory is in Atlanta, urban private-university environment. UT Austin is in urban Austin, large public research university. Both have strong pre-med populations; Emory smaller and more focused.',
+    residencyAngle:
+      'For students admitted to both: cost is a meaningful decision factor. Emory need-based aid for $150K-$250K AGI families brings cost to ~$35K-$50K/year. UT after Texas residency at $11,688 is dramatically cheaper across all income scenarios.',
+    faq: [
+      { q: 'Is Emory better than UT for pre-med?', a: 'Depends on advising style and outcomes. Emory pre-med has strong Emory Hospital and CDC adjacency. UT pre-med has Dell Medical and broader Texas Medical connections. Both produce successful med school applicants at similar rates.' },
+      { q: 'Is UT cheaper than Emory?', a: 'Yes. UT non-resident at $44,908 vs Emory sticker at $60,000 is $15,000/yr cheaper. With UT Texas residency pathway, UT drops to $11,688, dramatically cheaper than Emory.' },
+      { q: 'Should my student choose Emory for pre-med?', a: 'For students specifically pursuing Emory Medical School or Emory Rollins Public Health graduate school, Emory undergrad provides adjacency advantage. For students pursuing other medical schools, UT is cheaper with comparable outcomes.' },
+    ],
+    published: true,
+  },
 ];
 
 export const getComparison = (slug: string) => COMPARISONS.find(c => c.slug === slug && c.published);
