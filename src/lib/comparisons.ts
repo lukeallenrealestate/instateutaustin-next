@@ -1292,6 +1292,140 @@ export const COMPARISONS: Comparison[] = [
     ],
     published: true,
   },
+  {
+    slug: 'columbia',
+    competitorName: 'Columbia University',
+    competitorShortName: 'Columbia',
+    searchPhrase: 'ut austin vs columbia',
+    summary:
+      'UT Austin and Columbia represent different university models. Columbia is a top-10 US private Ivy League research university in New York City. UT is a top-30 public flagship in Austin. Columbia sticker: ~$68,000/year. UT non-resident: $44,908. Columbia offers substantial need-based aid. For high-income families, UT with Texas residency pathway is dramatically cheaper.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Columbia sticker at $68,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Columbia',
+      'McCombs Business direct-admit undergrad (Columbia has no undergrad business school; CBS is grad)',
+      'Austin tech industry is comparable to NYC tech at much lower cost of living',
+      'Broader undergraduate program breadth including engineering and CS at top-tier level',
+      'Texas residency pathway is unique to UT among top publics',
+    ],
+    competitorWins: [
+      'Columbia ranks top 10 nationally (UT top 30)',
+      'Columbia Journalism School is elite (graduate)',
+      'Columbia Business School (Fu Foundation Engineering) has strong reputation',
+      'NYC location provides unmatched Wall Street, media, and cultural access',
+      'Columbia Core Curriculum is distinctive undergraduate experience',
+      'Ivy League brand recognition and alumni network',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 68_000,
+      competitorOutOfState: 68_000,
+      note: 'Columbia sticker approximately $68,000/year. Columbia need-based aid: no loans for families under $150K AGI; substantial aid up to $250K AGI. For higher-income families, Columbia approaches sticker cost. UT with Texas residency pathway dramatically cheaper.',
+    },
+    programComparison:
+      'For overall prestige: Columbia wins (top 10 vs UT top 30). For undergrad Business: UT wins (McCombs direct admit; Columbia CBS is grad-only). For CS: comparable at top-15 tier. For Journalism graduate: Columbia J-School is elite. For NYC-adjacent finance and media careers: Columbia has substantial advantage.',
+    admissionsComparison:
+      'Columbia acceptance rate ~4%; UT ~31% overall. Columbia is dramatically more selective. Columbia values Core Curriculum fit and NYC engagement.',
+    cultureComparison:
+      'Columbia is in New York City, urban campus with global influence. UT Austin is in Austin, large public research university, growing city. NYC vs Austin lifestyle difference is significant.',
+    residencyAngle:
+      'For families admitted to Columbia with substantial aid: Columbia can be competitive with UT. For higher-income families: UT after Texas residency is dramatically cheaper than Columbia. NYC cost of living further differentiates.',
+    faq: [
+      { q: 'Is Columbia better than UT?', a: 'On overall prestige, dramatically yes (top 10 vs top 30). On specific programs: Columbia wins on prestige, NYC access, and Ivy brand. UT wins on undergrad business accessibility (McCombs direct admit) and cost.' },
+      { q: 'Is UT cheaper than Columbia?', a: 'Yes. UT non-resident at $44,908 vs Columbia sticker at $68,000. With UT Texas residency pathway, UT drops to $11,688, dramatically cheaper. NYC cost of living further differentiates.' },
+      { q: 'What about NYC access from Columbia?', a: 'For students pursuing Wall Street finance, media/journalism, fashion, or NYC-based tech, Columbia\'s NYC access is a substantial advantage. For students pursuing tech in Austin/Bay Area or Texas-based careers, UT competes well.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'brown',
+    competitorName: 'Brown University',
+    competitorShortName: 'Brown',
+    searchPhrase: 'ut austin vs brown',
+    summary:
+      'UT Austin and Brown represent different university models. Brown is a top-15 US private Ivy League research university in Providence, RI, distinctive for its Open Curriculum (no required distribution). UT is a top-30 public flagship. Brown sticker: ~$68,000/year. UT non-resident: $44,908. Brown offers substantial need-based aid.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Brown sticker at $68,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Brown',
+      'McCombs Business is top-tier undergrad business (Brown has no business school)',
+      'Cockrell Engineering is stronger than Brown Engineering',
+      'Larger undergraduate program breadth',
+      'Austin tech ecosystem vs Providence area',
+    ],
+    competitorWins: [
+      'Brown ranks top 15 nationally',
+      'Brown Open Curriculum is distinctive (no required courses; students design own path)',
+      'Brown-RISD dual degree program is unique (with Rhode Island School of Design)',
+      'Small undergraduate focus (~7,000 undergrads)',
+      'Ivy League brand recognition',
+      'Brown need-based aid is generous (no loans for families under $150K)',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 68_000,
+      competitorOutOfState: 68_000,
+      note: 'Brown sticker approximately $68,000/year. Brown need-based aid meaningful for lower-and-middle-income families. UT with Texas residency pathway dramatically cheaper.',
+    },
+    programComparison:
+      'For overall prestige: Brown wins. For undergrad Business: UT wins decisively (Brown has no business school). For CS: comparable at top-15 tier. For Engineering: UT wins. For interdisciplinary liberal arts with open curriculum: Brown wins.',
+    admissionsComparison:
+      'Brown acceptance rate ~5%; UT ~31% overall. Brown is dramatically more selective. Brown emphasizes intellectual curiosity and initiative (Open Curriculum design).',
+    cultureComparison:
+      'Brown is in Providence, RI, mid-sized New England city. Brown culture emphasizes intellectual freedom, small-college feel, creative interdisciplinary work. UT Austin is much larger urban public research university.',
+    residencyAngle:
+      'For families admitted to Brown with substantial aid: Brown can be competitive with UT. For higher-income families: UT after Texas residency is dramatically cheaper. Open Curriculum vs UT structured degree paths is a fit question.',
+    faq: [
+      { q: 'Is Brown better than UT?', a: 'On overall prestige, yes (top 15 vs top 30). Brown wins on Open Curriculum, small-college feel, Ivy brand. UT wins on undergrad business, engineering, CS accessibility.' },
+      { q: 'What is Brown\'s Open Curriculum?', a: 'Brown has no distribution requirements; students design their own courses within their major. Freedom is distinctive but requires self-direction. Not right for every student.' },
+      { q: 'Is UT cheaper than Brown?', a: 'Yes. UT non-resident $44,908 vs Brown $68,000. With Texas residency pathway, UT drops to $11,688, dramatically cheaper.' },
+    ],
+    published: true,
+  },
+  {
+    slug: 'dartmouth',
+    competitorName: 'Dartmouth College',
+    competitorShortName: 'Dartmouth',
+    searchPhrase: 'ut austin vs dartmouth',
+    summary:
+      'UT Austin and Dartmouth represent different university models. Dartmouth is a top-15 US private Ivy League college in Hanover, NH, distinctive for its small undergraduate focus (~4,500 undergrads) and D-Plan academic calendar. UT is a top-30 public flagship. Dartmouth sticker: ~$67,000/year. UT non-resident: $44,908.',
+    utWins: [
+      'UT non-resident at $44,908 is materially cheaper than Dartmouth sticker at $67,000',
+      'UT after Texas residency at $11,688 is dramatically cheaper than Dartmouth',
+      'McCombs Business is top-tier undergrad business (Dartmouth Tuck is graduate)',
+      'Larger academic environment with more course options',
+      'Austin urban location vs remote Hanover, NH',
+      'Broader career recruiting in Texas alumni network',
+    ],
+    competitorWins: [
+      'Dartmouth ranks top 15 nationally',
+      'Dartmouth small undergraduate focus is distinctive',
+      'D-Plan (year-round academic calendar with 4 terms) provides flexibility for internships',
+      'Ivy League brand recognition',
+      'Dartmouth Tuck MBA is elite (grad school)',
+      'Strong alumni network on Wall Street and in finance',
+    ],
+    costComparison: {
+      utInState: 11_688,
+      utOutOfState: 44_908,
+      competitorInState: 67_000,
+      competitorOutOfState: 67_000,
+      note: 'Dartmouth sticker approximately $67,000/year. Dartmouth need-based aid available. UT with Texas residency pathway dramatically cheaper.',
+    },
+    programComparison:
+      'For overall prestige: Dartmouth wins. For undergrad Business: UT wins decisively. For CS: comparable at top-15 tier. For finance/consulting recruiting: Dartmouth has strong Wall Street pipeline.',
+    admissionsComparison:
+      'Dartmouth acceptance rate ~6%; UT ~31% overall. Dartmouth is dramatically more selective.',
+    cultureComparison:
+      'Dartmouth is in Hanover, NH, remote New England location. Small-college feel with strong outdoor tradition. UT Austin is large urban university. Very different environments.',
+    residencyAngle:
+      'UT with Texas residency pathway is dramatically cheaper than Dartmouth in all scenarios except lowest-income families with maximum aid.',
+    faq: [
+      { q: 'Is Dartmouth better than UT?', a: 'On overall prestige, yes (top 15 vs top 30). Dartmouth wins on Ivy prestige, small-college experience, D-Plan flexibility. UT wins on business/engineering breadth and cost.' },
+      { q: 'What is Dartmouth\'s D-Plan?', a: 'D-Plan divides the year into 4 10-week terms rather than 2 semesters. Students take 3 terms per year with flexibility for off-term internships or study abroad. Distinctive academic calendar.' },
+    ],
+    published: true,
+  },
 ];
 
 export const getComparison = (slug: string) => COMPARISONS.find(c => c.slug === slug && c.published);
